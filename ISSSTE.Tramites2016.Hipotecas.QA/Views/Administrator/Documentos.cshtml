@@ -1,0 +1,177 @@
+﻿@model IEnumerable<ISSSTE.Tramites2016.Hipotecas.Model.Model.DocumentsAdministrator>
+@{
+    Layout = "~/Views/Shared/_LayoutAdministrator.cshtml";
+}
+<script type="text/javascript">
+    function GetImage(imageId) {
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Content("~/GetImage/DownloadImage")',
+            data: {
+                ImageID: imageId
+            },
+            success: function (data) {
+
+            }
+        });
+    }
+
+    @*function UpdateDocument(requestId,DocumentId,isValid)
+    {
+       var observaciones= $("#" + DocumentId).val()
+
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Content("/Administrator/Documents/")',
+            data: {
+                RequestID: requestId,
+                Observations: observaciones,
+                IsValid:isValid
+            },
+            success: function (data) {
+
+            }
+        });
+    }*@
+
+    function RedirectAction(Id, Page, NoIssste, Observations) {
+        window.location.href = "./RedirectPage?NoIssste=" + NoIssste + "&Page=" + Page + "&Request=" + Id + "&Obeservations" + Observations;
+    }
+</script>
+
+<div class="row" data-ng-controller="requestDetailController as vm" ng-init="vm.initDocuments(@ViewBag.documents)">
+
+    @Html.Partial("_AdministratorMenu")
+
+    <div class="container-fluid">
+        <div class="side-body" autoscroll="true">
+
+            <div class="row">
+
+                @Html.Partial("DetailEntitleNavTabs")
+
+                <div role="tabpanel" class="tab-pane active" id="docs">
+                    <div class="col-xs-12">
+                        <div class="form-group col-xs-8">
+                            <h3>Documentos</h3>
+                            <hr class="red">
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="pull-right margintop-15">
+                                <a href="@System.Configuration.ConfigurationManager.AppSettings["Sitio"]/Administrator/Index/#search" class="btn btn-default" type="button">
+                                    Volver a consulta de solicitudes
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    @if (Model.Count() > 0)
+                    {
+                        <div class="col-xs-12">
+                            <div class="alert alert-info">
+                                Para poder rechazar algún documento es necesario agregar una observación.
+                            </div>
+                        </div>
+                    }
+
+
+
+
+                    <div class="form-group col-xs-12">
+                        <h3></h3>
+                    </div>
+
+                    @*@using (Html.BeginForm("Documentos", "Administrator", FormMethod.Post, new { enctype = "multipart/form-data", @id = "formDocs", @class = "cmxform" }))
+                        {*@
+                    <div class="form-group col-md-12 ng-scope">
+                        <div data-ng-show="vm.isDocumentUpdate==true" class="alert alert-success marg-B10px margintop-10">
+                            La información se ha actualizado correctamente.
+                        </div>
+                        @if (Model.Count() == 0)
+                        {
+                            <div class="col-xs-12">
+                                <div class="alert alert-info">
+                                    No existen documentos cargados para la solicitud seleccionada.
+                                </div>
+                            </div>
+                        }
+
+
+                        @{
+                            var j = 0;
+                            foreach (var item in Model)
+                            {
+
+
+                                <file-display nfu-name="@Html.DisplayFor(modelItem => item.Description)" nfu-document="document" class="ng-isolate-scope">
+                                    <div class="row">
+                                        <div>
+                                            <div>
+                                                <label class="glyphicon glyphicon-cloud-download">&nbsp; </label><label class="control-label">Tipo Documento: </label> <label class="control-label margintop-5 ng-binding">@Html.DisplayFor(modelItem => item.Description)</label>
+
+                                                <div class="pull-right marginbot-20">
+                                                    <a type="button" class="btn btn-default" href="@Url.Action("GetImageView", "Administrator", new { id = item.DocumentId, documentTypeId = item.DocumentTypeId })" target="_blank">Ver</a>
+                                                    <button type="button" class="btn btn-link"><span>@Html.ActionLink("Descargar", "GetImage", "Administrator", new { id = item.DocumentId, documentTypeId = item.DocumentTypeId }, null)</span></button>
+                                                </div>
+
+                                                <div data-ng-hide="" class="text-well">
+                                                    @Html.TextAreaFor(modelItem => item.Observations, new { @id = item.DocumentId, @name = "Observaciones", @class = "form-control ns_", placeholder = "Observaciones", @ng_model = String.Format("vm.comments[{0}]", j) })
+                                                </div>
+
+                                                <div class="pull-right">
+                                                    <br>
+                                                    @*<input onclick="UpdateDocument('@item.RequestId', '@item.DocumentId', 1);" class="btn btn-primary" value="Aprobado" id="Aprobado" name="Aprobado" />
+                                                        <input onclick="UpdateDocument(''@item.RequestId', '@item.DocumentId', 0);"  class="btn btn-danger" value="Rechazado" id="Rechazado" name="Rechazado" />*@
+                                                    @if (item.IsValid == false && item.Observations == "")
+                                                    {
+                                                        <input type="button" data-ng-click="vm.updateDocument('@item.RequestId', '@item.DocumentId', 1, @String.Format("vm.comments[0]", j));" class="btn btn-primary" value="Aprobado" id="Aprobado" name="Aprobado" />
+                                                        <input type="button" ng-disabled="vm.comments[@j].length <= 0 || vm.comments[@j] == ''" data-ng-click="vm.updateDocument('@item.RequestId', '@item.DocumentId', 0, vm.comments[@j]);" class="btn btn-danger" value="Rechazado" id="Rechazado" name="Rechazado" />
+                                                    }
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </file-display>
+
+                                    <br />
+                                    <br />
+                                j++;
+                            }
+                        }
+
+                    </div>
+                    @*}*@
+
+                </div>
+
+                <div class="col-xs-12 marginbot-50">
+                    <div class="pull-right margintop-20 marginbot--10">
+                        <a class="btn btn-default" onclick="window.scrollTo(0,0)">
+                            <i class="fa fa-arrow-up"></i>Subir
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts{
+    @*@{
+            BundleTable.EnableOptimizations = false;
+        }*@
+    @Scripts.Render("~/bundles/administrator/javascript")
+    @Scripts.Render("~/bundles/administrator/app")
+
+}
+
+
+<br />
+<br />
+<br />
+<br />
+
+

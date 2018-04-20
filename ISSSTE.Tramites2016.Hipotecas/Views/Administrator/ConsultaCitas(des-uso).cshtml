@@ -1,0 +1,177 @@
+﻿
+@{ Layout = "~/Views/Shared/_LayoutAdministrator.cshtml"; }
+
+<div class="row" data-ng-controller="navigationController as nc">
+    <!--/ START LEFT MENU -->
+    <div id="side-menu" class="side-menu collapse">
+        <nav class="navbar navbar-default" role="navigation">
+            <!-- Main Menu -->
+            <div class="side-menu-container">
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="/Administrator/Index">Consulta de Solicitudes</a>
+                    </li>
+                    <li >
+                        <a href="/Administrator/AdministracionCitas">Administración de citas</a>
+                    </li>
+                    <li >
+                        <a href="/Administrator/ConsultaCitas">Consulta de Citas</a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </div> <!-- /.side-menu -->
+
+    <div class="container-fluid">
+        <div class="side-body ng-view" autoscroll="true">
+
+            <div data-ng-controller="searchController as vm" data-ng-init="vm.initSearch()" class="ng-scope">
+                <!--/ START TITLE -->
+                <div class="col-xs-12">
+                    <h2>Consulta de solicitudes</h2>
+                    <hr class="red">
+                </div>
+ <!--/ END TITLE -->
+
+<!-- START CONTENT -->
+                <div class="col-xs-12">
+                    <div class="alerts"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <label></label>
+                    </div>
+                </div>
+
+                <div class="col-sm-8">
+                    <div class="input-group">
+                        <input type="text" class="form-control ng-valid" placeholder="Buscar por folio o nombre" data-ng-model="vm.query" data-ng-keyup="$event.keyCode == 13 &amp;&amp; vm.searchRequests()">
+
+                        <div class="input-group-btn">
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-primary" data-ng-click="vm.searchRequests()">
+                                    Buscar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="dropdown pull-right" id="status-dropdow">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Mostrar por Todos los estatus
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a data-ng-click="vm.selectStatus(null)">Todos los estatus</a></li>
+                            <li><a data-ng-click="vm.selectStatus(1)">Niños con afiliación y vigencia</a></li>
+                            <li><a data-ng-click="vm.selectStatus(2)">Niños sin afiliación y vigencia</a></li>
+                            <li><a data-ng-click="vm.selectStatus(3)">Niños con discapacidad</a></li>
+                            <li><a data-ng-click="vm.selectStatus(4)">Niños sin discapacidad</a></li>
+                            <li data-ng-repeat="actualEstatus in vm.statusList" class="ng-scope">
+                                <a data-ng-click="vm.selectStatus(actualEstatus)" class="ng-binding">Cita agendada</a>
+                            </li>
+                            <li data-ng-repeat="actualEstatus in vm.statusList" class="ng-scope">
+                                <a data-ng-click="vm.selectStatus(actualEstatus)" class="ng-binding">Cita cerrada</a>
+                            </li>
+                            <li data-ng-repeat="actualEstatus in vm.statusList" class="ng-scope">
+                                <a data-ng-click="vm.selectStatus(actualEstatus)" class="ng-binding">Ingreso aceptado</a>
+                            </li>
+                            <li data-ng-repeat="actualEstatus in vm.statusList" class="ng-scope">
+                                <a data-ng-click="vm.selectStatus(actualEstatus)" class="ng-binding">Ingreso rechazado</a>
+                            </li>
+                            <li data-ng-repeat="actualEstatus in vm.statusList" class="ng-scope">
+                                <a data-ng-click="vm.selectStatus(actualEstatus)" class="ng-binding">Ingreso pospuesto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 margintop-30">
+                    <div class="panel panel-default" data-ng-show="vm.requests.length > 0">
+                        <div class="panel-body overflow-table">
+
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Folio</th>
+                                        <th>Nombre Beneficiario</th>
+                                        <th>Tipo de inmueble</th>
+                                        <th>Tipo de propietario</th>
+                                        <th>Dirección</th>
+                                        <th>Estatus</th>
+                                        <th>Fecha de solicitud</th>
+                                        <th></th>
+                                        <!--<th></th>
+                                        <th></th>-->
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr data-ng-repeat="actualRequest in vm.requests" class="ng-scope">
+                                        <td class="ng-binding">D87621160010956</td>
+                                        <td class="ng-binding">BEATRIZ ALVITER MARTINEZ</td>
+                                        <td><font style="text-transform: uppercase;" class="ng-binding">Departamento</font></td>
+                                        <td class="ng-binding">Directo</td>
+                                        <td class="ng-binding">Avenida del iman #78</td>
+
+                                        <td class="ng-binding">Cita agendada</td>
+                                        <td class="ng-binding">06/09/2016</td>
+
+                                        <td>
+                                            <div class="pull-right">
+                                                <a ng-href="#/request/9fe2253b-5561-45ce-a636-4170f13a54f0/50100" href="#/request/9fe2253b-5561-45ce-a636-4170f13a54f0/50100">
+                                                    <button type="button" class="btn btn-primary btn-sm">
+                                                        Ver detalle
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr><!-- end ngRepeat: actualRequest in vm.requests -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.panel-default -->
+                    </div>
+                    <!-- /.panel -->
+                    <div class="alert alert-info ng-hide" data-ng-show="vm.requests == 0">
+                        No se encontraron solicitudes.
+                    </div>
+
+                    <div class="col-xs-2 pull-left paddingleft-0">
+                        Mostrar:
+                        <select class="form-control ng-valid" data-ng-options="actualPageSize + ' resultados' for actualPageSize in vm.pageSizes" data-ng-model="vm.selectedPageSize" data-ng-change="vm.searchRequests()"><option value="number:10" label="10 resultados" selected="selected">10 resultados</option><option value="number:20" label="20 resultados">20 resultados</option><option value="number:30" label="30 resultados">30 resultados</option><option value="number:40" label="40 resultados">40 resultados</option><option value="number:50" label="50 resultados">50 resultados</option></select>
+                    </div>
+                    <div class="col-xs-10 pull-right marginbot-20 paddingright-0" data-ng-show="vm.requests.length > 0">
+                        <nav class="text-right">
+                            <ul class="pagination">
+                                <li data-ng-class="{ disabled: vm.isFirstPage() }" class="disabled">
+                                    <a data-ng-click="vm.changeToPreviousPage()">«</a>
+                                </li>
+                                <!-- ngRepeat: actualPage in vm.pages -->
+                                <li data-ng-repeat="actualPage in vm.pages" data-ng-class="{ active: vm.isPageSelected(actualPage) }" class="ng-scope active">
+                                    <a data-ng-click="vm.changeSelectedPage(actualPage)" class="ng-binding">1</a>
+                                </li><!-- end ngRepeat: actualPage in vm.pages -->
+                                <li data-ng-class="{ disabled: vm.isLasPage() }" class="disabled">
+                                    <a data-ng-disabled="vm.isLasPage()" data-ng-click="vm.changeToNextPage" disabled="disabled">»</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    UI.initTabs();
+</script>
+
+@section Scripts{
+      
+    @Scripts.Render("~/bundles/administrator/javascript")
+    @Scripts.Render("~/bundles/administrator/app")
+    @*@{  BundleTable.EnableOptimizations = false; }*@
+
+}

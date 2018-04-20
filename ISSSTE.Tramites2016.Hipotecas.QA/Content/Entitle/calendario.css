@@ -1,0 +1,149 @@
+.abl-thnobold th {
+    font-weight: normal !important;
+    padding-top: 10px !important;
+}
+
+
+.abl-cien {
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    font-size: 70%;
+    text-transform: uppercase;
+}
+
+td {
+    border: 1px solid #999;
+    height: 6em;
+    padding: 5px;
+    vertical-align: top;
+    width: 6em;
+    padding-left: 91px
+}
+
+.dia {
+    text-align: right;
+}
+
+.actual {
+    font-weight: bold;
+}
+
+
+.adisponible {
+    border: 2px solid #4D92DF;
+    background: rgb(173,216,230);
+    background: rgba(173,216,230, 0.2);
+    background: #F5FFFA;
+    cursor: pointer;
+}
+
+.sindisponibilidad {
+    border: 2px solid #ff0000;
+    border-top: 2px solid #ff0000;
+    background: #FFFAFA;
+}
+
+.today {
+    border: 2px solid #545454;
+    background: rgb(192,192,192);
+    background: rgba(192,192,192,0.3);
+}
+
+.baja {
+    background: #fef7e4;
+    height: 20px;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.nodisponible {
+    background: #f5dede;
+    height: 20px;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.sinservicio {
+    background: #cccccc;
+    height: 20px;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.fechapasada {
+    background: #CECEF6;
+    height: 20px;
+    margin-top: 50px;
+    width: 100%;
+}
+
+
+.leyenda .diaactual-ley {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #545454;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+}
+
+.leyenda td {
+    border: 1px solid #FFF !important;
+    height: 0;
+    padding: 5px;
+    vertical-align: top;
+    width: 10em;
+}
+
+.leyenda .disponible-ley {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #4D92DF;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    text-align: center;
+}
+
+.leyenda .bajadisponible-ley {
+    background: #fef7e4;
+    height: 20px;
+    width: 100%;
+}
+
+.leyenda .nodisponible-ley {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #a94442;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+}
+
+.leyenda .sinservicio-ley {
+    background: #cccccc;
+    height: 20px;
+    width: 100%;
+}
+
+.leyenda .fechapasada-ley {
+    background: #CECEF6;
+    height: 20px;
+    width: 100%;
+}
+.seleccionado {
+    border: 2px solid #E59621;
+    background: rgb(229, 150, 33);
+    background: rgba(173,216,230, 0.2);
+    background:#E59621;
+    cursor: pointer;
+}

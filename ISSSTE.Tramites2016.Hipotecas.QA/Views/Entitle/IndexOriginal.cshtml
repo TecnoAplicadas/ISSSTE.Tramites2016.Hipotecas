@@ -1,0 +1,132 @@
+﻿<!--
+//####################################################################
+//      ## Fecha de creación: 18-03-2016
+//      ## Fecha de última modificación: 30-03-2016
+//      ## Responsable: Emanuel De la Isla Vértiz
+//      ## Módulos asociados: Información general, Deudos, Beneficiarios, Historial Laboral.
+//      ## Id Tickets asociados al cambio: R-013042
+//####################################################################
+-->
+@{
+    ViewBag.Title = "Trámite de solicitud de cancelación de hipotecas vía administrativa del ISSSTE";
+
+    Layout = "~/Views/Shared/_LayoutEntitle.cshtml";
+}
+
+@*<div class="container" data-ng-controller="navigationController as nc" data-ng-init="nc.init()" >*@
+<div class="container" data-ng-controller="navigationController as nc" data-ng-init="nc.initEntitle()">
+    <div class="col-sm-4 pull-right marg-T10px">
+        <div class="user-credencials">
+            <ul class="list-unstyled">
+                <li>
+                    <span class="user-credencials__name">{{nc.entitleInformation.Name}}</span>
+                    <a class="LoginTokens" href="https://oficinavirtual.issste.gob.mx/accesogobmx/ctl/logoff.aspx">Salir</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <ol class="breadcrumb marg-T10px" >
+        <li>
+            <a href="http://www.gob.mx"><i class="icon icon-home"> </i></a>
+            <i id="navinicio" class="active"><a href="#{{nc.homeUrl}}"></i>
+        </li>
+        <li id="navinicio" class="active"><a href="#{{nc.homeUrl}}">Inicio</a></li>
+        <li id="navrequest" class="active"><a a data-ng-show="nc.isNewRequestSelected">Registrar Solicitud</a></li>
+        <li id="requests"><a data-ng-show="nc.isRequestsSelected">Mis solicitudes</a></li>
+    </ol>
+    <!-- Begin Digital Analytix Tag 1.1302.13 -->
+   
+
+    <div class="row ">
+        <div class="hidden-xs col-sm-8 margintop--20">
+            <h1 class="vertical-buffer">@ViewBag.Title</h2>
+        </div>
+    </div> <!-- row -->
+    <!-- Start Botones -->
+
+    <div class="row" data-ng-hide="nc.isOverrided">
+        <div class="col-sm-12 col-xs-12">
+            <div class="btn-group marginbot-50" role="group" aria-label="...">
+                <a  class="btn btn-default" data-ng-class="{ disabled: nc.isHomeSelected }" data-ng-click="nc.selectHome()" href="#{{nc.homeUrl}}" role="button" data-toggle="tooltip" data-placement="bottom" ><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Inicio</a>
+                <a class="btn btn-default" data-ng-class="{ disabled: nc.isAbouSelected }" data-ng-click="nc.selectAbout()" href="#{{nc.aboutUrl}}" role="button">Acerca del trámite</a>
+                <a class="btn btn-default" data-ng-class="{ disabled: nc.isNewRequestSelected }" data-ng-click="nc.selectNewRequest()" href="#{{nc.newRequestUrl}}" role="button" data-toggle="tooltip" data-placement="bottom" ><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Registrar solicitud</a>
+                <a  class="btn btn-default" data-ng-class="{ disabled: nc.isRequestsSelected }" data-ng-click="nc.selectRequests()" href="#{{nc.requestsUrl}}" role="button" data-toggle="tooltip" data-placement="bottom" ><span class="glyphicon glyphicon-eye-open"></span> &nbsp;&nbsp;Mis solicitudes</a>
+            </div>
+        </div>
+
+
+        <div class="hidden-xs col-if-12 hidden-ms hidden-md hidden-lg abl-menudos">
+            <div class="btn-group btn-group-justified marginbot-50" role="group" aria-label="...">
+                <a class="btn btn-default" data-ng-class="{ disabled: nc.isHomeSelected }" data-ng-click="nc.selectHome()" href="#{{nc.homeUrl}}" role="button">Inicio</a>
+                 <a class="btn btn-default" data-ng-class="{ disabled: nc.isAbouSelected }" data-ng-click="nc.selectAbout()" href="#{{nc.aboutUrl}}" role="button">Acerca del trámite</a>
+                <a class="btn btn-default" data-ng-class="{ disabled: nc.isNewRequestSelected }" data-ng-click="nc.selectNewRequest()" href="#{{nc.newRequestUrl}}" role="button">Registrar solicitud</a>
+                <a class="btn btn-default" data-ng-class="{ disabled: nc.isRequestsSelected }" data-ng-click="nc.selectRequests" href="#{{nc.requestsUrl}}" role="button">Mis solicitudes</a>
+            </div>
+        </div>
+
+        <div class="col-xs-12 hidden-if hidden-sm hidden-md hidden-lg">
+            <nav class="navbar navbar-inverse sub-navbar navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
+                            <span class="sr-only">Interruptor de Navegación</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/">@ViewBag.Title</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="subenlaces">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a data-ng-class="{ disabled: nc.isHomeSelected }" data-ng-click="nc.selectHome()" href="#{{nc.homeUrl}}">Inicio</a>
+                            </li>
+                            @*<li>
+                                    <a data-ng-class="{ disabled: nc.isAbouSelected }" data-ng-click="nc.selectAbout()" href="#{{nc.aboutUrl}}">Acerca del trámite</a>
+                                </li>*@
+                            <li>
+                                <a data-ng-class="{ disabled: nc.isNewRequestSelected }" data-ng-click="nc.selectNewRequest()" href="#{{nc.newRequestUrl}}">Registrar solicitud</a>
+                            </li>
+                            <li>
+                                <a data-ng-class="{ disabled: nc.isRequestsSelected }" data-ng-click="nc.selectRequests()" href="#{{nc.requestsUrl}}">Mis solicitudes</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </div> <!-- row -->
+
+    <div class="row">
+        <div class="col-xs-12 hidden-if hidden-sm hidden-md hidden-lg margintop-100"></div>
+    </div>
+
+    <!-- End Botones -->
+    <!-- Start Trámite -->
+    <div class="ng-view" autoscroll="true">
+
+    </div>
+    <!-- End Trámite -->
+</div>
+
+<!-- Working On It Overlay-->
+<div data-ng-controller="workingonit as vm" data-ng-show="vm.isWorking" class="dialog-container dissolve-animation">
+    <div class="dialog-message">
+        <img src="data:image/gif;base64,R0lGODlhGAAYAJECAP///5mZmf///wAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFCgACACwAAAAAGAAYAAACQJQvAGgRDI1SyLnI5jr2YUQx10eW5hmeB6Wpkja5SZy6tYzn+g5uMhuzwW6lFtF05CkhxGQm+HKuoDPplOlDFAAAIfkEBQoAAgAsFAAGAAQABAAAAgVUYqeXUgAh+QQFCgACACwUAA4ABAAEAAACBVRip5dSACH5BAUKAAIALA4AFAAEAAQAAAIFVGKnl1IAIfkEBQoAAgAsBgAUAAQABAAAAgVUYqeXUgAh+QQFCgACACwAAA4ABAAEAAACBVRip5dSACH5BAUKAAIALAAABgAEAAQAAAIFVGKnl1IAIfkECQoAAgAsBgAAAAQABAAAAgVUYqeXUgAh+QQJCgACACwAAAAAGAAYAAACJZQvEWgADI1SyLnI5jr2YUQx10eW5omm6sq27gvH8kzX9o3ndAEAIfkECQoAAgAsAAAAABgAGAAAAkCULxFoAAyNUsi5yOY69mFEMddHluYZntyjqY3Vul2yucJo5/rOQ6lLiak0QtSEpvv1lh8l0lQsYqJHaO3gFBQAACH5BAkKAAIALAAAAAAYABgAAAJAlC8RaAAMjVLIucjmOvZhRDHXR5bmGZ7co6mN1bpdsrnCaOf6zkOpzJrYOjHV7Gf09JYlJA0lPBQ/0ym1JsUeCgAh+QQJCgACACwAAAAAGAAYAAACQJQvEWgADI1SyLnI5jr2YUQx10eW5hme3KOpjdW6XbK5wmjn+s5Dqcya2Dox1exn9PSWJeRNSSo+cR/pzOSkHgoAIfkECQoAAgAsAAAAABgAGAAAAkCULxFoAAyNUsi5yOY69mFEMddHluYZntyjqY3Vul2yucJo5/rOQ6nMmtg6MdXsZ/T0liXc6jRbOTHR15SqfEIKACH5BAkKAAIALAAAAAAYABgAAAJAlC8RaAAMjVLIucjmOvZhRDHXR5bmGZ7co6mN1bpdsrnCaOf6zkO4/JgBOz/TrHhC9pYRpNJnqURLwtdT5JFGCgAh+QQJCgACACwAAAAAGAAYAAACPpQvEWgADI1SyLnI5jr2YUQx10eW5jme3NOpTWe5Qpu6tYzn+l558tWywW4lmk/IS6KOr2UtSILOYiYiUVAAADs=">
+        <span class="ms-accentText dialog-accentText">
+            &nbsp;Trabajando en ello...
+        </span>
+    </div>
+</div>
+<!--Image preview Dialog-->
+<image-dialog></image-dialog>
+
+@section Scripts{
+    @*@{
+            BundleTable.EnableOptimizations = true;
+        }*@
+
+    @Scripts.Render("~/bundles/entitle/javascript")
+    @Scripts.Render("~/bundles/entitle/app")
+}

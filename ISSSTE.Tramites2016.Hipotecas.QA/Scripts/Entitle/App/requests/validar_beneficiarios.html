@@ -1,0 +1,128 @@
+﻿<div class="container" ng-controller="requestController as vm" ng-init="vm.initData()">
+    <div class="alerts"></div>
+   
+    <div class="row">
+
+        <div class="row col-xs-12 marginbot-50" data-ng-show="!vm.validBeneficiariePension();">
+            <div>
+                <ul class="wizard-steps" style="margin-left:5px">
+                    <li class="completed" id="A" style="padding: 0 14px 0 50px;">
+                        <h5>Paso 1</h5>
+                        <span>Requisitos del trámite</span>
+                    </li>
+                    <li id="B" class="completed">
+                        <h5>Paso 2</h5>
+                        <span>Información de inmueble</span>
+                    </li>
+                    <li id="D" style="width: 280px">
+                        <h5>Paso 3</h5>
+                        <span>Cargar documentación</span>
+                    </li>
+                    <li>
+                        <i class="glyphicon glyphicon-ok-circle"></i>
+                    </li>
+                </ul>
+            </div> 
+            <h3>Ingresa el inmuebles a regularizar</h3>
+            <hr class="red" />
+           
+            <!-- Botones -->
+            <div class="pull-right">
+                <a data-ng-click="nc.navigateToLastRequestUrl(2)" id="changeBtn" class="btn btn-default" type="button">
+                    Regresar
+                </a>
+
+                <a data-ng-click="vm.validateBeneficiaries(true, nc.navigateToNextRequestUrl)" id="changeBtn" class="btn btn-primary" type="button">
+                    Continuar
+                </a>
+            </div>
+        </div>
+
+        <div class="row col-xs-12 marginbot-50" data-ng-show="vm.validBeneficiariePension();">
+
+            <h3>Información de los beneficiarios</h3>
+            <hr class="red" />
+            <p>Antes de continuar le pedimos verificar la siguiente información.</p>
+            <div class="alert alert-info">
+                <strong>¡Si su beneficiario no se encuentra en esta lista!</strong><br>Es necesario acudir a Afiliación y Vigencia para solicitar su registro.
+            </div>
+            <div data-ng-repeat="bn in vm.information.Beneficiaries">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+                        <form role="form">
+                            <div class="col-xs-12 marginbot-20">
+                                <h3>Beneficiaro {{ $index + 1}}</h3>
+                            </div>
+
+                            <div class="row">
+                                <div class="ab-general-padding ">
+                                    <div class="form-group col-xs-12 col-md-8">
+                                        <label class="control-label" for="curp">Clave Única de Registro de Población (CURP):</label>
+                                        <input class="form-control" type="text" disabled data-ng-model="bn.CURP">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-12 col-if-4 col-md-4">
+                                <label class="control-label" for="email-01">Nombre(s):</label>
+                                <input class="form-control" type="text" disabled data-ng-model="bn.Name">
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-6 col-if-4 col-md-4">
+                                <label class="control-label" for="email-01">Primer apellido:</label>
+                                <input class="form-control" type="text" disabled data-ng-model="bn.PaternalLastName">
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-6 col-if-4 col-md-4">
+                                <label class="control-label" for="email-01">Segundo apellido:</label>
+                                <input class="form-control" type="text" disabled data-ng-model="bn.MaternalLastName">
+                            </div>
+                            <div class="form-group col-xs-6 col-sm-4">
+                                <label class="control-label" for="email-01">Edad:</label>
+                                <input class="form-control" type="text" disabled data-ng-model="bn.Age">
+                            </div>
+                            <div class="form-group col-xs-6 col-sm-4">
+                                <label class="control-label" for="email-01">Entidad de Nacimiento:</label>
+                                <input class="form-control" type="text" disabled data-ng-model="bn.Birthplace">
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-4">
+                                <label class="control-label" for="email-01">Parentesco:</label>
+                                <input class="form-control" type="text" disabled data-ng-model="bn.Relationship">
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div> <!-- panel-body -->
+            </div>
+            <div class="panel panel-default" data-ng-show="vm.information.Beneficiaries.length == 0">
+                <div class="panel-body">
+                    <div class="alert alert-warning">
+                        No se encontraron resultados sobre los beneficiarios.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botones -->
+            <div class="pull-right">
+                <a data-ng-click="nc.navigateToLastRequestUrl()" id="changeBtn" class="btn btn-default" type="button">
+                    Regresar
+                </a>
+                <a data-ng-click="vm.validateBeneficiaries(nc.navigateToNextRequestUrl)" id="changeBtn" class="btn btn-danger" type="button">
+                    Información incorrecta
+                </a>
+                <a data-ng-click="vm.validateBeneficiaries(nc.navigateToNextRequestUrl)" id="changeBtn" class="btn btn-primary" type="button">
+                    Información correcta
+                </a>
+            </div>
+
+        </div> <!-- col -->
+
+    </div> <!-- row -->
+    <!-- End Trámite -->
+    <!-- End tramite Hipotecas -->
+
+
+</div><!-- container -->
+
+<script>
+    UI.initToolTips();
+</script>

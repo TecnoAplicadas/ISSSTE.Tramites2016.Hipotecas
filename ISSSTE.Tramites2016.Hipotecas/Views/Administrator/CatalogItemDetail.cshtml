@@ -1,0 +1,155 @@
+﻿@using System.Text;
+@using ISSSTE.Tramites2016.Common.Web.Helpers
+@model ISSSTE.Tramites2016.Hipotecas.Models.CatalogViewModel
+@{
+    Layout = null;
+}
+
+<script type="text/javascript">
+function validar(e) {
+    var texto = e.target.value;
+    console.log(texto);
+    console.log(/^([0-9])*$/.test(texto));
+    console.log(texto.length)
+    switch(texto.length)
+    {
+        case 1: if(!/^([0-2])*$/.test(texto))
+            e.target.value = ""
+            break;
+        case 2: if(!/^([0-9])*$/.test(texto) || (texto.charAt(0) == '2' && /^([4-9])*$/.test(texto.charAt(1) + "")))
+            e.target.value = texto.charAt(0)+"";
+            break;
+        case 3: if(texto.charAt(2)!=':')
+            e.target.value = texto.substring(0,2);
+            break;
+        case 4: if(!/^([0-5])*$/.test(texto.charAt(3)+""))
+            e.target.value = texto.substring(0,3);
+            break;
+        case 5: if(!/^([0-9])*$/.test(texto.charAt(4)+""))
+            e.target.value = texto.substring(0,4);
+            break;
+        case 6: e.target.value = texto.substring(0,5);
+            break;
+    }
+
+}
+</script>
+
+
+
+@{
+    StringBuilder foreignKeysArray = new StringBuilder();
+    foreignKeysArray.Append("[");
+
+    foreach (var actualProperty in Model.Properties)
+    {
+        if (actualProperty.IsForeignKey)
+        {
+            foreignKeysArray.Append(String.Format("'{0}',", actualProperty.Name));
+        }
+    }
+    if (Model.Properties.Count(p => p.IsForeignKey) > 0)
+    {
+        foreignKeysArray.Remove(foreignKeysArray.Length - 1, 1);
+    }
+
+    foreignKeysArray.Append("]");
+}
+<div data-ng-controller="catalogsController as vm" data-ng-init="vm.initCatalogItemDetail('@Model.CatalogName', @foreignKeysArray.ToString())">
+    <div class="col-xs-12">
+        <h2>Detalle del @Model.CatalogDisplayName.ToLower()</h2>
+        <hr class="red">
+    </div>
+
+    <!--/ END TITLE -->
+    <!-- START CONTENT -->
+
+    <div class="col-xs-12">
+        <div class="alerts"></div>
+    </div>
+
+    <form name="form" role="form" novalidate="novalidate">
+        <div class="col-xs-12">
+            <div class="margintop-20">
+                <button class="pull-right marginleft-10 btn btn-primary" type="button" ng-disabled="vm.error || !form.$valid"
+                        data-ng-click="vm.addOrUpdateCatalogItem()">
+                    Guardar
+                </button>
+    
+                <button class="pull-right marginleft-10 pull-right marginleft-10 btn btn-danger" type="button" ng-show="false"
+                        data-ng-disabled="vm.error"
+                        data-ng-show="!vm.isNew" data-ng-click="vm.deleteCatalogItem(nc.getCatalogUrl('@Model.CatalogName'))">
+                    Eliminar
+                </button>
+                <a href="#{{nc.getCatalogUrl('@Model.CatalogName')}}" class="pull-right marginleft-10 btn btn-default" type="button">
+                    Volver al listado
+                </a>
+            </div>
+        </div>
+
+        @foreach (var actualProperty in Model.Properties)
+        {
+            <div class="form-group col-lg-4 col-md-6">
+                <label class="control-label">
+                    @actualProperty.DisplayName@if (actualProperty.IsRequired)
+                    {<text>*</text>}:
+                </label>
+
+                @if (actualProperty.IsForeignKey)
+                {
+                    <select class="form-control"
+                            data-ng-options="vm.getDependentCatalogLabel(actualElementId, '@actualProperty.Name') for actualElementId in vm.getDependentCatalogValues('@actualProperty.Name')"
+                            data-ng-model="vm.catalogItem.@actualProperty.Name"></select>
+                            <input type="hidden" data-ng-model="vm.catalogItem.@actualProperty.Name" required />
+                }
+                else if (TypeHelper.IsString(actualProperty.Type))
+                {
+                    if (actualProperty.Name.Equals("Description"))
+                    {
+                        <textarea class="form-control" type="text" data-ng-model="vm.catalogItem.@actualProperty.Name" style="resize:none" maxlength="256" ng-keyup="vm.catalogItem.@actualProperty.Name = vm.validateInput($event, vm.catalogItem.@actualProperty.Name)" required></textarea>
+                    }
+                    else
+                    {
+                        <input class="form-control" type="text" maxlength="50" data-ng-model="vm.catalogItem.@actualProperty.Name" ng-keyup="vm.catalogItem.@actualProperty.Name = vm.validateInput($event, vm.catalogItem.@actualProperty.Name)" required />
+                    }
+
+                }
+                else if (TypeHelper.IsDecimal(actualProperty.Type))
+                {
+                    <div class="input-group">
+                        <div class="input-group-addon">$</div>
+                        <input class="form-control" type="number" data-ng-model="vm.catalogItem.@actualProperty.Name" required />
+                    </div>
+                }
+                else if (TypeHelper.IsInteger(actualProperty.Type) || TypeHelper.IsFloat(actualProperty.Type))
+                {
+                    <input class="form-control" type="number" data-ng-model="vm.catalogItem.@actualProperty.Name" required />
+                }
+                else if (TypeHelper.IsDate(actualProperty.Type))
+                {
+                    <input type="text" class="form-control" placeholder="Selecciona una fecha" datetimepicker datetimepicker-options="{ format: 'DD/MM/YYYY' }"
+                           data-ng-model="vm.catalogItem.@actualProperty.Name" required/>
+                }
+                else if (TypeHelper.IsBoolean(actualProperty.Type))
+                {
+                    <select class="form-control"
+                            data-ng-options="vm.getBooleanComboBoxLabel(actualBoolean) for actualBoolean in vm.booleanArray"
+                            data-ng-model="vm.catalogItem.@actualProperty.Name"></select>
+                            <input type="hidden" data-ng-model="vm.catalogItem.@actualProperty.Name" required />
+                }
+            </div>
+
+        }
+
+
+        <div class="col-xs-12 marginbot-50">
+            <div class="pull-right margintop-20 marginbot--10">
+                <a class="btn btn-default" onclick="window.scrollTo(0,0)">
+                    <i class="fa fa-arrow-up"></i>Subir
+                </a>
+            </div>
+        </div>
+    </form>
+
+</div>
+

@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [satd2015]
+    WITH PASSWORD = N'j|vhmsyujdNea,rfpi 1f_wkmsFT7_&#$!~<Tnuzv^m+sbG^', SID = 0x3D1AA0512BBF6B428C4130617645B09E, DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+

@@ -1,0 +1,138 @@
+﻿<div data-ng-controller="supportController as vm" data-ng-init="vm.init()">
+    <div class="col-xs-12">
+        <h2>Soporte a derechohabientes</h2>
+        <hr class="red">
+    </div>
+
+    <!--/ END TITLE -->
+    <!-- START CONTENT -->
+
+    <div class="col-xs-12">
+        <div class="alerts"></div>
+    </div>
+
+    <div>
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#curp" aria-controls="curp" role="tab" data-toggle="tab">Por CURP</a>
+            </li>
+            <li role="presentation">
+                <a href="#rfc" aria-controls="rfc" role="tab" data-toggle="tab">Por RFC</a>
+            </li>
+            <li role="presentation">
+                <a href="#isssteNumber" aria-controls="isssteNumber" role="tab" data-toggle="tab">Por Número de ISSSTE</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+
+        <!-- Start tab -->
+        <div role="tabpanel" class="tab-pane active" id="curp">
+
+            <form name="curpForm" data-ng-submit="vm.beginQuoteWithCurp()">
+                <div class="form-group col-xs-6">
+                    <h3>Buscar por CURP</h3>
+                </div>
+                <div class="col-xs-6">
+                    <div class="pull-right margintop-20">
+                        <button class="btn btn-primary" type="submit" data-ng-disabled="curpForm.$invalid">
+                            Buscar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-xs-12">
+                    <div class="form-group col-lg-6">
+                        <label class="control-label">CURP:</label>
+                        <input class="form-control" type="text" data-ng-model="vm.curp" data-ng-maxlength="18" required>
+                    </div>
+
+                </div>
+            </form>
+
+            <div class="col-xs-12 marginbot-50">
+                <div class="pull-right margintop-20 marginbot--10">
+                    <a class="btn btn-default" onclick="window.scrollTo(0,0)">
+                        <i class="fa fa-arrow-up"></i>Subir
+                    </a>
+                </div>
+            </div>
+            <!-- End Tab -->
+
+        </div>
+        <!-- /.Tab panes -->
+        <!-- Tab panes -->
+        <div role="tabpanel" class="tab-pane" id="rfc">
+
+            <form name="rfcForm" data-ng-submit="vm.beginQuoteWithRfc()">
+                <div class="form-group col-xs-6">
+                    <h3>Buscar por RFC</h3>
+                </div>
+                <div class="col-xs-6">
+                    <div class="pull-right margintop-20">
+                        <button class="btn btn-primary" type="submit" data-ng-disabled="rfcForm.$invalid">
+                           Buscar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-xs-12">
+                    <div class="form-group col-lg-6">
+                        <label class="control-label">RFC:</label>
+                        <input class="form-control" type="text" data-ng-model="vm.rfc" data-ng-maxlength="13" required >
+                    </div>
+
+                </div>
+            </form>
+
+            <div class="col-xs-12 marginbot-50">
+                <div class="pull-right margintop-20 marginbot--10">
+                    <a class="btn btn-default" onclick="window.scrollTo(0,0)">
+                        <i class="fa fa-arrow-up"></i>Subir
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- /.tabpanel -->
+        <!-- Tab panes -->
+        <div role="tabpanel" class="tab-pane" id="isssteNumber">
+
+            <form name="isssteNumberForm" data-ng-submit="vm.beginQuoteWithIsssteNumber()">
+                <div class="form-group col-xs-6">
+                    <h3>Buscar por Número ISSSTE</h3>
+                </div>
+                <div class="col-xs-6">
+                    <div class="pull-right margintop-20">
+                        <button class="btn btn-primary" type="submit" data-ng-disabled="isssteNumberForm.$invalid">
+                          Buscar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-xs-12">
+                    <div class="form-group col-lg-6">
+                        <label class="control-label">Número ISSSTE:</label>
+                        <input class="form-control" type="number" data-ng-model="vm.isssteNumber" data-ng-maxlength="13" required>
+                    </div>
+
+                </div>
+            </form>
+
+            <div class="col-xs-12 marginbot-50">
+                <div class="pull-right margintop-20 marginbot--10">
+                    <a class="btn btn-default" onclick="window.scrollTo(0,0)">
+                        <i class="fa fa-arrow-up"></i>Subir
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.tabpanel -->
+
+    </div>
+</div>
+<script>
+    UI.initTabs();
+</script>

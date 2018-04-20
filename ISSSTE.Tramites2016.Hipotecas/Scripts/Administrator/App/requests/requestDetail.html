@@ -1,0 +1,488 @@
+﻿<div data-ng-controller="requestDetailController as vm" data-ng-init="vm.initRequest()">
+    <div class="alerts"></div>
+    <div class="col-xs-12">
+        <h2>Solicitud {{vm.requestAll.Request.Folio}}</h2>
+        <h3>Estatus de la Solicitud: {{vm.requestAll.Request.StatusDescription}}</h3>
+        <hr class="red">
+    </div>
+
+    <!--/ END TITLE -->
+    <!-- START CONTENT -->
+
+    <div class="col-xs-12">
+        <div class="alerts"></div>
+    </div>
+
+    <div>
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#entitle" aria-controls="home" role="tab" data-toggle="tab">
+                    Datos
+                    del derechohabiente
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#laboral" aria-controls="laboral" role="tab" data-toggle="tab">
+                    Historial Laboral
+                </a>
+            </li>
+            <!--<li role="presentation">
+                <a href="#beneficiaries" aria-controls="beneficiarios" role="tab" data-toggle="tab">
+                    Datos de los Beneficiarios
+                </a>
+            </li>-->
+            <li role="presentation">
+                <a href="#debtors" aria-controls="deudos" role="tab" data-toggle="tab">
+                    Datos de los Deudos
+                </a>
+            </li>
+
+            <li role="presentation">
+                <a href="#states" aria-controls="estado" role="tab" data-toggle="tab">
+                    Resultado de
+                    la revisón
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+
+        <!-- Start tab -->
+        <div role="tabpanel" class="tab-pane active" id="entitle">
+
+            <div class="form-group col-xs-6">
+                <h3>Información general</h3>
+            </div>
+            <div class="col-xs-6">
+                <div class="pull-right margintop-20">
+                    <a href="#{{nc.searchUrl}}" class="btn btn-default" type="button">
+                        Volver a consulta de solicitudes
+                    </a>
+                </div>
+            </div>
+
+            <form role="form">
+                <div class="form-group col-xs-12">
+                    <h4>Datos personales</h4>
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="control-label" for="curp">Clave Única de Registro de Población (CURP):</label>
+                    <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.CURP">
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="control-label" for="rfc">Registro Federal del Contribuyente (RFC):</label>
+                    <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.RFC">
+                </div>
+                <div class="form-group col-xs-12">
+                    <label class="control-label" for="email-01">Nombre(s):</label>
+                    <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.Name">
+                </div>
+                <div class="form-group col-sm-6">
+                    <label class="control-label" for="email-01">Primer apellido:</label>
+                    <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.PaternalLastName">
+                </div>
+                <div class="form-group col-sm-6">
+                    <label class="control-label" for="email-01">Segundo apellido:</label>
+                    <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.MaternalLastName">
+                </div>
+                <div class="form-group col-sm-4">
+                    <label class="control-label" for="email-01">Sexo:</label>
+                    <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.Gender">
+                </div>
+                <div class="form-group col-sm-4">
+                    <label class="control-label" for="email-01">Edad:</label>
+                    <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.Age">
+                </div>
+                <div class="form-group col-sm-4">
+                    <label class="control-label" for="regimen">Regimen:</label>
+                    <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.RegimeType">
+                </div>
+                <div class="form-group col-xs-12">
+                    <h4>Dirección</h4>
+                </div>
+                <div class="row">
+                    <div class="ab-general-padding ">
+                        <div class="form-group col-sm-4 ">
+                            <label class="control-label" for="email-01">Código postal:</label>
+                            <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.ZipCode">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-sm-12 col-if-4 col-md-4">
+                    <label class="control-label" for="email-01">Nombre de vialidad:</label>
+                    <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.Street">
+                </div>
+                <div class="form-group col-sm-6 col-if-4 col-md-4">
+                    <label class="control-label" for="email-01">Número exterior:</label>
+                    <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.NumExt">
+                </div>
+                <div class="form-group col-sm-6 col-if-4 col-md-4">
+                    <label class="control-label" for="email-01">Número interior:</label>
+                    <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.NumInt">
+                </div>
+                <div class="form-group col-lg-6">
+                    <label class="control-label" for="email-01">Nombre del asentamiento humano o colonia:</label>
+                    <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.Colony">
+                </div>
+                <!--<div class="form-group col-lg-6">
+                    <label class="control-label" for="email-01">Nombre de la localidad:</label>
+                    <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.NoISSSTE">
+                </div>-->
+                <div class="form-group col-lg-6">
+                    <label class="control-label" for="email-01">Nombre del municipio o delegación:</label>
+                    <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.City">
+                </div>
+                <!--<div class="form-group col-lg-6">
+                    <label class="control-label" for="email-01">Nombre del estado o distrito federal:</label>
+                    <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.NoISSSTE">
+                </div>-->
+
+            </form>
+
+            <div class="col-if-12 col-sm-12 col-md-12 col-lg-12">
+                <h3>Datos de contacto</h3>
+            </div>
+
+            <form role="form">
+                <div class="form-group col-if-4 col-sm-4 col-md-4 col-lg-4">
+                    <label class="control-label" for="telefono">Teléfono (lada) y (número)*:</label>
+                    <input maxlength="10" class="form-control" name="telefono" type="text" data-ng-model="vm.information.Entitle.Telephone" ng-maxlength="10" ng-minlength="10" required disabled />
+                </div>
+                <div class="form-group col-if-4 col-sm-4 col-md-4 col-lg-4">
+                    <label class="control-label" for="correo">Correo electrónico*:</label>
+                    <input class="form-control" name="correo" type="email" data-ng-model="vm.information.Entitle.Email" required disabled />
+                </div>
+
+                <div class="form-group col-if-4 col-sm-4 col-md-4 col-lg-4">
+                    <label class="control-label" for="correo">Correo electrónico*:</label>
+                    <input class="form-control" name="correo" type="email" data-ng-model="vm.information.Entitle.Email" required disabled />
+                </div>
+
+            </form>
+
+
+            <div class="col-xs-12 marginbot-50">
+                <div class="pull-right margintop-20 marginbot--10">
+                    <a class="btn btn-default" onclick=" window.scrollTo(0, 0) ">
+                        <i class="fa fa-arrow-up"></i>Subir
+                    </a>
+                </div>
+            </div>
+            <!-- End Tab -->
+
+        </div>
+        <!-- /.Tab panes -->
+        <!-- Tab panes -->
+        <!--<div role="tabpanel" class="tab-pane" id="beneficiaries">
+
+            <div class="form-group col-xs-6">
+                <h3>Información de los beneficiarios</h3>
+            </div>
+
+            <div data-ng-repeat="bn in vm.information.Beneficiaries">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+                        <form role="form">
+                            <div class="col-xs-12 marginbot-20">
+                                <h3>Beneficiaro {{ $index + 1}}</h3>
+                            </div>
+
+                            <div class="row">
+                                <div class="ab-general-padding ">
+                                    <div class="form-group col-xs-12 col-md-8">
+                                        <label class="control-label" for="curp">Clave Única de Registro de Población (CURP):</label>
+                                        <input class="form-control" type="text" disabled data-ng-model="bn.CURP">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-12 col-if-4 col-md-4">
+                                <label class="control-label" for="email-01">Nombre(s):</label>
+                                <input class="form-control" type="text" disabled data-ng-model="bn.Name">
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-6 col-if-4 col-md-4">
+                                <label class="control-label" for="email-01">Primer apellido:</label>
+                                <input class="form-control" type="text" disabled data-ng-model="bn.PaternalLastName">
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-6 col-if-4 col-md-4">
+                                <label class="control-label" for="email-01">Segundo apellido:</label>
+                                <input class="form-control" type="text" disabled data-ng-model="bn.MaternalLastName">
+                            </div>
+                            <div class="form-group col-xs-6 col-sm-4">
+                                <label class="control-label" for="email-01">Edad:</label>
+                                <input class="form-control" type="text" disabled data-ng-model="bn.Age">
+                            </div>
+                            <div class="form-group col-xs-6 col-sm-4">
+                                <label class="control-label" for="email-01">Entidad de Nacimiento:</label>
+                                <input class="form-control" type="text" disabled data-ng-model="bn.Birthplace">
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-4">
+                                <label class="control-label" for="email-01">Parentesco:</label>
+                                <input class="form-control" type="text" disabled data-ng-model="bn.Relationship">
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div>-->
+        <!-- panel-body -->
+        <!--</div>
+            <div class="panel panel-default" data-ng-show="vm.information.Beneficiaries.length == 0">
+                <div class="panel-body">
+                    <div class="alert alert-warning">
+                        No se encontraron resultados sobre los beneficiarios
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <!-- /.tabpanel -->
+        <!-- Tab panes -->
+        <div role="tabpanel" class="tab-pane" id="debtors">
+
+            <!-- Start Tab -->
+            <div class="form-group col-xs-6">
+                <h3>Información de los deudos</h3>
+            </div>
+            <div class="col-xs-6">
+                <div class="pull-right margintop-20">
+                    <a href="#{{nc.searchUrl}}" class="btn btn-default" type="button">
+                        Volver a consulta de solicitudes
+                    </a>
+                </div>
+            </div>
+            <div data-ng-repeat="deb in vm.information.Debtors">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+                        <form role="form">
+                            <div class="col-xs-12 marginbot-20">
+                                <h3>Deudo {{ $index + 1 }}</h3>
+                            </div>
+
+                            <div class="row">
+                                <div class="ab-general-padding ">
+                                    <div class="form-group col-xs-12 col-md-8">
+                                        <label class="control-label" for="curp">Clave Única de Registro de Población (CURP):</label>
+                                        <input class="form-control" type="text" disabled data-ng-model="deb.CURP">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-12 col-if-4 col-md-4">
+                                <label class="control-label" for="email-01">Nombre(s):</label>
+                                <input class="form-control" type="text" disabled data-ng-model="deb.Name">
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-6 col-if-4 col-md-4">
+                                <label class="control-label" for="email-01">Primer apellido:</label>
+                                <input class="form-control" type="text" disabled data-ng-model="deb.PaternalLastName">
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-6 col-if-4 col-md-4">
+                                <label class="control-label" for="email-01">Segundo apellido:</label>
+                                <input class="form-control" type="text" disabled data-ng-model="deb.MaternalLastName">
+                            </div>
+                            <div class="form-group col-xs-6 col-sm-4">
+                                <label class="control-label" for="email-01">Edad:</label>
+                                <input class="form-control" type="text" disabled data-ng-model="deb.Age">
+                            </div>
+                            <div class="form-group col-xs-6 col-sm-4">
+                                <label class="control-label" for="email-01">Entidad de Nacimiento:</label>
+                                <input class="form-control" type="text" disabled data-ng-model="deb.Birthplace">
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-4">
+                                <label class="control-label" for="email-01">Parentesco:</label>
+                                <input class="form-control" type="text" disabled data-ng-model="deb.Relationship">
+                            </div>
+                        </form>
+
+                    </div> <!-- panel-body -->
+                </div> <!-- panel panel-default -->
+
+            </div>
+            <div class="panel panel-default" data-ng-show="vm.information.Debtors.length == 0">
+                <div class="panel-body">
+                    <div class="alert alert-warning">
+                        No se encontraron resultados sobre los deudos
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 marginbot-50">
+                <div class="pull-right margintop-20 marginbot--10">
+                    <a class="btn btn-default" onclick=" window.scrollTo(0, 0) ">
+                        <i class="fa fa-arrow-up"></i>Subir
+                    </a>
+                </div>
+            </div>
+            <!-- End Tab -->
+
+        </div>
+        <!-- /.tabpanel -->
+        <!-- Tab panes -->
+        <div id="laboral" role="tabpanel" class="tab-pane">
+
+            <!-- Start Tab -->
+            <div class="form-group col-xs-6">
+                <h3>Historia laboral del derechohabiente</h3>
+            </div>
+            <div class="form-group">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+
+                        <table class="table table-striped">
+
+                            <thead>
+                                <tr>
+                                    <th>Dependencia</th>
+                                    <th>Concepto inicial</th>
+                                    <th>Concepto final</th>
+                                    <th>Ramo</th>
+                                    <th>Pagaduría</th>
+                                    <th>Periodo</th>
+                                    <th>
+                                        Años cotizados
+                                        <br />(AA.MM.DD)
+                                    </th>
+                                    <th>Sueldo básico</th>
+                                    <!-- <th>Licencia liquidable</th>-->
+                                </tr>
+                            </thead>
+                            <tbody data-ng-repeat="wh in vm.information.WorkHistories">
+
+
+                                <tr>
+                                    <td>{{wh.Dependency}}</td>
+                                    <td>{{wh.StartReason}}</td>
+                                    <td>{{wh.ClosingReason}}</td>
+                                    <td>{{wh.Trade}}</td>
+                                    <td>{{wh.PayMaster}}</td>
+                                    <td>{{wh.StartDate}}<br>{{wh.EndDate}}</td>
+                                    <td>{{wh.Years}}</td>
+                                    <td>${{wh.SalaryISSSTE}}</td>
+                                    <!-- <td>$ 0.00</td>-->
+                                </tr>
+
+                            </tbody>
+                            <tbody data-ng-show="vm.information.WorkHistories.length == 0">
+                                <tr>
+                                    <td colspan="8">
+                                        <div class="alert alert-warning">
+                                            No se encontraron resultados para Historia Laboral
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                    <div class="panel-body">
+                        <div>
+                            <label style="font-weight:100;" class="control-label" for="pTiempoCotizado">Posible Tiempo Cotizado:</label> {{vm.information.timeContributions.TimeContributions}}
+                        </div>
+                        <div>
+                            <label style="font-weight:100;" class="control-label" for="pTiempoLicenciasliquidar">Posible Tiempo de Licencias a liquidar:</label> {{vm.information.timeContributions.TimeLicenses}}
+                        </div>
+                        <div>
+                            <label style="font-weight:100;" class="control-label" for="pTotalTiempoAcumulado">Posible Total Tiempo Acumulado:</label> {{vm.information.timeContributions.TotalTime}}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="col-xs-12 marginbot-50">
+                <div class="pull-right margintop-20 marginbot--10">
+                    <a class="btn btn-default" onclick=" window.scrollTo(0, 0) ">
+                        <i class="fa fa-arrow-up"></i>Subir
+                    </a>
+                </div>
+            </div>
+            <!-- End Tab -->
+
+        </div>
+        <!-- /.tabpanel -->
+        <!-- Tab panes -->
+        <div role="tabpanel" class="tab-pane" id="states">
+
+            <div class="col-xs-12">
+                <div class="pull-right margintop-20 marginbot--10">
+                    <a href="#{{nc.searchUrl}}" class="btn btn-default" type="button">
+                        Volver a consulta de solicitudes
+                    </a>
+                    <button class="btn btn-primary" type="button" data-ng-disabled="vm.opinionSelected == null ||  vm.statusSelected == null "
+                            data-ng-click="vm.saveRequest(nc.navigateToRequestUrl)">
+                        Guardar solicitud
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group col-xs-12">
+                <h3>Resultado de la revisón del tramite</h3>
+            </div>
+            <!-- Start Tab -->
+            <div class="form-group col-xs-12">
+                <form role="form">
+                    <div class="form-group col-if-6 col-sm-6 col-md-6 col-lg-6">
+                        <label class="control-label">Estatus Actual de la Solicitud:</label>
+                        <label class="btn btn-primary">{{vm.requestAll.Request.StatusDescription}}</label>
+                    </div>
+                    <div class="form-group col-if-6 col-sm-6 col-md-6 col-lg-6" data-ng-show="vm.requestAll.Opinion.Opinion1 != ''">
+                        <label class="control-label">Diagnostico Actual de la Solicitud:</label>
+                        <label class="label-warning">{{vm.requestAll.Opinion.Opinion1}}</label>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="panel-body" data-ng-show="vm.requestAll.Request.Date != '01/01/0001'">
+                <div>
+                    <label class="control-label" for="pTiempoCotizado">Fecha:</label> {{vm.requestAll.Request.Date}}
+                </div>
+                <div>
+                    <label class="control-label" for="pTiempoLicenciasliquidar">Tipo de beneficio:</label> {{vm.requestAll.Request.Pension}}
+                </div>
+            </div>
+
+            <div class="form-group col-xs-12">
+                <div class="btn-group" data-toggle="buttons">
+                    <!--<label class="btn btn-default" data-ng-class="{ 'btn-danger': actualStatus.IsCancel }"
+                               data-ng-repeat="actualStatus in vm.nextStatus"
+                               data-ng-click="vm.setSelectedNextStatus(actualStatus)">
+                        <input type="radio" name="options" id="option1" autocomplete="off">
+                    </label>-->
+
+
+                    <label data-ng-click="vm.setSelectedNextStatus(1)" class="btn btn-default" data-ng-show="vm.requestAll.Request.StatusId == 210 || vm.requestAll.Request.StatusId == 220 || vm.requestAll.Request.StatusId == 310">
+
+                        <input type="radio" name="options" id="option1" value="1" autocomplete="off"> Aprobado
+                    </label>
+                    <label data-ng-click="vm.setSelectedNextStatus(2)" class="btn btn-default" data-ng-show="vm.requestAll.Request.StatusId == 210 || vm.requestAll.Request.StatusId == 220 || vm.requestAll.Request.StatusId == 310">
+                        <input class="btn-danger" type="radio" name="options" id="option2" value="2" autocomplete="off"> No Aprobado
+                    </label>
+                    <!--<label data-ng-click="vm.setSelectedNextStatus(3)" class="btn btn-default">
+                        <input class="btn-danger" type="radio" name="options" id="option3" value="2" autocomplete="off"> Rechazar Solicitud
+                    </label>-->
+                </div>
+            </div>
+
+            <div class="form-group col-xs-12" data-ng-show="vm.requestAll.Request.StatusId == 210 || vm.requestAll.Request.StatusId == 220 || vm.requestAll.Request.StatusId == 310">
+                <h3>Seleccione el status y el diagnostico </h3>
+                <label class="control-label">Diagnostico:</label>
+                <select class="form-control" data-ng-model="vm.opinionSelected" data-ng-change="vm.setDiag(vm.opinionSelected)">
+                    <option data-ng-repeat="ms in vm.messages" value="{{ms.Message}}">{{ms.Message}}</option>
+
+                </select>
+                <!--<textarea class="form-control" rows="3" data-ng-model="vm.nextStatusObservations"></textarea>-->
+            </div>
+
+        </div>
+        <!-- /.tabpanel -->
+
+    </div>
+</div>
+<script>
+    UI.initTabs();
+</script>

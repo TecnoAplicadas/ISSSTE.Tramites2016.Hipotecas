@@ -1,0 +1,276 @@
+﻿<script type="text/javascript">
+    function udm_(e) {
+        var t = "comScore=", n = document, r = n.cookie, i = "", s = "indexOf", o = "substring", u = "length", a = 2048, f, l = "&ns_", c = "&", h, p, d, v, m = window, g = m.encodeURIComponent || escape;
+        if (r[s](t) + 1) for (d = 0, p = r.split(";"), v = p[u]; d < v; d++) h = p[d][s](t), h + 1 && (i = c + unescape(p[d][o](h + t[u])));
+        e += l + "_t=" + +(new Date) + l + "c=" + (n.characterSet || n.defaultCharset || "") + "&c8=" + g(n.title) + i + "&c7=" + g(n.URL) + "&c9=" + g(n.referrer), e[u] > a && e[s](c) > 0 && (f = e[o](0, a - 8).lastIndexOf(c), e = (e[o](0, f) + l + "cut=" + g(e[o](f + 1)))[o](0, a)), n.images ? (h = new Image, m.ns_p || (ns_p = h), h.src = e) : n.write("<", "p", "><", 'img src="', e, '" height="1" width="1" alt="*"', "><", "/p", ">")
+    };
+
+    function uid_call(a, b) {
+        ui_c2 = 17183199; // your corporate c2 client value
+        ui_ns_site = 'ISSSTE.Hipotecas.Documentacion'; // your sites identifier
+        window.b_ui_event = window.c_ui_event != null ? window.c_ui_event : "", window.c_ui_event = a;
+        var ui_pixel_url = 'https://sb.scorecardresearch.com/p?c1=2&c2=' + ui_c2 + '&ns_site=' + ui_ns_site + '&name=' + a + '&ns_type=hidden&type=hidden&ns_ui_type=' + b;
+        var b = "comScore=", c = document, d = c.cookie, e = "", f = "indexOf", g = "substring", h = "length", i = 2048, j, k = "&ns_", l = "&", m, n, o, p, q = window, r = q.encodeURIComponent || escape;
+        if (d[f](b) + 1) for (o = 0, n = d.split(";"), p = n[h]; o < p; o++) m = n[o][f](b), m + 1 && (e = l + unescape(n[o][g](m + b[h])));
+        ui_pixel_url += k + "_t=" + +(new Date) + k + "c=" + (c.characterSet || c.defaultCharset || "") + "&c8=" + r(c.title) + e + "&c7=" + r(c.URL) + "&c9=" + r(c.referrer) + "&b_ui_event=" + b_ui_event + "&c_ui_event=" + c_ui_event, ui_pixel_url[h] > i && ui_pixel_url[f](l) > 0 && (j = ui_pixel_url[g](0, i - 8).lastIndexOf(l), ui_pixel_url = (ui_pixel_url[g](0, j) + k + "cut=" + r(ui_pixel_url[g](j + 1)))[g](0, i)), c.images ? (m = new Image, q.ns_p || (ns_p = m), m.src = ui_pixel_url) : c.write("<p><img src='", ui_pixel_url, "' height='1' width='1' alt='*'></p>");
+    }
+
+    udm_('https://sb.scorecardresearch.com/b?c1=2&c2=17183199&ns_site=gobmx&name=ISSSTE.Hipotecas.Documentacion');
+</script>
+<!-- End Digital Analytix Tag 1.1302.13 -->
+
+@model List<ISSSTE.Tramites2016.Hipotecas.Model.Model.DocumentType>
+
+@{
+    ViewBag.Title = "Trámite de solicitud de cancelación de hipotecas vía administrativa del ISSSTE";
+    Layout = "~/Views/Shared/_LayoutEntitle.cshtml";
+}
+
+<script type="text/javascript">
+    function RedirectAction(Id, Page) {
+        window.location.href = "./RedirectPage?NoIssste=" + Id + "&Page=" + Page;
+    }
+</script>
+
+<script src="~/Scripts/additional-methods.js"></script>
+
+<script type="text/javascript">
+    function showContent() {
+        element1 = document.getElementById("Oculta_6");
+        element2 = document.getElementById("Oculta_7");
+        element3 = document.getElementById("Oculta_8");
+
+        check = document.getElementById("TitularDif");
+        if (check.checked) {
+            element1.style.display='block';
+            element2.style.display = 'block';
+            element3.style.display = 'block';
+        }
+        else {
+            element1.style.display = 'none';
+            element2.style.display = 'none';
+            element3.style.display = 'none';
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    function ShowHideDiv(chkNoDocs) {
+
+        var dvNoDocs = document.getElementById("dvNoDocs");
+        var form = document.getElementById("form-group");
+        dvNoDocs.style.display = chkNoDocs.checked ? "none" : "block";
+
+        var dvNoDocsBtn = document.getElementById("dvNoDocsBtn");
+        dvNoDocsBtn.style.display = chkNoDocs.checked ? "block" : "none";
+        
+        if (chkNoDocs.checked)
+        {
+            
+        }
+        
+
+    }
+</script>
+
+<script>
+    function habilita(chkNoDocs) {
+        document.getElementById("TitularDif").checked = false;
+    }
+</script>
+
+<div class="container" data-ng-controller="requestController as vm" ng-init="vm.disabledUploadDocuments = false; vm.documentesRequired = @ViewBag.documentsRequired; vm.init()">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <ol class="breadcrumb  col-md-8" id="nave">
+                <li><a href="http://www.gob.mx"><i class="icon icon-home"></i></a><i id="navinicio" class="active"><a href="http://www.gob.mx"></a></i></li>
+                <li id="navinicio"><a href="~/Entitle/index?noissste=@ViewBag.NoIssste#/Home">Inicio</a></li>
+                <li class="active">Cargar documentación</li>
+            </ol>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            @Html.Partial("_InfoUsuario", new { UserName = ViewBag.Name })
+        </div>
+
+        <div class="hidden-xs col-xs-8 ">
+            <h2 class="vertical-buffer">@ViewBag.Title</h2>
+
+        </div>
+        <div class="row" data-ng-hide="nc.isOverrided">
+            @Html.Partial("_EntitleMenu", new { page = "regitroSolicitud" })
+        </div>
+    </div>
+
+    <div>
+        <!--Start Wizard Steps-->
+        <ul class="wizard-steps">
+            <li class="completed" id="A" style="padding: 0 14px 0 50px;">
+                <h5>Paso 1</h5>
+                <span>Requisitos del trámite</span>
+            </li>
+            <li id="B" class="completed">
+                <h5>Paso 2</h5>
+                <span>Registro de cancelación</span>
+            </li>
+            <li id="D" class="completed" style="width: 280px">
+                <h5>Paso 3</h5>
+                <span>Cargar documentación</span>
+            </li>
+            <li>
+                <i class="glyphicon glyphicon-ok-circle"></i>
+            </li>
+        </ul>
+        <div class="row">
+            <div class="col-md-12">
+                <p>Estos son los pasos que tendrás que seguir para completar tu solicitud.</p>
+            </div>
+        </div>
+        <!--End Wizard Steps-->
+        <!-- Start Trámite -->
+
+
+        <div class="row" style="margin-left: -10px">
+            <div class="col-xs-12 marginbot-50">
+
+                <h3>Carga de documentación</h3>
+                <hr class="red">
+
+                <br />
+
+
+                @using (Html.BeginForm("SaveDocumentacion", "Entitle", FormMethod.Post, new { enctype = "multipart/form-data", @id = "formDocs", @class = "cmxform" }))
+                {
+
+                    <input type="hidden" id="NoIssste" name="NoIssste" value="@(ViewBag.NoIssste ?? String.Empty)" />
+                    <input type="hidden" id="RequestId" name="RequestId" value="@(ViewBag.RequestId ?? String.Empty)" />
+
+                    <div id="Contenido">
+                        <br />
+                        <div class="alert alert-info">
+                            <p><strong>Los archivos soportados son imágenes en formato JPG, PNG así como documentos en formato PDF. </strong></p>
+                        </div>
+                        <div class="alert alert-info">
+                            <p><strong>Solo se permiten archivos menores a 5 megas.</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-warning alert-dismissible">
+                        <p>Pagos de derechos de inscripción en registro público de la propiedad previa autorización.</p>
+                    </div>
+                    <div class="alert alert-info">
+                        <p>Podrás seleccionar la opción "No subir documentos", la solicitud no se registrará y podrás agendar una cita para presentar tus documentos originales para cotejo. <p>
+                    </div>
+
+                    <div class="alerts"></div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="TitularDif" id="TitularDif" onclick="showContent();">
+                            No soy el dueño del inmueble hipotecado
+                        </label>
+                    </div>
+
+                    <div>
+                        <div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="chkNoDocs" data-ng-model="vm.disabledUploadDocuments" onclick="habilita();" />
+                                    No subir documentos
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="docsList" data-ng-show="!vm.disabledUploadDocuments">
+                        <div class="col-if-12 col-md-12 bottom-buffer" style="border: 1px solid #ddd; border: 1px solid rgba(115, 115, 115, 0.2); padding-bottom: 10px; padding-top: 10px;">
+
+                            @{var j = 0;}
+                            @foreach (var item in Model)
+                            {
+                                <div id="Div_@item.DocumentTypeId">
+                                    @if (item.Required == false)
+                                    {
+                                        <label> @Html.DisplayFor(modelItem => item.Description)</label>
+                                    }
+                                    else
+                                    {
+                                        <label> @Html.DisplayFor(modelItem => item.Description, new { @required = true })<span class="required">*</span>:</label>
+                                    }
+                                    <input type="file" accept="application/pdf,image/png,image/jpeg" name="@Html.DisplayFor(modelItem => item.DocumentTypeId)" id="@Html.DisplayFor(modelItem => item.DocumentTypeId)" /> <!--name="@String.Format("document{0}", j)"-->
+                                    <hr />
+                                </div>
+                                j++;
+                            }
+                        </div>
+                    <!--</div>-->
+
+
+                    <div class="form-group">
+
+                        <table style="width:100%">
+                            <tr>
+                                <td style="color: #DDDDDD;">
+                                    <span>* Campos obligatorios</span>
+                                </td>
+
+                                <td align="right">
+                                    <button onclick="RedirectAction(@ViewBag.NoIssste, 'Registro'); uid_call('Hipotecas.Documentacion.Anterior', 'clickin'); Mostrar()" id="changeBtn" class="btn btn-default" type="button">
+                                        Regresar
+                                    </button>
+
+                                    <button class="btn btn-primary" type="submit">
+                                        Siguiente paso
+                                    </button>
+                                    @*<button onclick="uid_call('Hipotecas.Documentacion.Siguiente','clickin')" class="btn btn-primary" type="submit" ng-click="vm.inValidDocument()">
+                                        Siguiente paso
+                                    </button>*@
+                                </td>
+                            </tr>
+                        </table>
+                        <br />
+                        <br />
+                    </div>
+                    </div>
+                                }
+            </div>
+
+            <div id="dvNoDocsBtn" data-ng-show="vm.disabledUploadDocuments">
+                @using (Html.BeginForm("SaveRequestNoComplete", "Entitle", FormMethod.Post, new { enctype = "multipart/form-data", @id = "formNoDocs", @class = "cmxform" }))
+            {
+                    <input type="hidden" id="NoIssste" name="NoIssste" value="@(ViewBag.NoIssste ?? String.Empty)" />
+                    <input type="hidden" id="RequestId" name="RequestId" value="@(ViewBag.RequestId ?? String.Empty)" />
+                    <table style="width:100%">
+                        <tr>
+
+                            <td align="right">
+                                <a onclick="RedirectAction(@ViewBag.NoIssste, 'Registro'); uid_call('Hipotecas.Documentacion.Anterior', 'clickin'); Mostrar()" id="changeBtn" class="btn btn-default" type="button">
+                                    Regresar
+                                </a>
+                                <button onclick="uid_call('Hipotecas.Documentacion.Siguiente','clickin')" class="btn btn-primary">
+                                    Siguiente paso
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                }
+                <br />
+            </div>
+
+        </div><!-- row -->
+        <!-- End Trámite -->
+    </div><!-- container -->
+
+<script>
+    UI.initTabs();
+    UI.initToolTips();
+    UI.initPrintButtons();
+</script>
+
+@section Scripts{
+    @*@{
+            BundleTable.EnableOptimizations = true;
+        }*@
+
+    @Scripts.Render("~/bundles/entitle/javascript")
+    @Scripts.Render("~/bundles/entitle/app")
+}

@@ -1,0 +1,37 @@
+﻿.fileblock {
+    border-color: #dddddd !important;
+    box-shadow: none !important;
+    float: left !important;
+    height: 135px !important;
+    margin: 0 5px 5px 0 !important;
+    position: relative !important;
+    text-align: center !important;
+    width: 135px !important;
+}
+
+.fileblock .righticonzone {
+    cursor: pointer !important;
+    left: 122px !important;
+    position: absolute !important;
+    top: 5px !important;
+}
+
+.fileblock .lefticonzone {
+    cursor: pointer !important;
+    left: 5px !important;
+    position: absolute !important;
+    top: 5px !important;
+}
+
+.fileblock .buttonzone {
+    left: 25px !important;
+    position: absolute !important;
+    top: 80px !important;
+}
+
+.fileblock .infozone {
+    position: absolute !important;
+    text-align: center !important;
+    top: 47px !important;
+    width: 100px !important;
+}

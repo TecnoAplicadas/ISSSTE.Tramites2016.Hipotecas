@@ -1,0 +1,31 @@
+﻿@model ISSSTE.Tramites2016.Hipotecas.Models.LoginCompleteViewModel
+@{
+    ViewBag.Title = "Inicio de sesión exitoso";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+<div data-ng-app="ISSSTE.Tramites2016.Hipotecas.Administrator.App">
+    <input type="hidden" id="baseUrl" value="@String.Format("{0}://{1}{2}", Request.Url.Scheme, Request.Url.Authority, Url.Content("~"))"/>
+    @RenderBody()
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/modernizr")
+@Scripts.Render("~/bundles/respond")
+@Scripts.Render("~/bundles/utils")
+@Scripts.Render("~/bundles/administrator/javascript")
+@Scripts.Render("~/bundles/angular")
+@Scripts.Render("~/bundles/angular-auto-validate")
+@Scripts.Render("~/bundles/angular-upload")
+@Scripts.Render("~/bundles/bootstrap-datetimepicker")
+@RenderSection("scripts", false)
+</body>
+</html>

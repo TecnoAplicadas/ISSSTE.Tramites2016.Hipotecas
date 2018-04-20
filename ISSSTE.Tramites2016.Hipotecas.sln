@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISSSTE.Tramites2016.Hipotecas", "ISSSTE.Tramites2016.Hipotecas\ISSSTE.Tramites2016.Hipotecas.csproj", "{7700ADE2-ABF6-407C-A24E-DD034B4350B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISSSTE.Tramites2016.Common", "ISSSTE.Tramites2016.Common\ISSSTE.Tramites2016.Common.csproj", "{70274565-A1E2-4B83-99FB-6EC171F9DDD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISSSTE.Tramites2016.Common.Reports", "ISSSTE.Tramites2016.Common.Reports\ISSSTE.Tramites2016.Common.Reports.csproj", "{3FC276AE-5F4C-4D47-9979-18EA111E8E9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISSSTE.Tramites2016.Common.Security", "ISSSTE.Tramites2016.Common.Security\ISSSTE.Tramites2016.Common.Security.csproj", "{5AAFAC41-F5E9-40E6-B480-A3A1F0BCE7A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISSSTE.Tramites2016.Hipotecas.DataAccess", "ISSSTE.Tramites2016.Hipotecas.DataAccess\ISSSTE.Tramites2016.Hipotecas.DataAccess.csproj", "{2DB4C943-6E07-44DA-BB23-8687CE8C0143}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISSSTE.Tramites2016.Hipotecas.Domian", "ISSSTE.Tramites2016.Hipotecas.Domian\ISSSTE.Tramites2016.Hipotecas.Domian.csproj", "{1DFAE144-4D6E-45A3-A315-252A155F9205}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISSSTE.Tramites2016.Hipotecas.Model", "ISSSTE.Tramites2016.Hipotecas.Model\ISSSTE.Tramites2016.Hipotecas.Model.csproj", "{BDC50ED9-2DC5-42E3-80CA-880CA314251F}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ISSSTE.Tramites2016.Hipotecas.Db", "ISSSTE.Tramites2016.Hipotecas.Db\ISSSTE.Tramites2016.Hipotecas.Db.sqlproj", "{3A37F8B6-1BC6-4849-A2DC-BA26109D069D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISSSTE.Tramites2016.Hipotecas.Bussiness", "ISSSTE.Tramites2016.Hipotecas.Bussiness\ISSSTE.Tramites2016.Hipotecas.Bussiness.csproj", "{68AB8DAB-0403-4E3C-A721-69ECFC121D38}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7700ADE2-ABF6-407C-A24E-DD034B4350B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7700ADE2-ABF6-407C-A24E-DD034B4350B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7700ADE2-ABF6-407C-A24E-DD034B4350B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7700ADE2-ABF6-407C-A24E-DD034B4350B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70274565-A1E2-4B83-99FB-6EC171F9DDD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70274565-A1E2-4B83-99FB-6EC171F9DDD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70274565-A1E2-4B83-99FB-6EC171F9DDD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70274565-A1E2-4B83-99FB-6EC171F9DDD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FC276AE-5F4C-4D47-9979-18EA111E8E9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FC276AE-5F4C-4D47-9979-18EA111E8E9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FC276AE-5F4C-4D47-9979-18EA111E8E9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FC276AE-5F4C-4D47-9979-18EA111E8E9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AAFAC41-F5E9-40E6-B480-A3A1F0BCE7A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AAFAC41-F5E9-40E6-B480-A3A1F0BCE7A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AAFAC41-F5E9-40E6-B480-A3A1F0BCE7A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AAFAC41-F5E9-40E6-B480-A3A1F0BCE7A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DB4C943-6E07-44DA-BB23-8687CE8C0143}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DB4C943-6E07-44DA-BB23-8687CE8C0143}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DB4C943-6E07-44DA-BB23-8687CE8C0143}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DB4C943-6E07-44DA-BB23-8687CE8C0143}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DFAE144-4D6E-45A3-A315-252A155F9205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DFAE144-4D6E-45A3-A315-252A155F9205}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DFAE144-4D6E-45A3-A315-252A155F9205}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DFAE144-4D6E-45A3-A315-252A155F9205}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDC50ED9-2DC5-42E3-80CA-880CA314251F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDC50ED9-2DC5-42E3-80CA-880CA314251F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDC50ED9-2DC5-42E3-80CA-880CA314251F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDC50ED9-2DC5-42E3-80CA-880CA314251F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A37F8B6-1BC6-4849-A2DC-BA26109D069D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A37F8B6-1BC6-4849-A2DC-BA26109D069D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A37F8B6-1BC6-4849-A2DC-BA26109D069D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3A37F8B6-1BC6-4849-A2DC-BA26109D069D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A37F8B6-1BC6-4849-A2DC-BA26109D069D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A37F8B6-1BC6-4849-A2DC-BA26109D069D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{68AB8DAB-0403-4E3C-A721-69ECFC121D38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68AB8DAB-0403-4E3C-A721-69ECFC121D38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68AB8DAB-0403-4E3C-A721-69ECFC121D38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68AB8DAB-0403-4E3C-A721-69ECFC121D38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

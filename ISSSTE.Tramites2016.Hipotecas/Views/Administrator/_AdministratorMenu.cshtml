@@ -1,0 +1,99 @@
+﻿
+
+<div class="row" data-ng-controller="navigationController as nc">
+    <!--/ START LEFT MENU -->
+    <div id="side-menu" class="side-menu collapse">
+        <nav class="navbar navbar-default" role="navigation">
+            <!-- Main Menu -->
+            <div class="side-menu-container">
+
+                @if (Request.Url.AbsoluteUri.Contains("administrador"))
+                {
+                    <ul class="nav navbar-nav">
+                        <li data-ng-class="{ 'active': nc.isSearchSelected}">
+                            <a href="#{{nc.searchUrl}}">Consulta de solicitudes</a>
+                        </li>
+                        <li data-ng-class="{ 'active': nc.isDatesSelected}">
+                            <a href="#{{nc.datesUrl}}">Consulta de citas</a>
+                        </li>
+                        <li data-ng-class="{ 'active': nc.isCalendarSelected}" data-ng-show="nc.canUseCalendar()">
+                            <a href="#{{nc.calendarUrl}}">Administracion de citas</a>
+                        </li>
+
+                        <li data-ng-show="nc.canUserAccessSupport()" data-ng-class="{ 'active': nc.isSupportSelected}">
+                            <a href="#{{nc.supportUrl}}">Soporte a clientes</a>
+                        </li>
+                        <li data-ng-show="nc.canUserAccessCatalogs()"
+                            class="panel panel-default" id="dropdown"
+                            data-ng-class="{ 'active': nc.isAnyCatalogSelected()}">
+                            <a data-toggle="collapse" data-target="#dropdown-lvl1">
+                                Catálogos<span class="caret"></span>
+                            </a>
+                            <div id="dropdown-lvl1" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ul class="nav navbar-nav">
+                                        <li data-ng-class="{ 'subactive': nc.isCatalogSelected(nc.catalogs.documentTypes), 'inactive': !nc.isCatalogSelected(nc.catalogs.documentTypes) }"><a href="#{{nc.getCatalogUrl(nc.catalogs.documentTypes)}}">Tipo de documentos</a></li>
+                                        @*<li data-ng-class="{ 'subactive': nc.isCatalogSelected(nc.catalogs.childCareCenterTypes), 'inactive': !nc.isCatalogSelected(nc.catalogs.childCareCenterTypes) }"><a href="#{{nc.getCatalogUrl(nc.catalogs.childCareCenterTypes)}}">Tipos de estancias</a></li>
+                                            <li data-ng-class="{ 'subactive': nc.isCatalogSelected(nc.catalogs.childCareCenters), 'inactive': !nc.isCatalogSelected(nc.catalogs.childCareCenters) }"><a href="#{{nc.getCatalogUrl(nc.catalogs.childCareCenters)}}">Estancias</a></li>*@
+                                        <li data-ng-show="nc.canUserAccessSupport()" data-ng-class="{ 'subactive': nc.isCatalogSelected(nc.catalogs.delegations), 'inactive': !nc.isCatalogSelected(nc.catalogs.delegations) }">
+                                            <a href="#{{nc.getCatalogUrl(nc.catalogs.delegations)}}">Delegaciones</a>
+                                        </li>
+                                     </ul>
+                                </div>
+                            </div>
+                        </li>
+               
+                    </ul>
+                }
+                else
+                {
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="@System.Configuration.ConfigurationManager.AppSettings["Sitio"]/Administrador/#search">Consulta de Solicitudes</a>
+                        </li>
+                        <li>
+                            <a href="@System.Configuration.ConfigurationManager.AppSettings["Sitio"]/Administrador/#calendar">Administración de citas</a>
+                        </li>
+                        <li>
+                            <a href="@System.Configuration.ConfigurationManager.AppSettings["Sitio"]/Administrador/#appointments">Consulta de Citas</a>
+                        </li>
+
+
+                        <li data-ng-show="nc.canUserAccessCatalogs()"
+                            class="panel panel-default" id="dropdown"
+                            data-ng-class="{ 'active': nc.isAnyCatalogSelected()}">
+                            <a data-toggle="collapse" data-target="#dropdown-lvl1">
+                                Catálogos<span class="caret"></span>
+                            </a>
+                            <div id="dropdown-lvl1" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ul class="nav navbar-nav">
+                                        <li data-ng-class="{ 'subactive': nc.isCatalogSelected(nc.catalogs.documentTypes), 'inactive': !nc.isCatalogSelected(nc.catalogs.documentTypes) }"><a href="#{{nc.getCatalogUrl(nc.catalogs.documentTypes)}}">Tipo de documentos</a></li>
+                                        <li data-ng-class="{ 'subactive': nc.isCatalogSelected(nc.catalogs.delegations), 'inactive': !nc.isCatalogSelected(nc.catalogs.delegations) }">
+                                            <a href="#{{nc.getCatalogUrl(nc.catalogs.delegations)}}" data-ng-show="nc.canUserAccessSupport()">Delegaciones</a>
+                                        </li>
+                                        @*<li data-ng-class="{ 'subactive': nc.isCatalogSelected(nc.catalogs.childCareCenterTypes), 'inactive': !nc.isCatalogSelected(nc.catalogs.childCareCenterTypes) }"><a href="#{{nc.getCatalogUrl(nc.catalogs.childCareCenterTypes)}}">Tipos de estancias</a></li>
+                                            <li data-ng-class="{ 'subactive': nc.isCatalogSelected(nc.catalogs.childCareCenters), 'inactive': !nc.isCatalogSelected(nc.catalogs.childCareCenters) }"><a href="#{{nc.getCatalogUrl(nc.catalogs.childCareCenters)}}">Estancias</a></li>*@
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                  
+                    </ul>
+                }
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </div> <!-- /.side-menu -->
+    <!--/ END LEFT MENU -->
+    <div class="container-fluid">
+        <div class="side-body ng-view" autoscroll="true"></div>
+    </div>
+</div>
+
+@section Scripts{
+    @*@{
+            BundleTable.EnableOptimizations = false;
+        }*@
+
+
+}

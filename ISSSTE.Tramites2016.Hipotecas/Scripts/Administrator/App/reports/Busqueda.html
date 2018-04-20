@@ -1,0 +1,390 @@
+﻿
+<div data-ng-controller="searchControler as vm" data-ng-init="vm.initSearch()">
+
+    <br />
+    <div class="">
+        <h2>Criterios de busqueda</h2>
+        <hr class="red">
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-group col-xs-6">
+                <label class="">Delegación:</label>
+                <div class="dropdown  pull-right" id="status-dropdow">
+                    <button class="btn btn-primary dropdown-toggle " style="width:300px;" type="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">
+                        Seleccionar Delegación
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li>
+                            <a data-ng-click="vm.selectDelegation(null)">Todas las Delegaciones</a>
+                        </li>
+                        <li data-ng-repeat="actualDelegation in vm.delegationsList">
+                            <a data-ng-click="vm.selectDelegation(actualDelegation.DelegationId)">{{actualDelegation.Name}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="form-group col-xs-6">
+                <label>Tipo de Beneficio Solicitado:</label>
+                <div class="dropdown  pull-right" id="status-dropdow">
+
+                    <button class=" btn btn-primary dropdown-toggle" style="width:300px" type="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">
+                        Seleccionar Beneficio
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li>
+                            <a data-ng-click="vm.selecTipoPension(null)">Todas los Beneficios</a>
+                        </li>
+                        <li data-ng-repeat="actualBeneficio in vm.tipoBeneficioList">
+                            <a data-ng-click="vm.selecTipoPension(actualBeneficio.PensionId)">{{actualBeneficio.Name}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="col-xs-12">
+            <div class="form-group col-xs-6">
+                <label>Sexo:</label>
+                <div class="dropdown  pull-right " id="status-dropdow">
+
+                    <button class="btn btn-primary dropdown-toggle" style="width:200px;" type="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">
+                        Seleccionar Sexo
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                        <li>
+                            <a data-ng-click="vm.selectGenero(null)">Todos los sexos</a>
+                        </li>
+                        <li>
+                            <a data-ng-click="vm.selectGenero(1)">Hombres</a>
+                        </li>
+                        <li>
+                            <a data-ng-click="vm.selectGenero(2)">Mujeres</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <br />
+            <div class="form-group col-xs-6">
+                <label>Estatus de la solicitud: </label>
+                <div class="dropdown   pull-right" id="status-dropdow">
+
+                    <button class="btn btn-primary dropdown-toggle" style="width:300px;" type="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">
+                        Seleccionar Estatus
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu4">
+                        <li>
+                            <a data-ng-click="vm.selectStatus(null)">Todos los Estatus</a>
+                        </li>
+                        <li data-ng-repeat="actualEstatus in vm.statusList">
+                            <a data-ng-click="vm.selectStatus(actualEstatus.StatusId)">{{actualEstatus.Name}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group datepicker-group col-md-6 " id="fechaDel">
+            <label>Periodo del</label>
+            <input class="form-control c" type="text" ng-model="vm.inicio" datetimepicker name="FechaDel"
+                   placeholder="Fecha Inicial" datetimepicker-options="{ format: 'YYYY/MM/DD' }" id="datePicker" required />
+        </div>
+
+        <div class="form-group datepicker-group col-md-6" id="fechaAl">
+            <label class="">Periodo Al</label>
+            <input class="form-control" type="text" ng-model="vm.final" datetimepicker name="fechaDel"
+                   placeholder="Fecha Final" datetimepicker-options="{ format: 'YYYY/MM/DD' }" id="datePicker" required />
+        </div>
+        <div class="form-group col-md-6">
+            <label>Número de ISSSTE</label>
+
+            <input class="form-control" type="text" id="numIssste" placeholder="Ingresa No. ISSSTE" data-ng-model="vm.numIssste" onkeypress="return valideKey(event);" />
+        </div>
+        <div class="form-group col-md-6">
+            <label>Nombre</label>
+
+            <input class="form-control" type="text" id="nombre" placeholder="Ingresa un Nombre" data-ng-model="vm.nameEntiti" />
+
+        </div>
+        <div class="form-group col-md-6">
+            <button class="btn btn-primary " type="button" data-ng-click="vm.searchRequests()">&nbsp;&nbsp;Buscar&nbsp;&nbsp;</button>
+        </div>
+    </div>
+
+
+    <div class="col-xs-12 alert alert-danger margintop-30 " data-ng-show="vm.alertaFechas==0" id="alertaFecha">
+        La fecha de inicio no puede ser mayor a la fecha final
+    </div>
+
+
+    <br /><br />
+    <div class="panel " data-ng-show="vm.requests.length > 0">
+
+        <div class="alert alert-info margintop-30" data-ng-show="vm.requests == 0">
+            No se encontraron solicitudes.
+        </div>
+
+
+        <div class="col-xs-2 pull-left paddingleft-0">
+            Mostrar:
+            <select class="form-control"
+                    data-ng-options="actualPageSize + ' resultados' for actualPageSize in vm.pageSizes"
+                    data-ng-model="vm.selectedPageSize" data-ng-change="vm.searchRequests()"></select>
+        </div>
+
+        <div class="col-xs-10 pull-right marginbot-20 paddingright-0" data-ng-show="vm.requests.length > 0">
+            <nav class="text-right">
+                <ul class="pagination">
+                    <li data-ng-class="{ disabled: vm.isFirstPage() }">
+                        <a data-ng-click="vm.changeToPreviousPage()">&laquo;</a>
+                    </li>
+                    <li data-ng-repeat="actualPage in vm.pages"
+                        data-ng-class="{ active: vm.isPageSelected(actualPage) }">
+                        <a data-ng-click="vm.changeSelectedPage(actualPage)">{{actualPage}}</a>
+                    </li>
+                    <li data-ng-class="{ disabled: vm.isLasPage() }">
+                        <a data-ng-disabled="vm.isLasPage()"
+                           data-ng-click="vm.changeToNextPage">&raquo;</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="form-group col-xs-12" data-ng-show="vm.requests.length > 0">
+        <div class="form-group col-xs-4">
+            <input type="button" class="btn btn-primary" onclick="tableToExcel('testTable', 'Hipotecas')" value="Exportar a Excel"><br />
+        </div>
+        <!--<div class="form-group col-xs-4">
+            <input type="button" class="btn btn-primary" value="Exportar a PDF" id="btnPrint" />
+        </div>
+                    -->
+
+    </div>
+    <div class="">
+        <!-- <div class="" id="testTable">-->
+        <!----------------------------------------------Reportes-------------------------------------------------------------------->
+        <div class="row">
+
+            <div class="margintop-30">
+
+                <div class="panel ">
+                    <div id="dvData">
+
+                        <table class="table" id="">
+                            <thead>
+                                <tr>
+                                    <th>Delegación</th>
+                                    <th>Nombre</th>
+                                    <th>No. de ISSSTE</th>
+                                    <th>Sexo</th>
+                                    <th>Tipo de beneficio solicitado</th>
+                                    <th>Edad a la fecha de la solicitud</th>
+                                    <th>Periodos de la solicitud Del</th>
+                                    <th>Al</th>
+                                    <th>Estatus de la solicitud</th>
+                                    <th>Fecha de la Cita</th>
+                                    <th>Hora de la Cita</th>
+                                    <th>Días entre la solicitud y la cita</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-ng-repeat="actualRequest in vm.requests">
+                                    <td>{{actualRequest.DelegationName}}</td>
+                                    <td>{{actualRequest.NameE}}</td>
+                                    <td>{{actualRequest.NoISSSTE}}</td>
+                                    <td>{{actualRequest.Sexo}}</td>
+                                    <td>{{actualRequest.TipoPensionSolicitado}}</td>
+                                    <td>{{actualRequest.Age}}</td>
+                                    <td>{{actualRequest.PeriodoDel}}</td>
+                                    <td>{{actualRequest.PeriodoAl}}</td>
+                                    <td>{{actualRequest.EstatusDeSolicitud}}</td>
+                                    <td>{{actualRequest.DateAppoinment}}</td>
+                                    <td>{{actualRequest.TimeAppoiment}}</td>
+                                    <td>{{actualRequest.DiferenciaFechasint}}</td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <!-- /.panel-default -->
+                </div>
+                <!-- /.panel -->
+
+            </div>
+        </div>
+        <!----------------------------------------------Fin Reportes-------------------------------------------------------------------->
+        <div id="testTable">
+            <div id="dvData" data-ng-show="false">
+                <table class="table" id="">
+                    <thead>
+                        <tr>
+                            <th>Delegación</th>
+                            <th>Nombre</th>
+                            <th>No. de ISSSTE</th>
+                            <th>Sexo</th>
+                            <th>Tipo de beneficio solicitado</th>
+                            <th>Edad a la fecha de la solicitud</th>
+                            <th>Periodos de la solicitud Del</th>
+                            <th>Al</th>
+                            <th>Estatus de la solicitud</th>
+                            <th>Fecha de la Cita</th>
+                            <th>Hora de la Cita</th>
+                            <th>Días entre la solicitud y la cita</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-ng-repeat="actualimpresion in vm.impresion">
+                            <td>{{actualimpresion.DelegationName}}</td>
+                            <td>{{actualimpresion.NameE}}</td>
+                            <td>{{actualimpresion.NoISSSTE}}</td>
+                            <td>{{actualimpresion.Sexo}}</td>
+                            <td>{{actualimpresion.TipoPensionSolicitado}}</td>
+                            <td>{{actualimpresion.Age}}</td>
+                            <td>{{actualimpresion.PeriodoDel}}</td>
+                            <td>{{actualimpresion.PeriodoAl}}</td>
+                            <td>{{actualimpresion.EstatusDeSolicitud}}</td>
+                            <td>{{actualimpresion.DateAppoinment}}</td>
+                            <td>{{actualimpresion.TimeAppoiment}}</td>
+                            <td>{{actualimpresion.DiferenciaFechasint}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-----------------------------------------Inicio de Totales------------------------------------------------------------------>
+            <br /><br />
+            <div class="col-xs-12 marginbot-80">
+
+                <table>
+                    <tr>
+                        <td>
+                            <!---Totales por solicitud--->
+                            <table>
+                                <tr><th class="pull-right"> Totales por Solicitud</th></tr>
+                                <tr> <td>Solicitud(es) Exitosa(s)</td> <td><label class="marginleft-10" data-ng-model="vm.TotalesPorSolicitudExitoso" />{{vm.TotalesPorSolicitudExitoso}}</td></tr>
+                                <tr> <td>Solicitud(es) Incorrecta(s)</td> <td><label type="text" class="marginleft-10" data-ng-model="vm.TotalesPorSolicitudIncorrecto" />{{vm.TotalesPorSolicitudIncorrecto}}</td></tr>
+
+                            </table> <!---Fin Totales por solicitud--->
+                        </td>
+
+                        <td>
+                            <!---Totales por Citas--->
+                            <table class="marginleft-80">
+                                <tr><th class="pull-right"> Totales por Citas</th></tr>
+                                <tr> <td>Cita(s) Atendida(s)</td> <td><label type="text" class="marginleft-10" data-ng-model="vm.TotalesPorCitaCorrecto" />{{vm.TotalesPorCitaCorrecto}}</td></tr>
+
+                                <tr> <td>Cita(s) Cancelada(s)</td> <td><label type="text" class="marginleft-10" data-ng-model="vm.TotalesPorCitaIncorrecto" />{{vm.TotalesPorCitaIncorrecto}}</td></tr>
+                            </table> <!---Fin Totales por Citas--->
+                        </td>
+                    </tr>
+                </table>
+                <br /><br /><br />
+                <table>
+                    <tr>
+                        <td>
+                            <table>
+                                <!-- Tabla tipo de Beneficio-->
+                                <tr>
+                                    <th> Totales por Tipo de Beneficio</th>
+                                </tr>
+                                <tr>
+                                    <td>Jubilación</td>
+                                    <td><label type="text" class="marginleft-10" data-ng-model="vm.TotalesPorBeneficioJubilacion" />{{vm.TotalesPorBeneficioJubilacion}} </td>
+                                </tr>
+                                <tr>
+                                    <td>Edad y Tiempo de Servicio</td>
+                                    <td><label type="text" class="marginleft-10" data-ng-model="vm.TotalesPorBeneficioEdadYTiempoServicio" />{{vm.TotalesPorBeneficioEdadYTiempoServicio}} </td>
+                                </tr>
+                                <tr>
+                                    <td>Cesantia de Edad Avanzada</td>
+                                    <td><label type="text" class="marginleft-10" data-ng-model="vm.TotalesPorBeneficioCesantia" />{{vm.TotalesPorBeneficioCesantia}} </td>
+                                </tr>
+                                <tr>
+                                    <td>Transmición por Muerte de Trabajador</td>
+                                    <td><label type="text" class="marginleft-10" data-ng-model="vm.TotalesPorBeneficioMuerteTrabajador" />{{vm.TotalesPorBeneficioMuerteTrabajador}} </td>
+                                </tr>
+                                <tr>
+                                    <td>Transmición por Muerte de Pensionado</td>
+                                    <td><label type="text" class="marginleft-10" data-ng-model="vm.TotalesPorBeneficioMuertePensionado" />{{vm.TotalesPorBeneficioMuertePensionado}} </td>
+                                </tr>
+                            </table>
+
+                        </td>
+                        <td>
+                            <div data-ng-show="vm.banderaSoloDelegacion==true">
+                                <table class="marginleft-80">
+                                    <!----Totales Delegación -->
+                                    <tr>
+                                        <th> Totales por Delegación</th>
+                                    </tr>
+                                    <tr>
+
+                                        <td>Solicitud(es) Exitosas</td>
+                                        <td><label type="text" class="marginleft-10" data-ng-model="vm.TotalesDelegacionExitosas" />{{vm.TotalesDelegacionExitosas}} </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Solicitud(es) Incorrectas</td>
+                                        <td><label type="text" class="marginleft-10" data-ng-model="vm.TotalesDelegacionIncorrectas" />{{vm.TotalesDelegacionIncorrectas}} </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Solicitud(es) Agendadas</td>
+                                        <td><label type="text" class="marginleft-10" data-ng-model="vm.TotalesDelegacionAgendada" />{{vm.TotalesDelegacionAgendada}} </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Solicitud(es) Canceladas</td>
+                                        <td><label type="text" class="marginleft-10" data-ng-model="vm.TotalesDelegacionCancelada" />{{vm.TotalesDelegacionCancelada}} </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-----------------------------------------Fin de Totales------------------------------------------------------------------>
+
+</div>
+<br /><br />
+<script type="text/javascript">
+    restaFechas = function(f1,f2)
+     {
+         var aFecha1 = f1.split('/');
+         var aFecha2 = f2.split('/');
+         var fFecha1 = Date.UTC(aFecha1[2],aFecha1[1]-1,aFecha1[0]);
+         var fFecha2 = Date.UTC(aFecha2[2],aFecha2[1]-1,aFecha2[0]);
+         var dif = fFecha2 - fFecha1;
+         var dias = Math.floor(dif / (1000 * 60 * 60 * 24));
+         return dias;
+     }
+</script>
+<script type="text/javascript">
+    function valideKey(evt) {
+        var code = (evt.which) ? evt.which : evt.keyCode;
+        if (code == 8) {
+            return true;
+        }
+        else if (code >= 48 && code <= 57) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+</script>
+

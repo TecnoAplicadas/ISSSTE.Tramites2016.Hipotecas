@@ -1,0 +1,54 @@
+﻿<div data-ng-controller="messagesController as vm" data-ng-init="vm.initSave()">
+    <!--/ START TITLE -->
+    <div class="col-xs-12">
+        <h2>Mensaje</h2>
+        <hr class="red">
+    </div>
+
+    <!--/ END TITLE -->
+    <!-- START CONTENT -->
+
+    <div class="col-xs-12">
+        <div class="alerts"></div>
+    </div>
+    <div class="row">
+
+        <div class="col-xs-12  marginbot-40">
+            <div class="panel panel-default ">
+                <div class="panel-body ">
+                    <label class="control-label">
+                        Clave:
+                    </label>
+                    <label class="control-label">
+                        {{vm.messagesSave[0].Key}}
+                    </label>
+                    <ng-form ame="form" role="form" novalidate="novalidate">
+                        <div class="form-group form-group ">
+
+                            <br />
+
+                            <label class="control-label">Nombre:</label>
+                            <input name="numero-issste" class="form-control" type="text" required
+                                   data-ng-model="vm.messagesSave[0].Description">
+                        </div>
+                    </ng-form>
+
+                </div>
+            </div>
+            <div class="text-right">
+                <!--ng-class="{ disabled : !vm.isFormValid()  }"-->
+                <button class="btn btn-primary " type="button" ng-class="{ disabled : !vm.isFormValid()  }"
+                        data-ng-click="vm.savemessagesContr(nc.messagesUrl)">
+                    Guardar
+                </button>
+                <a class="btn btn-danger " type="button"
+                   href="#{{nc.messagesUrl}}">
+                    Cancelar
+                </a>
+            </div>
+
+            <!-- /.col -->
+            <!-- END CONTENT -->
+        </div>
+    </div>
+</div>

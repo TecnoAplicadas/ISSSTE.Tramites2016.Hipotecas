@@ -1,0 +1,172 @@
+﻿<!--
+//####################################################################
+//      ## Fecha de creación: 18-03-2016
+//      ## Fecha de última modificación: 30-03-2016
+//      ## Responsable: Emanuel De la Isla Vértiz
+//      ## Módulos asociados: Información general, Deudos, Beneficiarios, Historial Laboral.
+//      ## Id Tickets asociados al cambio: R-013042
+//####################################################################
+-->
+<!-- Contenido -->
+
+<div ng-controller="requestController as vm" ng-init="vm.initRequests()">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-if-12 col-md-12">
+            <div class="alerts"></div>
+        </div>
+    </div>
+
+    <!-- Start Trámite -->
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-if-12 col-md-12">
+            <h2>Mis solicitudes</h2>
+            <hr class="red">
+            
+        </div> <!-- col -->
+        <div class="col-xs-12 col-sm-12 col-if-12 col-md-12">
+            <div class="vertical-buffer">
+                <div>
+                    <div class="alert alert-info" data-ng-show="vm.information.Entitle.State == 'F'">
+                        <p>Ingresa la CURP del deudo que realizó el trámite de solicitud de pensión.</p>
+                    </div>
+                    <div id="noFoundDebtors" class="alert alert-warning" style="display:none;">
+                        Por favor ingresa la CURP del deudo.
+                    </div>
+                    <div data-ng-show="vm.requestDebtors.length == 0" id="noSearchDebtors" class="alert alert-warning">
+                        No se encontraron solicitudes con la CURP ingresada.
+                    </div>
+                    <div id="noDebtorsList" class="alert alert-warning" style="display: none;">
+                        La CURP del deudo ingresado no corresponde a la lista de los beneficiarios del derechohabiente.
+                    </div>
+                    <div class="row" data-ng-show="vm.information.Entitle.State == 'F'">
+                        <div class="form-group col-if-6 col-sm-12 col-md-6">
+                            <div>
+                                <label class="control-label label-style" for="curp">Clave Única de Registro de Población (CURP)<label class="control-label">*</label>:</label>
+                                <input class="form-control" type="text" data-ng-model="vm.newDebtorData.CURP" id="txtCurp"
+                                       pattern="^[A-Z]{1}[AEIOU]{1}[A-Z]{2}[0-9]{2}(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])[HM]{1}(AS|BC|BS|CC|CS|CH|CL|CM|DF|DG|GT|GR|HG|JC|MC|MN|MS|NT|NL|OC|PL|QT|QR|SP|SL|SR|TC|TS|TL|VZ|YN|ZS|NE)[B-DF-HJ-NP-TV-Z]{3}[0-9A-Z]{1}[0-9]{1}$"
+                                       pattern-err-type="curp" ng-maxlength="18" required name="curp">
+                            </div>
+                        </div>
+                        <div>
+                            <br />
+                            <a data-ng-click="vm.searchRequestDebtorsByCURP();" id="changeBtn" class="btn btn-primary" data-ng-class="{disabled : !vm.newDebtorData.CURP}" data-toggle="tooltip" data-placement="bottom" data-toggle="tooltip" data-placement="bottom" title="Buscar solicitud realizada por un Deudo">
+                                Buscar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="margintop-10 bottom-buffer" data-ng-show="vm.information.Entitle.State != 'F'">
+                <h2>Solicitudes en trámite</h2>
+                <hr class="red">
+                <div class=" marg-B30px marg-T30px">
+                    <table class="table margintop-10">
+                        <thead>
+                            <tr>
+                                <th class="abl-th">Folio</th>
+                                <th class="abl-thf">Fecha</th>
+                                <th>Estatus</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-ng-repeat="req in vm.requests">
+                                <td>{{req.Folio}}</td>
+                                <td>{{req.Date}}</td>
+                                <td>{{req.StatusDescription}}</td>
+                                <td>
+
+                                    <button type="button" class="btn btn-default btn-sm"  data-ng-click="nc.navigateToDetailRequest(req.RequestId)">
+                                        <span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;Ver detalle
+                                    </button>
+                                    <button type="button" class="btn btn-primary btn-sm pull-right" style="margin-left:30px;" data-ng-show="req.StatusId == 120 || req.StatusId == 140 || req.StatusId == 150 || req.StatusId == 130"
+                                            data-ng-click="nc.navigateToDateRequest(req.RequestId)">
+                                        <span class="glyphicon glyphicon-calendar"></span>&nbsp;&nbsp; Agendar cita
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+            <!-- Citas pasadas -->
+            <div data-ng-show="vm.pastrequests.length > 0 && vm.information.Entitle.State != 'F'">
+                <h2>Solicitudes pasadas</h2>
+                <hr class="red">
+                <div class="bottom-buffer">
+                    <div>
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="abl-th">Folio</th>
+                                    <th class="abl-thf">Fecha</th>
+                                    <th>Estatus</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody data-ng-repeat="req in vm.pastrequests">
+                                <tr>
+                                    <td>{{req.Folio}}</td>
+                                    <td>{{req.Date}}</td>
+                                    <td>{{req.StatusDescription}}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-default btn-sm" data-ng-click="nc.navigateToDetailRequest(req.RequestId)">
+                                            <span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;Ver Detalle
+                                        </button>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+            <div data-ng-show="vm.requestDebtors.length > 0">
+                <h2>Solicitudes</h2>
+                <hr class="red">
+                <div class="bottom-buffer">
+                    <div>
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="abl-th">Folio</th>
+                                    <th class="abl-thf">Fecha</th>
+                                    <th>Estatus</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-ng-repeat="reqDebtors in vm.requestDebtors">
+                                    <td>{{reqDebtors.Folio}}</td>
+                                    <td>{{reqDebtors.Date}}</td>
+                                    <td>{{reqDebtors.StatusDescription}}</td>
+                                    <td>
+
+                                        <button type="button" class="btn btn-default btn-sm" data-ng-click="nc.navigateToDetailRequest(reqDebtors.RequestId)">
+                                            <span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;Ver Detalle
+                                        </button>
+                                        <button type="button" class="btn btn-primary btn-sm" data-ng-show="reqDebtors.StatusId == 120 || reqDebtors.StatusId == 140 || reqDebtors.StatusId == 150 || reqDebtors.StatusId == 130"
+                                                data-ng-click="nc.navigateToDateRequest(reqDebtors.RequestId)">
+                                            <span class="glyphicon glyphicon-calendar"></span>&nbsp;&nbsp; Agendar Cita
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div> <!-- row -->
+    <!-- End Trámite -->
+    <!-- End tramite Hipotecas -->
+
+
+</div><!-- container -->

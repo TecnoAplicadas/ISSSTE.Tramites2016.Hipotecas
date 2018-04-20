@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BDC50ED9-2DC5-42E3-80CA-880CA314251F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ISSSTE.Tramites2016.Hipotecas.Model</RootNamespace>
+    <AssemblyName>ISSSTE.Tramites2016.Hipotecas.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\Alert.cs" />
+    <Compile Include="Api\ConverterData.cs" />
+    <Compile Include="Api\DownloadFileResult.cs" />
+    <Compile Include="Enums\AvailabilityEnum.cs" />
+    <Compile Include="Enums\EnumBeneficiario.cs" />
+    <Compile Include="Enums\EnumConfigMessages.cs" />
+    <Compile Include="Enums\PensionsEnum.cs" />
+    <Compile Include="Enums\RolEnum.cs" />
+    <Compile Include="Enums\StatusEnum.cs" />
+    <Compile Include="Enums\WeekDayEnum.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Appoinment.cs" />
+    <Compile Include="Model\AspNetRole.cs" />
+    <Compile Include="Model\AspNetUser.cs" />
+    <Compile Include="Model\AspNetUserClaim.cs" />
+    <Compile Include="Model\AspNetUserLogin.cs" />
+    <Compile Include="Model\AspNetUserRole.cs" />
+    <Compile Include="Model\CivilState.cs" />
+    <Compile Include="Model\Configuration.cs" />
+    <Compile Include="Model\Debtor.cs" />
+    <Compile Include="Model\Delegation.cs" />
+    <Compile Include="Model\DelegationCalendar.cs" />
+    <Compile Include="Model\Document.cs" />
+    <Compile Include="Model\Documents.cs" />
+    <Compile Include="Model\DocumentsAdministrator.cs" />
+    <Compile Include="Model\DocumentType.cs" />
+    <Compile Include="Model\DocumentTypes.cs" />
+    <Compile Include="Model\Entitle.cs" />
+    <Compile Include="Model\Holyday.cs" />
+    <Compile Include="Model\MaximumSalary.cs" />
+    <Compile Include="Model\Message.cs" />
+    <Compile Include="Model\Model1.cs" />
+    <Compile Include="Model\Model2.cs" />
+    <Compile Include="Model\Opinion.cs" />
+    <Compile Include="Model\OpinionMessage.cs" />
+    <Compile Include="Model\PropertType.cs" />
+    <Compile Include="Model\Relationship.cs" />
+    <Compile Include="Model\RelationshipDocument.cs" />
+    <Compile Include="Model\RelationshipsTitlesKey.cs" />
+    <Compile Include="Model\RelationshipTitle.cs" />
+    <Compile Include="Model\Request.cs" />
+    <Compile Include="Model\RequestAdministrator.cs" />
+    <Compile Include="Model\RequestDocuments.cs" />
+    <Compile Include="Model\RequestDocuments_DocumentTypes.cs" />
+    <Compile Include="Model\RequestStatu.cs" />
+    <Compile Include="Model\Request_Property_Entitles.cs" />
+    <Compile Include="Model\Requirement.cs" />
+    <Compile Include="Model\Role.cs" />
+    <Compile Include="Model\Schedule.cs" />
+    <Compile Include="Model\Seguimiento.cs" />
+    <Compile Include="Model\SpecialDay.cs" />
+    <Compile Include="Model\SpecialDaysSchedule.cs" />
+    <Compile Include="Model\Status.cs" />
+    <Compile Include="Model\StatusNextStatu.cs" />
+    <Compile Include="Model\StatusRelatedStatu.cs" />
+    <Compile Include="Model\sysdiagram.cs" />
+    <Compile Include="Model\TimeContribution.cs" />
+    <Compile Include="Model\TypeOwner.cs" />
+    <Compile Include="Model\UpdateStatus.cs" />
+    <Compile Include="Model\UrbanCenter.cs" />
+    <Compile Include="Model\Validation.cs" />
+    <Compile Include="Model\Weekday.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Pocos\AppointmentsResult.cs" />
+    <Compile Include="Pocos\CalendarApi.cs" />
+    <Compile Include="Pocos\CalendarList.cs" />
+    <Compile Include="Pocos\DateDelegationApi.cs" />
+    <Compile Include="Pocos\DatesApi.cs" />
+    <Compile Include="Pocos\DayCalendar.cs" />
+    <Compile Include="Pocos\DocumentData.cs" />
+    <Compile Include="Pocos\EntitledData.cs" />
+    <Compile Include="Pocos\IntDateApi.cs" />
+    <Compile Include="Pocos\KeyValue.cs" />
+    <Compile Include="Pocos\MortgageCancelReportData.cs" />
+    <Compile Include="Pocos\OpinionRequestApi.cs" />
+    <Compile Include="Pocos\PagedMessagesResult.cs" />
+    <Compile Include="Pocos\PagedRequestsResult.cs" />
+    <Compile Include="Pocos\PostData.cs" />
+    <Compile Include="Pocos\RelationshipGeneric.cs" />
+    <Compile Include="Pocos\RequestGeneric.cs" />
+    <Compile Include="Pocos\ScheduleAdminApi.cs" />
+    <Compile Include="Pocos\ScheduleApi.cs" />
+    <Compile Include="Pocos\SearchParameterApi.cs" />
+    <Compile Include="Pocos\SpecialDayScheduleApi.cs" />
+    <Compile Include="Pocos\StatusOpinionApi.cs" />
+    <Compile Include="Pocos\UserRequestApi.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\DisplayNames.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DisplayNames.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="obj\Debug\ISSSTE.Tramites2016.Escrituracion.Model.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\ISSSTE.Tramites2016.Hipotecas.Model.Properties.Resources.resources" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Resources\DisplayNames.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DisplayNames.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="bin\Debug\ISSSTE.Tramites2016.Hipotecas.Model.exe.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\ISSSTE.Tramites2016.Escrituracion.Model.csproj.GenerateResource.Cache" />
+    <None Include="obj\Debug\ISSSTE.Tramites2016.Escrituracion.Model.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\ISSSTE.Tramites2016.Hipotecas.Model.csproj.GenerateResource.Cache" />
+    <None Include="obj\Debug\ISSSTE.Tramites2016.Hipotecas.Model.csprojResolveAssemblyReference.cache" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pocos\App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ISSSTE.Tramites2016.Common\ISSSTE.Tramites2016.Common.csproj">
+      <Project>{70274565-a1e2-4b83-99fb-6ec171f9ddd2}</Project>
+      <Name>ISSSTE.Tramites2016.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Antlr3.Runtime.dll" />
+    <Content Include="bin\Debug\Antlr3.Runtime.pdb" />
+    <Content Include="bin\Debug\Elmah.dll" />
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Debug\EntityFramework.xml" />
+    <Content Include="bin\Debug\es\EntityFramework.resources.dll" />
+    <Content Include="bin\Debug\es\EntityFramework.SqlServer.resources.dll" />
+    <Content Include="bin\Debug\es\System.Web.Mvc.resources.dll" />
+    <Content Include="bin\Debug\es\System.Web.Optimization.resources.dll" />
+    <Content Include="bin\Debug\es\System.Web.Razor.resources.dll" />
+    <Content Include="bin\Debug\es\System.Web.WebPages.Deployment.resources.dll" />
+    <Content Include="bin\Debug\es\System.Web.WebPages.Razor.resources.dll" />
+    <Content Include="bin\Debug\es\System.Web.WebPages.resources.dll" />
+    <Content Include="bin\Debug\ISSSTE.Tramites2016.Common.exe" />
+    <Content Include="bin\Debug\ISSSTE.Tramites2016.Common.pdb" />
+    <Content Include="bin\Debug\ISSSTE.Tramites2016.Hipotecas.Model.exe" />
+    <Content Include="bin\Debug\ISSSTE.Tramites2016.Hipotecas.Model.pdb" />
+    <Content Include="bin\Debug\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="bin\Debug\System.Net.Http.Formatting.dll" />
+    <Content Include="bin\Debug\System.Net.Http.Formatting.xml" />
+    <Content Include="bin\Debug\System.Web.Http.dll" />
+    <Content Include="bin\Debug\System.Web.Http.xml" />
+    <Content Include="bin\Debug\System.Web.Mvc.dll" />
+    <Content Include="bin\Debug\System.Web.Mvc.xml" />
+    <Content Include="bin\Debug\System.Web.Optimization.dll" />
+    <Content Include="bin\Debug\System.Web.Optimization.xml" />
+    <Content Include="bin\Debug\System.Web.Razor.dll" />
+    <Content Include="bin\Debug\System.Web.Razor.xml" />
+    <Content Include="bin\Debug\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\Debug\System.Web.WebPages.Deployment.xml" />
+    <Content Include="bin\Debug\System.Web.WebPages.dll" />
+    <Content Include="bin\Debug\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\Debug\System.Web.WebPages.Razor.xml" />
+    <Content Include="bin\Debug\System.Web.WebPages.xml" />
+    <Content Include="bin\Debug\WebGrease.dll" />
+    <Content Include="obj\Debug\ISSSTE.Tramites2016.Escrituracion.Model.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\ISSSTE.Tramites2016.Hipotecas.Model.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\ISSSTE.Tramites2016.Hipotecas.Model.exe" />
+    <Content Include="obj\Debug\ISSSTE.Tramites2016.Hipotecas.Model.pdb" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

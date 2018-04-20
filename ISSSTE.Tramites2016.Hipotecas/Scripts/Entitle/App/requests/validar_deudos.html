@@ -1,0 +1,198 @@
+﻿<!--
+//####################################################################
+//      ## Fecha de creación: 18-03-2016
+//      ## Fecha de última modificación: 30-03-2016
+//      ## Responsable: Emanuel De la Isla Vértiz
+//      ## Módulos asociados: Información general, Deudos, Beneficiarios, Historial Laboral.
+//      ## Id Tickets asociados al cambio: R-013042
+//####################################################################
+-->
+<div ng-controller="requestController as vm" ng-init="vm.init()">
+
+    <style>
+        .label-style {
+            color: #545454 !important;
+            font-size: 18px !important;
+        }
+    </style>
+    <script type="text/javascript">
+
+        function udm_(e) {
+            var t = "comScore=", n = document, r = n.cookie, i = "", s = "indexOf", o = "substring", u = "length", a = 2048, f, l = "&ns_", c = "&", h, p, d, v, m = window, g = m.encodeURIComponent || escape; if (r[s](t) + 1) for (d = 0, p = r.split(";"), v = p[u]; d < v; d++) h = p[d][s](t), h + 1 && (i = c + unescape(p[d][o](h + t[u]))); e += l + "_t=" + +(new Date) + l + "c=" + (n.characterSet || n.defaultCharset || "") + "&c8=" + g(n.title) + i + "&c7=" + g(n.URL) + "&c9=" + g(n.referrer), e[u] > a && e[s](c) > 0 && (f = e[o](0, a - 8).lastIndexOf(c), e = (e[o](0, f) + l + "cut=" + g(e[o](f + 1)))[o](0, a)), n.images ? (h = new Image, m.ns_p || (ns_p = h), h.src = e) : n.write("<", "p", "><", 'img src="', e, '" height="1" width="1" alt="*"', "><", "/p", ">")
+        };
+
+        function uid_call(a, b) {
+            ui_c2 = 17183199; // your corporate c2 client value
+            ui_ns_site = 'gobmx_isssste_td-sp10'; // your sites identifier
+            window.b_ui_event = window.c_ui_event != null ? window.c_ui_event : "", window.c_ui_event = a;
+            var ui_pixel_url = 'https://sb.scorecardresearch.com/p?c1=2&c2=' + ui_c2 + '&ns_site=' + ui_ns_site + '&name=' + a + '&ns_type=hidden&type=hidden&ns_ui_type=' + b;
+            var b = "comScore=", c = document, d = c.cookie, e = "", f = "indexOf", g = "substring", h = "length", i = 2048, j, k = "&ns_", l = "&", m, n, o, p, q = window, r = q.encodeURIComponent || escape; if (d[f](b) + 1) for (o = 0, n = d.split(";"), p = n[h]; o < p; o++) m = n[o][f](b), m + 1 && (e = l + unescape(n[o][g](m + b[h]))); ui_pixel_url += k + "_t=" + +(new Date) + k + "c=" + (c.characterSet || c.defaultCharset || "") + "&c8=" + r(c.title) + e + "&c7=" + r(c.URL) + "&c9=" + r(c.referrer) + "&b_ui_event=" + b_ui_event + "&c_ui_event=" + c_ui_event, ui_pixel_url[h] > i && ui_pixel_url[f](l) > 0 && (j = ui_pixel_url[g](0, i - 8).lastIndexOf(l), ui_pixel_url = (ui_pixel_url[g](0, j) + k + "cut=" + r(ui_pixel_url[g](j + 1)))[g](0, i)), c.images ? (m = new Image, q.ns_p || (ns_p = m), m.src = ui_pixel_url) : c.write("<p><img src='", ui_pixel_url, "' height='1' width='1' alt='*'></p>");
+            //alert(ui_pixel_url);
+        }
+        udm_('https://sb.scorecardresearch.com/b?c1=2&c2=17183199&ns_site=gobmx&name=area.seccion');
+    </script>
+
+    <!-- GRÁFICA BASE -->
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-if-12 col-md-12">
+
+            <ul class="wizard-steps" style="margin-left:5px">
+                <li class="completed" id="A" style="padding: 0 14px 0 50px;">
+                    <h5>Paso 1</h5>
+                    <span>Requisitos del trámite</span>
+                </li>
+                <li id="B" class="completed">
+                    <h5>Paso 2</h5>
+                    <span>Información de inmueble</span>
+                </li>
+                <li id="D" style="width: 280px">
+                    <h5>Paso 3</h5>
+                    <span>Cargar documentación</span>
+                </li>
+                <li>
+                    <i class="glyphicon glyphicon-ok-circle"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Start Trámite -->
+    <!--<div class="col-xs-12 marginbot-50">-->
+    <!--data-ng-show="vm.validDebtorPension();"> -->
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-if-12 col-md-12">
+            <h2>Ingresa el inmuebles a regularizar</h2>
+            <hr class="red bottom-buffer">
+
+            <div class="form-group col-xs-6 col-sm-4" style="margin-top: -25px">
+                <label class="col-md-12" style="padding-left: 0;">
+                    Tipo inmueble<label class="control-label" for="email-01">*</label>:
+                </label>
+                <select class="form-control ns_" ng-model="data.model">
+                    <option ng-repeat="tp in vm.Property" value="{{tp.IdPropertyType}}">{{tp.Description}}</option>
+                </select>
+            </div>
+
+
+            <div class="form-group col-xs-6 col-sm-4" style="margin-top: -25px">
+                <label class="col-md-12" style="padding-left: 0;">
+                    Tipo poseedor<label class="control-label" for="email-01">*</label>:
+                </label>
+                <select class="form-control ns_" ng-model="data.model">
+                    <option ng-repeat="to in vm.Owner" value="{{to.IdTypeOwner}}" selected="selected" disabled>{{to.Description}}</option>
+                </select>
+            </div>
+
+
+            <div class="form-group col-xs-6 col-sm-4" style="margin-top: -25px">
+                <label class="col-md-12" style="padding-left: 0;">
+                    Centro urbano<label class="control-label" for="email-01">*</label>:
+                </label>
+
+                <select class="form-control ns_" ng-model="data.model" data-ng-click="vm.GetUrbanCenter();">
+                    <option ng-repeat="tu in vm.Urban" value="{{tu.IdUrbanCenter}}">{{tu.Description}}</option>
+                </select>
+            </div>
+
+            <div class="form-group col-if-6 col-md-4">
+                <label class="control-label" for="email-01">Código postal:</label>
+                <input class="form-control" type="text" data-ng-model="bn.Name">
+            </div>
+
+            <div class="form-group col-if-6 col-md-4">
+                <label class="control-label" for="email-01">Municipio o Alcaldía:</label>
+                <input class="form-control" type="text" data-ng-model="bn.Name">
+            </div>
+
+            <div class="form-group col-if-6 col-md-4">
+                <label class="control-label" for="email-01">Colonia:</label>
+                <input class="form-control" type="text" data-ng-model="bn.Name">
+            </div>
+
+            <div class="form-group col-if-6 col-md-4">
+                <label class="control-label" for="email-01">Calle:</label>
+                <input class="form-control" type="text" data-ng-model="bn.Name">
+            </div>
+
+
+            <div class="form-group col-if-6 col-md-4">
+                <label class="control-label" for="email-01">Número exterior:</label>
+                <input class="form-control" type="text" data-ng-model="bn.Name">
+            </div>
+
+
+            <div class="form-group col-if-6 col-md-4">
+                <label class="control-label" for="email-01">Número interior:</label>
+                <input class="form-control" type="text" data-ng-model="bn.Name">
+            </div>
+            <div class="form-group col-sm-12 col-if-4 col-md-4">
+                <label class="control-label" for="email-01">Manzana:</label>
+                <input class="form-control" type="text" data-ng-model="bn.Name">
+            </div>
+
+
+
+
+            <div class="row vertical-buffer" data-ng-if="vm.Owner.indexOf(vm.Owner.IdOwnerType) == 1">
+                <div id="divCurpDebtor" class="col-md-8" style="padding-left: 0px;">
+                    <ng-form name="form" role="form" novalidate="novalidate">
+                        <div class="form-group col-if-12 col-sm-12 col-md-8">
+                            <label class="control-label label-style" for="curp">Clave Única de Registro de Población (CURP)<label class="control-label">*</label>:</label>
+                            <input class="form-control" type="text" data-ng-model="vm.newDebtorData.CURP" id="txtCurp"
+                                   pattern="^[A-Z]{1}[AEIOU]{1}[A-Z]{2}[0-9]{2}(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])[HM]{1}(AS|BC|BS|CC|CS|CH|CL|CM|DF|DG|GT|GR|HG|JC|MC|MN|MS|NT|NL|OC|PL|QT|QR|SP|SL|SR|TC|TS|TL|VZ|YN|ZS|NE)[B-DF-HJ-NP-TV-Z]{3}[0-9A-Z]{1}[0-9]{1}$"
+                                   pattern-err-type="curp" ng-maxlength="18" required name="curp">
+
+
+
+                        </div>
+
+                        <div class="form-group col-sm-12 col-if-4 col-md-4">
+                            <label class="control-label" for="email-01">Nombre(s):</label>
+                            <input class="form-control" type="text" data-ng-model="bn.Name">
+                        </div>
+                        <div class="form-group col-xs-12 col-sm-6 col-if-4 col-md-4">
+                            <label class="control-label" for="email-01">Primer apellido:</label>
+                            <input class="form-control" type="text" data-ng-model="bn.PaternalLastName">
+                        </div>
+                        <div class="form-group col-xs-12 col-sm-6 col-if-4 col-md-4">
+                            <label class="control-label" for="email-01">Segundo apellido:</label>
+                            <input class="form-control" type="text" data-ng-model="bn.MaternalLastName">
+                        </div>
+
+                        <div class="form-group col-xs-6 col-sm-4">
+                            <label class="control-label" for="email-01">Entidad de Nacimiento:</label>
+                            <input class="form-control" type="text" data-ng-model="bn.Birthplace">
+                        </div>
+                        <div class="form-group col-sm-4 datepicker-group" style="margin-top:-25px">
+                            <label>
+                                Fecha de nacimiento<label class="control-label asterisk" for="calendarYear">*</label>:
+                            </label>
+                            <input class="ns_ form-control" id="calendarYear" type="text" data-ng-model=vm.Birthdate
+                                   placeholder="Selecciona una fecha" required>
+                            <i class="glyphicon glyphicon-calendar" aria-hidden="true" style="right: 12px; position: absolute; padding: 35px; pointer-events: none;"></i>
+                        </div>
+
+                        <div class="form-group col-sm-12 col-if-4 col-md-4" style="margin-top:-25px">
+                            <label>
+                                Sexo<label class="control-label asterisk5">*</label>:
+                            </label>
+                            <select id="data_ask5" class="ns_ form-control" data-ng-model="vm.newKidData.Gender" placeholder="Selecciona el sexo" required>
+                                <option value=''>- Selecciona -</option>
+                                <option value="H">Masculino</option>
+                                <option value="M">Femenino</option>
+                            </select>
+                        </div>
+
+                        <br />
+
+                    </ng-form><br /><br />
+                </div>
+            </div>
+        </div> <!-- col -->
+    </div>
+
+</div><!-- container -->
+<div class="bottom-buffer"></div>
+<script>
+    UI.initToolTips();
+</script>

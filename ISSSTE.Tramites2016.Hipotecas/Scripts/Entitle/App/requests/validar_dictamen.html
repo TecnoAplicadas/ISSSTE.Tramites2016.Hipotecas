@@ -1,0 +1,66 @@
+﻿<!-- Contenido -->
+<div class="container" ng-controller="emptyController as vm" ng-init="vm.init()">
+
+    <!-- Start Trámite -->
+
+    <div class="row">
+
+        <div class="col-xs-12  marginbot-40">
+
+            <h3>Validación del dictamen</h3>
+            <div class="alert alert-info">
+                <strong>¡Tu dictamen fue emitido!</strong> Por favor indique si tu estás de acuerdo con este dictamen.
+            </div>
+
+            <h5>Mi solicitud:</h5>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Folio</th>
+                            <th>Fecha</th>
+                            <th>Estatus</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>ABL1234567890150716140312</td>
+                            <td>15/02/2015</td>
+                            <td>En espera de aprobación del dictamen</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <p>
+                <strong>Detalle del dictamen:</strong>
+            </p>
+            <p></p>
+            <p></p>
+
+
+            <!-- Botones -->
+            <div class="pull-right margintop-30">
+                <a href="dictamen_rechazado.html" id="changeBtn" class="btn btn-danger" type="button">
+                    No estoy de acuerdo con el dictamen
+                </a>
+                <a href="dictamen_aprobado.html" id="changeBtn" class="btn btn-primary" type="button">
+                    Si estoy de acuerdo con el dictamen
+                </a>
+            </div>
+
+
+        </div> <!-- col -->
+
+    </div> <!-- row -->
+
+    <!-- End Trámite -->
+
+
+    <!-- End tramite Hipotecas -->
+
+
+</div><!-- container -->

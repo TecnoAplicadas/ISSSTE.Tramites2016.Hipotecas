@@ -1,0 +1,111 @@
+﻿@using System.Text;
+@using ISSSTE.Tramites2016.Common.Web.Helpers
+@model ISSSTE.Tramites2016.Hipotecas.Models.CatalogViewModel
+@{
+    Layout = null;
+}
+@{
+    StringBuilder foreignKeysArray = new StringBuilder();
+    foreignKeysArray.Append("[");
+
+    foreach (var actualProperty in Model.Properties)
+    {
+        if (actualProperty.IsForeignKey)
+        {
+            foreignKeysArray.Append(String.Format("'{0}',", actualProperty.Name));
+        }
+    }
+    if (Model.Properties.Count(p => p.IsForeignKey) > 0)
+    {
+        foreignKeysArray.Remove(foreignKeysArray.Length - 1, 1);
+    }
+
+    foreignKeysArray.Append("]");
+}
+<div data-ng-controller="catalogsController as vm" data-ng-init="vm.initCatalog('@Model.CatalogName', @foreignKeysArray.ToString())">
+    <!--/ START TITLE -->
+    <div class="col-xs-12">
+        <h2>Listado de @Model.CatalogDisplayName.ToLower()</h2>
+        <hr class="red">
+    </div>
+
+    <!--/ END TITLE -->
+    <!-- START CONTENT -->
+
+    <div class="col-xs-12">
+        <div class="alerts"></div>
+    </div>
+
+    <div class="col-xs-12">
+        <a href="#{{nc.getNewCatalogItemDetail('@Model.CatalogName')}}" class="btn btn-primary pull-right">
+            <span aria-hidden="true"></span>
+            Agregar @Model.CatalogDisplayName.ToLower()
+        </a>
+    </div>
+    <div class="col-xs-12 margintop-30">
+        <div class="panel panel-default" data-ng-show="vm.catalogItems.length > 0">
+            <div class="panel-body overflow-table">
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            @foreach (var actualProperty in Model.Properties)
+                              {
+                                <th>@actualProperty.DisplayName</th>
+                            }
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-ng-repeat="actualCatalogItem in vm.catalogItems">
+                            @foreach (var actualProperty in Model.Properties)
+                            {
+                                if (actualProperty.IsForeignKey)
+                                {
+                                    <td>{{vm.getDependentCatalogLabel(actualCatalogItem.@actualProperty.Name, '@actualProperty.Name')}}</td>
+                                }
+                                else if (TypeHelper.IsDecimal(actualProperty.Type))
+                                {
+                                    <td>{{actualCatalogItem.@actualProperty.Name | currency}}</td>
+                                }
+                                else if (TypeHelper.IsDate(actualProperty.Type))
+                                {
+                                    <td>{{actualCatalogItem.@actualProperty.Name | date:'dd/mm/yyyy'}}</td>
+                                }
+                                else if (TypeHelper.IsBoolean(actualProperty.Type))
+                                {
+                                    <td data-ng-if="actualCatalogItem.@actualProperty.Name">Sí</td>
+                                    <td data-ng-if="!actualCatalogItem.@actualProperty.Name">No</td>
+                                }
+                                else
+                                {
+                                    <td>{{actualCatalogItem.@actualProperty.Name}}</td>
+                                }
+                            }
+                            <td>
+                                <div class="pull-right">
+                                    @if (!String.IsNullOrEmpty(Model.KeyProperty))
+                                    {
+                                        <a ng-href="#{{nc.getCatalogItemDetailUrl('@Model.CatalogName', actualCatalogItem.@Model.KeyProperty)}}">
+                                            <button type="button" class="btn btn-primary btn-sm">
+                                                Ver detalle
+                                            </button>
+                                        </a>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.panel-default -->
+        </div>
+        <!-- /.panel -->
+        <div class="alert alert-info" data-ng-show="vm.catalogItems == 0">
+            No se encontro ningún @Model.CatalogDisplayName.ToLower().
+        </div>
+    </div>
+    <!-- /.col -->
+    <!-- END CONTENT -->
+
+</div>

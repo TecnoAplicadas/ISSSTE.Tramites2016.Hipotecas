@@ -1,0 +1,166 @@
+﻿<div ng-controller="dateController as vm" ng-init="vm.initDates()">
+   
+    <!-- Start Trámite -->
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12 ">
+            <h2 class="marg-T30px">Mi solicitud</h2>
+            <hr class="red marg-B30px ">
+            <div>
+                <div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Folio</th>
+                                <th>Fecha</th>
+                                <th>Estatus</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{vm.opinionRequest.Request.Folio}}</td>
+                                <td>{{vm.opinionRequest.Request.Date}}</td>
+                                <td>{{vm.opinionRequest.Request.StatusDescription}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--<h3>Diagnóstico</h3>-->
+            <!--<div class="alert alert-info">
+                <strong>¡Su diagnóstico fue emitido!</strong>
+                Por favor indique si usted está de acuerdo con este dictamen.
+            </div>-->
+            <!--<p>
+                <strong>Detalle del diagnostico:</strong>
+            </p>
+            <p>{{vm.opinionRequest.Opinion.Opinion1}}</p>-->
+            <!-- Botones -->
+            <div class="pull-right margintop-30" data-ng-show="vm.opinionRequest.Request.StatusId == 120">
+                <button data-ng-click="vm.rejectDiagnostic(nc.navigateToRequest)" class="btn btn-danger" type="button">
+                    No estoy de acuerdo con el dictamen
+                </button>
+                <button data-ng-click="vm.aproveDiagnostic()" class="btn btn-primary" type="button">
+                    Si estoy de acuerdo con el dictamen
+                </button>
+            </div>
+
+
+        </div> <!-- col -->
+        <div data-ng-show="vm.opinionRequest.Request.StatusId == 120 || vm.opinionRequest.Request.StatusId == 140 ||
+         vm.opinionRequest.Request.StatusId == 150 || vm.opinionRequest.Request.StatusId == 130">
+            <div class="col-xs-12 col-sm-12 col-if-12 col-md-12">
+                <h2 class="marg-T30px">Mis citas</h2>
+                <hr class="red marg-B30px">
+                <div class="alert alert-info">
+                    <strong>Debes de cancelar tu cita para poder agendar una nueva cita.</strong><br>Toma en cuenta que solo podrás agendar o re-agendar {{vm.dates.NumberAppointments}} veces una cita.
+                </div>
+            <br/>
+
+                <h2 class="marg-T30px">Cita agendada</h2>
+                <hr class="red marg-B30px">
+                <div class="margintop-10">
+                    <div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="abl-thestatal">Fecha de la cita</th>
+                                    <th class="abl-thestatal">Hora de la cita</th>
+                                    <th>Delegación</th>
+                                    <th>Dirección</th>
+                                </tr>
+                            </thead>
+                            <tbody data-ng-repeat="cu in vm.dates.CurrentdAppoinments">
+                                <tr>
+                                    <td>{{cu.Date}}</td>
+                                    <td>{{cu.Time}}</td>
+                                    <td>{{cu.Delegation.Name}}</td>
+                                    <td>
+                                        {{cu.Delegation.Address}}
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                            <tbody data-ng-show="vm.dates.CurrentdAppoinments.length == 0">
+                                <tr>
+                                    <td colspan="4">
+                                        <div class="alert alert-warning">
+                                            No se encontraron resultados.
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="pull-right">
+                            <a  data-ng-click="vm.cancelApp(vm.dates.CurrentdAppoinments[0].AppoinmentId)" class="btn btn-danger btn-ms" ng-class="{ disabled: vm.dates.CurrentdAppoinments.length == 0}">
+                                <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;&nbsp;Cancelar cita
+                            </a>
+
+                            <a  data-ng-click="nc.navigateToDate(vm.opinionRequest.Request.RequestId)" class="btn btn-primary btn-ms"
+                               data-ng-show="(vm.dates.CurrentdAppoinments.length + vm.dates.CanceledAppoinments.length) < vm.dates.NumberAppointments">
+                                <span class="glyphicon glyphicon-calendar"></span>&nbsp;&nbsp;Agendar/Re-agendar cita
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <br /><br />
+
+                <!-- Citas pasadas -->
+                <h2 class="marg-T30px">Citas canceladas y/o no atendidas</h2>
+                <hr class="red marg-B30px">
+                <div class="vertical-buffer">
+                    <div>
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="abl-thestatal">Fecha de la cita</th>
+                                    <th class="abl-thestatal">Hora de la cita</th>
+                                    <th>Delegación</th>
+                                    <th>Dirección</th>
+                                </tr>
+                            </thead>
+                            <tbody data-ng-repeat="can in vm.dates.CanceledAppoinments">
+                                <tr>
+                                    <td>{{can.Date}}</td>
+                                    <td>{{can.Time}}</td>
+                                    <td>{{can.Delegation.Name}}</td>
+                                    <td>
+                                        {{can.Delegation.Address}}
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                            <tbody data-ng-show="vm.dates.CanceledAppoinments.length == 0">
+                                <tr>
+                                    <td colspan="4">
+                                        <div class="alert alert-warning">
+                                            No se encontraron resultados.
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div><!-- col -->
+        </div>
+    </div><!-- row -->
+
+    <div class="row" data-ng-show="vm.opinionRequest.Request.StatusId == 120 || vm.opinionRequest.Request.StatusId == 140 ||
+         vm.opinionRequest.Request.StatusId == 150 || vm.opinionRequest.Request.StatusId == 130">
+        <!-- col -->
+
+    </div> <!-- row -->
+    <!-- End Trámite -->
+    <!-- End tramite Hipotecas -->
+
+
+</div><!-- container -->
+<div class=""></div>

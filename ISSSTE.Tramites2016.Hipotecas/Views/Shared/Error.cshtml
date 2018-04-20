@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Error";
+
+    if (ViewContext.RouteData.Values["Controller"].ToString() == "Entitle")
+    {
+        Layout = "~/Views/Shared/_LayoutEntitle.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_LayoutAdministrator.cshtml";
+    }
+}
+
+<div class="container" style="margin-top: -2px;">
+    <h2></h2>
+    <div class="alert alert-danger alert-dismissible" role="alert">
+        <strong>¡Ups, algo salio mal! Intenta alguna de las siguientes cosas: </strong>
+        <br/><br/>
+        Comprueba que estes conectado a la red.
+        <br/>
+        Comprueba la información ingresada.
+        <br/>
+        Contacta al administrador del sistema.
+    </div>
+</div>

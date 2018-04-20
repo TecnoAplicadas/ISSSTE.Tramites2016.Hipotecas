@@ -1,0 +1,85 @@
+﻿<div data-ng-controller="messagesController as vm" data-ng-init="vm.initSearch()">
+    <!--/ START TITLE -->
+    <div class="col-xs-12">
+        <h2>Consulta de mensajes</h2>
+        <hr class="red">
+    </div>
+    <!--/ END TITLE -->
+    <!-- START CONTENT -->
+    <div class="col-xs-12">
+        <div class="alerts">
+
+        </div>
+
+    </div>
+
+    <!--<div class="col-xs-12">
+        <div class="alert alert-success" data-ng-hide="vm.Savesucces.length > 0">
+            {{vm.Savesucces}}
+        </div>
+
+    </div>-->
+
+    <div class="row">
+
+        <div class="col-xs-12  marginbot-40">
+
+            <div class="col-xs-12 margintop-30" data-ng-controller="navigationController as nc">
+                <div class="panel panel-default" data-ng-show="vm.messages.length > 0">
+                    <div class="panel-body overflow-table">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Clave</th>
+                                    <th>Nombre</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-ng-repeat="message in vm.messages">
+                                    <td>{{message.Key}}</td>
+                                    <td>{{message.Description}}</td>
+                                    <td>
+                                        <a type="button" class="btn btn-primary" href="#{{nc.getmessagesByIdUrl(message.MessageId)}}">
+                                            Editar
+                                        </a>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.panel-default -->
+                </div>
+                <!-- /.panel -->
+                <div class="alert alert-info" data-ng-show="vm.messages == 0">
+                    No se encontraron mensajes.
+                </div>
+
+                <div class="col-xs-2 pull-left paddingleft-0">
+                    Mostrar:
+                    <select class="form-control"
+                            data-ng-options="actualPageSize + ' resultados' for actualPageSize in vm.pageSizes"
+                            data-ng-model="vm.selectedPageSize" data-ng-change="vm.searchmessages()"></select>
+                </div>
+                <div class="col-xs-10 pull-right marginbot-20 paddingright-0" data-ng-show="vm.messages.length > 0">
+                    <nav class="text-right">
+                        <ul class="pagination">
+                            <li data-ng-class="{ disabled: vm.isFirstPage() }">
+                                <a data-ng-click="vm.changeToPreviousPage()">&laquo;</a>
+                            </li>
+                            <li data-ng-repeat="actualPage in vm.pages"
+                                data-ng-class="{ active: vm.isPageSelected(actualPage) }">
+                                <a data-ng-click="vm.changeSelectedPage(actualPage)">{{actualPage}}</a>
+                            </li>
+                            <li data-ng-class="{ disabled: vm.isLasPage() }">
+                                <a data-ng-disabled="vm.isLasPage()"
+                                   data-ng-click="vm.changeToNextPage">&raquo;</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

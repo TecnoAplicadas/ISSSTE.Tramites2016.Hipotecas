@@ -1,0 +1,50 @@
+﻿@*<h2>Solicitud</h2>
+<hr class="red">*@
+<div>
+
+    @if (Request.Url.AbsoluteUri.Contains("EsAngular"))
+    {
+        
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="@(ViewBag.Page=="Detail"?"active":"inactive")">
+                <a ng-click="vm.getCompleteUrl('@System.Configuration.ConfigurationManager.AppSettings["Sitio"]/Administrator/Detail?NoIssste={0}&Request={1}&Page=Detail')" style="cursor: pointer" role="tab" data-toggle="tab">Derechohabiente</a>
+            </li>
+            <li role="presentation" class="@(ViewBag.Page=="Documentos"?"active":"inactive")">
+                <a ng-click="vm.getCompleteUrl('@System.Configuration.ConfigurationManager.AppSettings["Sitio"]/Administrator/Documentos?NoIssste={0}&Request={1}&Observations={2}&Page=Documentos')" style="cursor: pointer" role="tab" data-toggle="tab">Documentos</a>
+            </li>
+            <li role="presentation" class="@(ViewBag.Page=="RequestView"?"active":"inactive")">
+                <a ng-click="vm.getCompleteUrl('@System.Configuration.ConfigurationManager.AppSettings["Sitio"]/Administrator/RequestView?NoIssste={0}&Request={1}&Obeservations={2}&Page=RequestView')" style="cursor: pointer" role="tab" data-toggle="tab">Datos de la solicitud</a>
+            </li>
+            <li role="presentation" class="@(ViewBag.Page=="Seguimiento"?"active":"inactive")">
+                <a ng-click="vm.getCompleteUrl('@System.Configuration.ConfigurationManager.AppSettings["Sitio"]/Administrator/Seguimiento?NoIssste={0}&Request={1}&Observations={2}&Page=Seguimiento')" style="cursor: pointer" role="tab" data-toggle="tab">Seguimiento</a>
+            </li>
+            <li role="presentation" class="@(ViewBag.page=="ResultadoRevision"?"active":"inactive")">
+                <a ng-click="vm.getCompleteUrl('@System.Configuration.ConfigurationManager.AppSettings["Sitio"]/Administrador/#ResultadoRevision/{0}/{1}/{2}')" style="cursor: pointer" role="tab" data-toggle="tab">Resultado de la revisión
+                </a>
+            </li>
+        </ul>
+    }
+    else
+    {
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="@(ViewBag.Page=="Detail"?"active":"inactive")">
+                <a href="@Url.Action("Detail",     "Administrator", new { NoIssste = @ViewBag.NoISSSTE, Request = @ViewBag.ReturnUrl, Observations = @ViewBag.Observations})" ng-click="vm.saveTempObservations()" style="cursor: pointer" role="tab">Derechohabiente</a>
+            </li>
+            <li role="presentation" class="@(ViewBag.Page=="Documentos"?"active":"inactive")">
+                <a href="@Url.Action("Documentos", "Administrator", new { NoIssste = @ViewBag.NoISSSTE, Request = @ViewBag.ReturnUrl, Observations = @ViewBag.Observations })"   style="cursor: pointer" role="tab">Documentos</a>
+            </li>
+            <li role="presentation" class="@(ViewBag.Page=="RequestView"?"active":"inactive")">
+                <a href="@Url.Action("RequestView", "Administrator", new { NoIssste = @ViewBag.NoISSSTE, Request = @ViewBag.ReturnUrl, Observations = @ViewBag.Observations })" ng-click="vm.saveTempObservations()" style="cursor: pointer" role="tab" >Datos de la solicitud</a>
+            </li>
+            <li role="presentation" class="@(ViewBag.Page=="Seguimiento"?"active":"inactive")">
+                <a href="@Url.Action("Seguimiento", "Administrator", new { NoIssste = @ViewBag.NoISSSTE, Request = @ViewBag.ReturnUrl, Observations = @ViewBag.Observations })"ng-click="vm.saveTempObservations()" style="cursor: pointer" role="tab" >Seguimiento</a>
+            </li>
+            <li role="presentation" class="@(ViewBag.page=="ResultadoRevision"?"active":"inactive")">
+                <a onclick="window.location.href='@System.Configuration.ConfigurationManager.AppSettings["Sitio"]/Administrador/#ResultadoRevision/@ViewBag.NoISSSTE/@ViewBag.ReturnUrl/@ViewBag.Observations'" ng-click="vm.saveTempObservations()" style="cursor: pointer" role="tab" data-toggle="tab">Resultado de la revisión</a>
+            </li>
+        </ul>
+    }
+    
+</div>
+
+

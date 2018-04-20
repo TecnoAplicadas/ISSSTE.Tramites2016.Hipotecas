@@ -1,0 +1,225 @@
+﻿<!--
+//####################################################################
+//      ## Fecha de creación: 18-03-2016
+//      ## Fecha de última modificación: 30-03-2016
+//      ## Responsable: Emanuel De la Isla Vértiz
+//      ## Módulos asociados: Información general, Deudos, Beneficiarios, Historial Laboral.
+//      ## Id Tickets asociados al cambio: R-013042
+//####################################################################
+-->
+<div ng-controller="requestController as vm" ng-init="vm.initData()">
+    <script type="text/javascript">
+
+        function udm_(e) {
+            var t = "comScore=", n = document, r = n.cookie, i = "", s = "indexOf", o = "substring", u = "length", a = 2048, f, l = "&ns_", c = "&", h, p, d, v, m = window, g = m.encodeURIComponent || escape; if (r[s](t) + 1) for (d = 0, p = r.split(";"), v = p[u]; d < v; d++) h = p[d][s](t), h + 1 && (i = c + unescape(p[d][o](h + t[u]))); e += l + "_t=" + +(new Date) + l + "c=" + (n.characterSet || n.defaultCharset || "") + "&c8=" + g(n.title) + i + "&c7=" + g(n.URL) + "&c9=" + g(n.referrer), e[u] > a && e[s](c) > 0 && (f = e[o](0, a - 8).lastIndexOf(c), e = (e[o](0, f) + l + "cut=" + g(e[o](f + 1)))[o](0, a)), n.images ? (h = new Image, m.ns_p || (ns_p = h), h.src = e) : n.write("<", "p", "><", 'img src="', e, '" height="1" width="1" alt="*"', "><", "/p", ">")
+        };
+
+        function uid_call(a, b) {
+            ui_c2 = 17183199; // your corporate c2 client value
+            ui_ns_site = 'gobmx_isssste_td-sp10'; // your sites identifier
+            window.b_ui_event = window.c_ui_event != null ? window.c_ui_event : "", window.c_ui_event = a;
+            var ui_pixel_url = 'https://sb.scorecardresearch.com/p?c1=2&c2=' + ui_c2 + '&ns_site=' + ui_ns_site + '&name=' + a + '&ns_type=hidden&type=hidden&ns_ui_type=' + b;
+            var b = "comScore=", c = document, d = c.cookie, e = "", f = "indexOf", g = "substring", h = "length", i = 2048, j, k = "&ns_", l = "&", m, n, o, p, q = window, r = q.encodeURIComponent || escape; if (d[f](b) + 1) for (o = 0, n = d.split(";"), p = n[h]; o < p; o++) m = n[o][f](b), m + 1 && (e = l + unescape(n[o][g](m + b[h]))); ui_pixel_url += k + "_t=" + +(new Date) + k + "c=" + (c.characterSet || c.defaultCharset || "") + "&c8=" + r(c.title) + e + "&c7=" + r(c.URL) + "&c9=" + r(c.referrer) + "&b_ui_event=" + b_ui_event + "&c_ui_event=" + c_ui_event, ui_pixel_url[h] > i && ui_pixel_url[f](l) > 0 && (j = ui_pixel_url[g](0, i - 8).lastIndexOf(l), ui_pixel_url = (ui_pixel_url[g](0, j) + k + "cut=" + r(ui_pixel_url[g](j + 1)))[g](0, i)), c.images ? (m = new Image, q.ns_p || (ns_p = m), m.src = ui_pixel_url) : c.write("<p><img src='", ui_pixel_url, "' height='1' width='1' alt='*'></p>");
+            //alert(ui_pixel_url);
+        }
+        udm_('https://sb.scorecardresearch.com/b?c1=2&c2=17183199&ns_site=gobmx&name=area.seccion');
+    </script>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-if-12 col-md-12">
+            <div class="alerts"></div>
+        </div>
+    </div>
+
+    <!-- GRÁFICA BASE -->
+    <div class="row ">
+        <ul class="wizard-steps-extensive col-md-12">
+            <li class="completed"> <h5 data-ng-click="nc.navigateToRequestUrl()">1</h5> <span>Requisitos del trámite</span> </li>
+            <li> <h5>2</h5> <span>Datos generales</span> </li>
+            <li> <h5>3</h5> <span>Historia Laboral</span> </li>
+            <li> <h5>4</h5> <span>Registro de solicitud</span> </li>
+            <li> <h5>5</h5> <span>Informacion de los deudos</span> </li>
+        </ul>
+    </div> <!-- /row -->
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-if-12 col-md-12">
+            <h2>Datos generales del derechohabiente</h2>
+            <hr class="red" />
+            <div class="alert alert-info marg-B30px marg-T30px">
+                Antes de continuar verifica la siguiente información.
+            </div>
+        </div>
+
+    </div>
+    <!-- Start Trámite -->
+    <div class="row">
+        <form role="form">
+            <div class="form-group col-xs-12 marg-B30px marg-T30px">
+                <h2>Datos personales</h2>
+                <hr class="red">
+            </div>
+            <div class="form-group col-md-4">
+                <label class="control-label" for="curp">Clave Única de Registro de Población (CURP):</label>
+                <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.CURP">
+            </div>
+            <div class="form-group col-sm-4">
+                <label class="control-label" for="rfc">Registro Federal del Contribuyente <br />(RFC):</label>
+                <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.RFC">
+            </div>
+            <div class="form-group col-sm-4">
+                <label class="control-label" for="email-01">Nombre(s):<br /><a style="color:white">b</a></label>
+                <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.Name">
+            </div>
+            <div class="form-group col-sm-4">
+                <label class="control-label" for="email-01">Primer apellido:</label>
+                <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.PaternalLastName">
+            </div>
+            <div class="form-group col-sm-4">
+                <label class="control-label" for="email-01">Segundo apellido:</label>
+                <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.MaternalLastName">
+            </div>
+            <div class="form-group col-sm-4">
+                <label class="control-label" for="email-01">Sexo:</label>
+                <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.Gender">
+            </div>
+            <div class="form-group col-sm-4">
+                <label class="control-label" for="email-01">Edad:</label>
+                <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.Age">
+            </div>
+            <div class="form-group col-sm-4">
+                <label class="control-label" for="regimen">Régimen de pensión:</label>
+                <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.RegimeType">
+            </div>
+
+            <!--Información de estatus del Derechohabiente-->
+            <div class="form-group col-sm-4">
+                <label class="control-label" for="email-01">Estatus:</label>
+                <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.StateDescription">
+            </div>
+            <div class="form-group col-xs-12 marg-B30px marg-T30px">
+                <h2>Dirección</h2>
+                <hr class="red">
+            </div>
+            <div class="row">
+                <div class="ab-general-padding ">
+                    <div class="form-group col-sm-4 ">
+                        <label class="control-label" for="email-01">Código postal:</label>
+                        <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.ZipCode">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label class="control-label" for="email-01">Colonia:</label>
+                        <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.Colony">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label class="control-label" for="email-01">Municipio o Alcaldía:</label>
+                        <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.City">
+                    </div>
+                    <div class="form-group col-sm-4 ">
+                        <label class="control-label" for="email-01">Calle:</label>
+                        <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.Street">
+                    </div>
+                    <div class="form-group col-sm-4 ">
+                        <label class="control-label" for="email-01">Número exterior:</label>
+                        <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.NumExt">
+                    </div>
+                    <div class="form-group col-sm-4 ">
+                        <label class="control-label" for="email-01">Número interior:</label>
+                        <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.NumInt">
+                    </div>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 marg-B30px marg-T30px">
+            <h2>Datos de contacto</h2>
+            <hr class="red">
+            <div class="alert alert-info marg-B30px marg-T30px">
+                Los siguientes datos son obligatorios, favor de ingresarlos.
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div id="divCurp" class="form-group">
+            <ng-form name="form" role="form" novalidate="novalidate">
+                <!--<div class="col-if-6 col-sm-12 col-md-2">
+                    <label class="control-label" for="lada" style="color:#545454 !important">Lada</label><label class="control-label"> <span id="spanlada" class="form-text form-text-error"  style="color:#545454">*</span></label><label>:</label>
+                    <small> <input id="inptlada" data-placement="left" style="border: 1px solid #ccc;" maxlength="3" class="form-control form-control-error" name="lada" data-ng-model="vm.lada" ng-maxlength="3" ng-minlength="2" onkeypress="return valida(event)" required></small>
+                </div>
+                <div class="col-if-6 col-sm-12 col-md-2">
+                    <label class="control-label" for="telefono" style="color:#545454 !important">Teléfono fijo</label><label class="control-label"> <span id="spantel" class="form-text form-text-error"  style="color:#545454">*</span></label><label>:</label>
+                    <small> <input id="inpttel" data-placement="left" style="border: 1px solid #ccc;" maxlength="8" class="form-control form-control-error" name="telefono" data-ng-model="vm.telefono" ng-maxlength="8" ng-minlength="7" onkeypress="return valida(event)" required></small>
+                </div>
+                <div class="col-if-6 col-sm-12 col-md-4 bottom-buffer">
+                    <label class="control-label" for="correo" style="color:#545454 !important">Correo electrónico</label><label class="control-label"> <span id="spanemail" class="form-text form-text-error"  style="color:#545454">*</span></label><label>:</label>
+                    <small>    <input id="inptemail" data-placement="left" style="border: 1px solid #ccc;" class="form-control form-control-error" name="correo" type="email" data-ng-model="vm.information.Entitle.Email" required></small>
+                </div>-->
+
+                <div class="form-group col-xs-2">
+                    <label>Lada<label class="control-label">*</label>:</label>
+                    <input name="lada" class="form-control" placeholder="Lada" type="text"
+                           data-ng-model="vm.lada" required maxlength="3" ng-minlength="2" onkeypress="return valida(event)">
+                </div>
+                <div class="form-group col-xs-2">
+                    <label>Teléfono fijo<label class="control-label">*</label>:</label>
+                    <input name="telefono" class="form-control" placeholder="Teléfono" type="text"
+                           data-ng-model="vm.telefono" required ng-minlength="7" maxlength="8" onkeypress="return valida(event)">
+
+                </div>
+                <div class="form-group col-xs-4">
+                    <label>Correo electrónico<label class="control-label">*</label>:</label>
+                    <input name="correo" class="form-control" type="email" placeholder="Usuario@dominio.com"
+                           data-ng-model="vm.information.Entitle.Email" required>
+                </div>
+
+                <div class="col-sm-12 col-md-4"></div>
+            </ng-form>
+
+
+            <br />
+            <!-- Botones -->
+            <div class="col-md-12 clearfix botttom-buffer marginbot-70">
+                <div class="pull-left text-muted">
+                    *Campos obligatorios
+                </div>
+                <div class="pull-right  ">
+                    <a  data-ng-click="nc.navigateToLastRequestUrl(2)" id="changeBtn" class="btn btn-default" data-placement="bottom">
+                        Regresar
+                    </a>
+                    <a  ng-class="{ disabled: !vm.isFormValid(form, form.telefono, form.correo)}"
+                       data-ng-click="vm.validateData(nc.navigateToNextRequestUrl)" id="changeBtn" class="btn btn-primary" data-placement="bottom">
+                        Siguiente
+                    </a>
+                </div>
+            </div>
+        </div> <!-- panel-body -->
+    </div>
+    <!-- End Trámite -->
+    <!-- End tramite Hipotecas -->
+
+
+</div><!-- container -->
+
+<script>
+    UI.initToolTips();
+</script>
+
+<script>
+    function valida(e) {
+        tecla = (document.all) ? e.keyCode : e.which;
+
+        //Tecla de retroceso para borrar, siempre la permite
+        if (tecla == 8) {
+            return true;
+        }
+
+        // Patron de entrada, en este caso solo acepta numeros
+        patron = /[0-9]/;
+        tecla_final = String.fromCharCode(tecla);
+        return patron.test(tecla_final);
+    }
+</script>

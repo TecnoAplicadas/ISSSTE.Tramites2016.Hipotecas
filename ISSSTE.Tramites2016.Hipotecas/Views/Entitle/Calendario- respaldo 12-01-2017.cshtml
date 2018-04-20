@@ -1,0 +1,286 @@
+﻿<!-- Begin Digital Analytix Tag 1.1302.13 -->
+<script type="text/javascript">
+    function udm_(e) {
+        var t = "comScore=", n = document, r = n.cookie, i = "", s = "indexOf", o = "substring", u = "length", a = 2048, f, l = "&ns_", c = "&", h, p, d, v, m = window, g = m.encodeURIComponent || escape;
+        if (r[s](t) + 1) for (d = 0, p = r.split(";"), v = p[u]; d < v; d++) h = p[d][s](t), h + 1 && (i = c + unescape(p[d][o](h + t[u])));
+        e += l + "_t=" + +(new Date) + l + "c=" + (n.characterSet || n.defaultCharset || "") + "&c8=" + g(n.title) + i + "&c7=" + g(n.URL) + "&c9=" + g(n.referrer), e[u] > a && e[s](c) > 0 && (f = e[o](0, a - 8).lastIndexOf(c), e = (e[o](0, f) + l + "cut=" + g(e[o](f + 1)))[o](0, a)), n.images ? (h = new Image, m.ns_p || (ns_p = h), h.src = e) : n.write("<", "p", "><", 'img src="', e, '" height="1" width="1" alt="*"', "><", "/p", ">")
+    };
+
+    function uid_call(a, b) {
+        ui_c2 = 17183199; // your corporate c2 client value
+        ui_ns_site = 'ISSSTE.Hipotecas.Calendario'; // your sites identifier
+        window.b_ui_event = window.c_ui_event != null ? window.c_ui_event : "", window.c_ui_event = a;
+        var ui_pixel_url = 'https://sb.scorecardresearch.com/p?c1=2&c2=' + ui_c2 + '&ns_site=' + ui_ns_site + '&name=' + a + '&ns_type=hidden&type=hidden&ns_ui_type=' + b;
+        var b = "comScore=", c = document, d = c.cookie, e = "", f = "indexOf", g = "substring", h = "length", i = 2048, j, k = "&ns_", l = "&", m, n, o, p, q = window, r = q.encodeURIComponent || escape;
+        if (d[f](b) + 1) for (o = 0, n = d.split(";"), p = n[h]; o < p; o++) m = n[o][f](b), m + 1 && (e = l + unescape(n[o][g](m + b[h])));
+        ui_pixel_url += k + "_t=" + +(new Date) + k + "c=" + (c.characterSet || c.defaultCharset || "") + "&c8=" + r(c.title) + e + "&c7=" + r(c.URL) + "&c9=" + r(c.referrer) + "&b_ui_event=" + b_ui_event + "&c_ui_event=" + c_ui_event, ui_pixel_url[h] > i && ui_pixel_url[f](l) > 0 && (j = ui_pixel_url[g](0, i - 8).lastIndexOf(l), ui_pixel_url = (ui_pixel_url[g](0, j) + k + "cut=" + r(ui_pixel_url[g](j + 1)))[g](0, i)), c.images ? (m = new Image, q.ns_p || (ns_p = m), m.src = ui_pixel_url) : c.write("<p><img src='", ui_pixel_url, "' height='1' width='1' alt='*'></p>");
+    }
+
+    udm_('https://sb.scorecardresearch.com/b?c1=2&c2=17183199&ns_site=gobmx&name=ISSSTE.Hipotecas.Calendario');
+
+</script>
+
+@*@using System.Data.Entity.ModelConfiguration.Conventions*@
+@*@model List<ISSSTE.Tramites2016.Hipotecas.Model.Model.DocumentType> *@
+@model List<ISSSTE.Tramites2016.Hipotecas.Model.Model.Delegation>
+
+@{
+         ViewBag.Title = "Trámite de solicitud de cancelación de hipotecas vía administrativa del ISSSTE";
+         Layout = "~/Views/Shared/_LayoutEntitle.cshtml";
+}
+
+
+@section Scripts{
+
+    @Scripts.Render("~/bundles/administrator/javascript")
+    @Scripts.Render("~/bundles/administrator/app")
+    @*@{  BundleTable.EnableOptimizations = false; }*@
+
+}
+
+
+
+
+<link rel="stylesheet" href="../../Content/calendario.css">
+<div class="container">
+<div class="col-xs-12 col-sm-8" style="margin-left: -10px;">
+    <ol class="breadcrumb  col-md-8 marg-T15px" id="nave" style="margin-top: 15px">
+        <li><a href="http://www.gob.mx"><i class="icon icon-home"></i></a><i id="navinicio" class="active"><a href="http://www.gob.mx"></a></i></li>
+        <li id="navinicio"><a href="~/Entitle/index?noissste=@ViewBag.ReturnUrl#/Home">Inicio</a></li>
+        <li class="active">Agendar cita</li>
+    </ol>
+</div>
+
+
+@Html.Partial("_InfoUsuario", new { UserName = ViewBag.Name })
+
+<div class="hidden-xs col-xs-8 " style="margin-left: -10px;">
+    <h2 class="vertical-buffer">@ViewBag.Title</h2>
+</div>
+
+
+<div class="row" data-ng-hide="nc.isOverrided">
+    <div class="clearfix">
+    </div>
+
+    <!-- Start Botones -->
+    <div class="row" style="margin-left: -10px;">
+        <div class="row" style="margin-left: -10px;">
+            <div class="hidden-xs hidden-if hidden-sm col-md-12 col-lg-12">
+                <div class="col-md-9">
+                    <div class="btn-group text-center bottom-buffer" role="group" aria-label="...">
+                        <a role="button" class="btn btn-default"
+                           onclick=" RedirectAction(@ViewBag.ReturnUrl, 'Index') " data-toggle="tooltip"
+                           data-placement="bottom" style="padding: 10px 20px;">
+
+                            <span class="icon-home" aria-hidden="true"></span>&nbsp;Inicio
+                        </a>
+                        <a class="btn btn-default" onclick=" RedirectAction(@ViewBag.ReturnUrl, 'Solicitud') " data-toggle="tooltip"
+                           data-placement="bottom" role="button" style="padding: 10px 20px;">
+                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;Acerca del trámite
+                        </a>
+
+                        <a role="button" class="btn btn-default"
+                           onclick=" RedirectAction(@ViewBag.ReturnUrl, 'About') " data-toggle="tooltip"
+                           data-placement="bottom" style="padding: 10px 20px;">
+                            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>&nbsp;Registrar solicitud
+                        </a>
+
+                        <a class="btn btn-default" onclick=" RedirectAction(@ViewBag.ReturnUrl, 'Historial') " data-toggle="tooltip"
+                           data-placement="bottom" role="button" style="padding: 10px 20px;">
+                            <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>&nbsp;Ver mis solicitudes
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container" ng-controller="dateController as vm" ng-init="vm.initCalendar()">
+    <!--Start Wizard Steps-->
+    <div class="row" style="margin-left: -10px;">
+        <div class="col-xs-12" style="margin-left: -14px; margin-right: -14px;">
+            <h3>Agendar una cita</h3>
+            <hr class="red ">
+        </div>
+
+        <div class="col-xs-12">
+            <div class="alert alert-info" style="margin-left: -14px; width: 1135px;">
+                Para acceder a la disponibilidad de días y horarios, debes seleccionar un mes y año.
+            </div>
+        </div>
+        <div >
+
+            <label class="control-label">Delegación:</label>
+
+            <div class="col-md-5">
+                @using (Html.BeginForm("SaveAppointment", "Entitle", FormMethod.Get, new {@id = "formIndex", @class = "cmxform"}))
+                {
+                    List<SelectListItem> listItems = new List<SelectListItem>();
+                    ISSSTE.Tramites2016.Hipotecas.Model.Model.Delegation dld;
+                    foreach (var dc in Model)
+                    {
+                        dld = new ISSSTE.Tramites2016.Hipotecas.Model.Model.Delegation();
+                        listItems.Add(new SelectListItem
+                        {
+                            Text = dc.Name,
+                            Value = dc.DelegationId.ToString(),
+
+                        });
+
+                        dld.Name = dc.Name;
+                        dld.DelegationId = dc.DelegationId;
+                        dld.Name = dc.Name;
+                    }
+
+                    for (int i = 0; i < listItems.Count; i++)
+                    {
+                        if (Model.ToString() == listItems[i].Value) //falta continuación de model...
+                        {
+                            listItems[i].Selected = true;
+                        }
+                    }
+
+                    @Html.DropDownList("ddlproperty", listItems, "Selecciona una opción", new {@class = "form-control ns_"})
+                }
+
+            </div>
+
+
+
+        </div>
+        <div class="col-xs-8" style="padding-left: 0; padding-right: 0; padding-right: 0;">
+            <div class="form-group col-md-6 " style="padding-left: 0; padding-right: 0;">
+                <label class="control-label">Mes:</label>
+                <select class="form-control ng-valid" data-ng-model="vm.monthSelect" data-ng-change="vm.getCalendar()">
+                    <option value="? number:9 ?"></option>
+                    <option ng-selected="vm.monthSelect == mn.Value" data-ng-repeat="mn in vm.months" value="01" class="ng-binding ng-scope">Enero</option>
+                    <option ng-selected="vm.monthSelect == mn.Value" data-ng-repeat="mn in vm.months" value="02" class="ng-binding ng-scope">Febrero</option>
+                    <option ng-selected="vm.monthSelect == mn.Value" data-ng-repeat="mn in vm.months" value="03" class="ng-binding ng-scope">Marzo</option>
+                    <option ng-selected="vm.monthSelect == mn.Value" data-ng-repeat="mn in vm.months" value="04" class="ng-binding ng-scope">Abril</option>
+                    <option ng-selected="vm.monthSelect == mn.Value" data-ng-repeat="mn in vm.months" value="05" class="ng-binding ng-scope">Mayo</option>
+                    <option ng-selected="vm.monthSelect == mn.Value" data-ng-repeat="mn in vm.months" value="06" class="ng-binding ng-scope">Junio</option>
+                    <option ng-selected="vm.monthSelect == mn.Value" data-ng-repeat="mn in vm.months" value="07" class="ng-binding ng-scope">Julio</option>
+                    <option ng-selected="vm.monthSelect == mn.Value" data-ng-repeat="mn in vm.months" value="08" class="ng-binding ng-scope">Agosto</option>
+                    <option ng-selected="vm.monthSelect == mn.Value" data-ng-repeat="mn in vm.months" value="09" class="ng-binding ng-scope" selected="selected">Septiembre</option>
+                    <option ng-selected="vm.monthSelect == mn.Value" data-ng-repeat="mn in vm.months" value="10" class="ng-binding ng-scope">Octubre</option>
+                    <option ng-selected="vm.monthSelect == mn.Value" data-ng-repeat="mn in vm.months" value="11" class="ng-binding ng-scope">Noviembre</option>
+                    <option ng-selected="vm.monthSelect == mn.Value" data-ng-repeat="mn in vm.months" value="12" class="ng-binding ng-scope">Diciembre</option>
+                </select>
+            </div>
+
+            <div class="form-group col-md-6 " style="padding-right: 0;">
+                <label class="control-label">Año:</label>
+                <select class="form-control ng-valid" data-ng-model="vm.yearSelect" data-ng-change="vm.getCalendar()">
+                    <option value="? number:2016 ?"></option>
+                    <option ng-selected="vm.yearSelect == yr.Value" data-ng-repeat="yr in vm.years" value="2016" class="ng-binding ng-scope" selected="selected">
+                    <option ng-selected="vm.yearSelect == yr.Value" data-ng-repeat="yr in vm.years" value="2017" class="ng-binding ng-scope">2017</option>
+                    <option ng-selected="vm.yearSelect == yr.Value" data-ng-repeat="yr in vm.years" value="2018" class="ng-binding ng-scope">2018</option>
+                    <option ng-selected="vm.yearSelect == yr.Value" data-ng-repeat="yr in vm.years" value="2019" class="ng-binding ng-scope">2019</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6 " style="padding-right: 0;">
+
+                <div class="form-group datepicker-group">
+                    <label class="control-label" for="calendarYear">Calendario:</label>
+                    <input class="form-control" id="calendarYear" type="text">
+                    <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                </div>
+
+                <div class="row">
+                </div>
+
+            </div>
+
+            <!---------------------------------------------------------Inicia Calendario---------------------------------------------------->
+            <table class="abl-thnobold" data-ng-hide="vm.calendar.Days == null">
+                <thead>
+                <tr>
+                    <th style="text-transform: lowercase;">dom</th>
+                    <th style="text-transform: lowercase;">lun</th>
+                    <th style="text-transform: lowercase;">mar</th>
+                    <th style="text-transform: lowercase;">mié</th>
+                    <th style="text-transform: lowercase;">jue</th>
+                    <th style="text-transform: lowercase;">vie</th>
+                    <th style="text-transform: lowercase;">sáb</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr data-ng-repeat="rw in vm.calendar.Days">
+                    <td data-ng-repeat="col in rw" data-ng-model="vm.dayCalendar" data-ng-click="vm.getTimes(col)" data-ng-class="{
+                                'sindisponibilidad' : col.Availability == 4,
+                                'adisponible' : col.Availability == 1,
+                                'today' : col.Day == vm.FromDate
+                                }" onclick=" cambiar_color_out(this) " id="fechaElegida" onblur=" cambiar_color_over(this) ">
+                        <div class="selectedDay">
+                            {{col.Day}}
+                        </div>
+                        <div></div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="leyenda bottom-buffer" data-ng-hide="vm.calendar.Days == null">
+                <tr>
+                    <td>
+                        Sin disponibilidad
+                        <div class="nodisponible-ley"></div>
+                    </td>
+
+                    <td>
+                        Disponible
+                        <div class="disponible-ley" style="text-align: center;"></div>
+                    </td>
+                    <td>
+                        Día actual
+                        <div class="diaactual-ley"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="col-md-3 bottom-buffer" style="margin-left: 82px;" data-ng-hide="vm.calendar.Days == null">
+            <div class="panel panel-default margintop-80">
+                <div class="panel-body">
+                    <h5>Horarios disponibles:</h5>
+                    <br/>
+
+                    <div class="alert alert-info">
+                        Seleccionaste la fecha siguiente para tu cita:<br/>{{vm.dateDelegation.Date}}<br/>
+
+                        Selecciona un horario para agendar cita.
+                    </div>
+
+                    <div class="col-xs-12">
+                        <div class="radio">
+                            <label style="margin-left: 10px;" data-ng-repeat="tm in vm.times">
+                                <input style="margin-left: -25px;" type="radio" data-ng-model="tm.timeselection" data-ng-click="vm.selectTime(tm)" name="tm.Time" value="tm" checked="checked"> {{ tm.Time | limitTo : 5}}
+                            </label>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!----------------------------------------------------------Fin Calendario------------------------------------------->
+        <!-- Botones -->
+        <div class="pull-right bottom-buffer col-md-offset-8 bottom-buffer" style="margin-right: 22px;" data-ng-hide="vm.calendar.Days == null">
+            <button data-ng-click="nc.navigateToDateRequest(vm.reqId)" class="btn btn-default" type="button">
+                Regresar
+            </button>
+            <button onclick=" uid_call('citas.agendar.request', 'clickin') " data-ng-click="vm.saveAppointment(nc.navigateToDateRequest)" data-ng-class="{ 'disabled' : vm.dayCalendar == null || vm.timeselection ==  null }" class="btn btn-primary disabled" type="button">
+                Agendar cita
+            </button>
+            <br>
+        </div>
+        <br>
+    </div>
+
+</div>
+</div>
+    

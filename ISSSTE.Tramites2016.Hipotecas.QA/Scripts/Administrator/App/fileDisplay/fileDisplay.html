@@ -1,0 +1,60 @@
+﻿<div>
+    <div class="form-group">
+        <div>
+            <div class="dotInfo process" data-placement="bottom" data-toggle="tooltip"
+                 data-original-title="En proceso" data-ng-show="vm.nfuDocument.IsValid == null">
+                <span class="glyphicon glyphicon-refresh"></span>
+            </div>
+            <div class="dotInfo aprove" data-placement="bottom" data-toggle="tooltip"
+                 data-original-title="Aprobado" data-ng-show="vm.nfuDocument.IsValid != null && vm.nfuDocument.IsValid">
+                <span class="glyphicon glyphicon-ok"></span>
+            </div>
+            <div class="dotInfo rejected" data-placement="bottom" data-toggle="tooltip"
+                 data-original-title="rechazado"
+                 data-ng-show="vm.nfuDocument.IsValid != null && !vm.nfuDocument.IsValid">
+                <span class="glyphicon glyphicon-remove"></span>
+            </div>
+            <label class="control-label margintop-5">{{vm.nfuName}}</label>
+
+            <div class="alert alert-info marg-B10px margintop-10"
+                 data-ng-show="(vm.nfuIsReadOnly || vm.isDocumentValid) || !vm.nfuDocument">
+                <span data-ng-show="!vm.nfuDocument">No se ha cargado ninún documento aún.</span>
+                <span data-ng-show="vm.nfuDocument && vm.nfuDocument.Observations && (vm.nfuIsReadOnly || vm.isDocumentValid)">{{vm.nfuDocument.Observations}}</span>
+                <span data-ng-show="vm.nfuDocument && !vm.nfuDocument.Observations && (vm.nfuIsReadOnly || vm.isDocumentValid)">Sin observaciones.</span>
+            </div>
+
+            <div class="pull-right marginbot-20">
+                <a class="btn btn-default download" data-ng-show="vm.nfuDocument.DownloadUrl"
+                   data-ng-click="vm.nfuDisplayImageInDialog()">
+                    <span>Ver</span>
+                </a>
+                <a class="btn btn-default download" data-ng-show="vm.nfuDocument.DownloadUrl"
+                   href="{{vm.nfuDocument.DownloadUrl}}" target="_blank">
+                    <span>Descargar</span>
+                </a>
+
+                <div class="btn-group" data-toggle="buttons"
+                     data-ng-show="vm.nfuDocument && !vm.nfuIsReadOnly && !vm.isDocumentValid">
+                    <label class="btn btn-default" data-ng-class="{'btn-primary': vm.nfuDocument.IsValid == true}"
+                           data-ng-click="vm.setDocumentApprovedState(true)">
+                        <input type="radio" name="options" id="option1" autocomplete="off"> Aprobar
+                    </label>                   
+
+                    <label class="btn btn-default" data-ng-class="{'btn-danger': vm.nfuDocument.IsValid == false}"
+                           data-ng-click="vm.setDocumentApprovedState(false)">
+                        <input type="radio" name="options" id="option2" autocomplete="off"> Rechazar
+                    </label>
+
+                    <label class="btn btn-default" 
+                           data-ng-click="vm.setDocumentNullState()">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> Sin revisar
+                    </label>
+                </div>
+            </div>
+            <div data-ng-hide="(vm.nfuIsReadOnly || vm.isDocumentValid)">
+                <textarea class="form-control" rows="3" data-ng-model="vm.nfuDocument.Observations"
+                          data-ng-show="vm.nfuDocument"></textarea>
+            </div>
+        </div>
+    </div>
+</div>

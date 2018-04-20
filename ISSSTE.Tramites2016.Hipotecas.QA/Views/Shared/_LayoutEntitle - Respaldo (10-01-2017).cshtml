@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Trámite de solicitud de cancelación de hipotecas vía administrativa del ISSSTE";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+    <link rel="icon" href="@Url.Content("./Images/Entitled/favicon.ico")" type="image/x-icon" />
+    <!-- CSS -->
+    <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
+    <link href="~/Content/Entitle/calendario.css" rel="stylesheet" />
+    <script src="~/Scripts/Administrator/App/calendar/calendarController.js"></script>
+    <script src="~/Scripts/Administrator/App/calendar/calendarDataService.js"></script>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700&amp;subset=latin" media="all">
+    <script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
+    <script src="https://framework-gb.cdn.gob.mx/assets/scripts/jquery-ui-datepicker.js"></script>
+    
+    @Scripts.Render("~/bundles/jquery")
+
+</head>
+
+<body>
+    <main class="page" data-ng-app="ISSSTE.Tramites2016.Hipotecas.Entitle.App">
+        @RenderBody()
+    </main>
+
+    @Scripts.Render("~/bundles/modernizr")
+    @*@Scripts.Render("~/bundles/angular")
+        @Scripts.Render("~/bundles/angular-auto-validate")*@
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+

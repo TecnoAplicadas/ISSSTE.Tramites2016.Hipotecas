@@ -1,0 +1,239 @@
+﻿<!-- Begin Digital Analytix Tag 1.1302.13 -->
+
+
+<script type="text/javascript">
+    function udm_(e) { var t = "comScore=", n = document, r = n.cookie, i = "", s = "indexOf", o = "substring", u = "length", a = 2048, f, l = "&ns_", c = "&", h, p, d, v, m = window, g = m.encodeURIComponent || escape; if (r[s](t) + 1) for (d = 0, p = r.split(";"), v = p[u]; d < v; d++) h = p[d][s](t), h + 1 && (i = c + unescape(p[d][o](h + t[u]))); e += l + "_t=" + +(new Date) + l + "c=" + (n.characterSet || n.defaultCharset || "") + "&c8=" + g(n.title) + i + "&c7=" + g(n.URL) + "&c9=" + g(n.referrer), e[u] > a && e[s](c) > 0 && (f = e[o](0, a - 8).lastIndexOf(c), e = (e[o](0, f) + l + "cut=" + g(e[o](f + 1)))[o](0, a)), n.images ? (h = new Image, m.ns_p || (ns_p = h), h.src = e) : n.write("<", "p", "><", 'img src="', e, '" height="1" width="1" alt="*"', "><", "/p", ">") };
+    function uid_call(a, b) {
+        ui_c2 = 17183199; // your corporate c2 client value
+        ui_ns_site = 'ISSSTE.Escrituracion.Calendario'; // your sites identifier
+        window.b_ui_event = window.c_ui_event != null ? window.c_ui_event : "", window.c_ui_event = a;
+        var ui_pixel_url = 'https://sb.scorecardresearch.com/p?c1=2&c2=' + ui_c2 + '&ns_site=' + ui_ns_site + '&name=' + a + '&ns_type=hidden&type=hidden&ns_ui_type=' + b;
+        var b = "comScore=", c = document, d = c.cookie, e = "", f = "indexOf", g = "substring", h = "length", i = 2048, j, k = "&ns_", l = "&", m, n, o, p, q = window, r = q.encodeURIComponent || escape; if (d[f](b) + 1) for (o = 0, n = d.split(";"), p = n[h]; o < p; o++) m = n[o][f](b), m + 1 && (e = l + unescape(n[o][g](m + b[h]))); ui_pixel_url += k + "_t=" + +(new Date) + k + "c=" + (c.characterSet || c.defaultCharset || "") + "&c8=" + r(c.title) + e + "&c7=" + r(c.URL) + "&c9=" + r(c.referrer) + "&b_ui_event=" + b_ui_event + "&c_ui_event=" + c_ui_event, ui_pixel_url[h] > i && ui_pixel_url[f](l) > 0 && (j = ui_pixel_url[g](0, i - 8).lastIndexOf(l), ui_pixel_url = (ui_pixel_url[g](0, j) + k + "cut=" + r(ui_pixel_url[g](j + 1)))[g](0, i)), c.images ? (m = new Image, q.ns_p || (ns_p = m), m.src = ui_pixel_url) : c.write("<p><img src='", ui_pixel_url, "' height='1' width='1' alt='*'></p>");
+    }
+    udm_('https://sb.scorecardresearch.com/b?c1=2&c2=17183199&ns_site=gobmx&name=ISSSTE.Escrituracion.Calendario');
+</script>
+
+
+<!-- End Digital Analytix Tag 1.1302.13 -->
+
+@{
+    ViewBag.Title = "Trámite de solicitud de cancelación de hipotecas vía administrativa del ISSSTE";
+    Layout = "~/Views/Shared/_LayoutEntitle.cshtml";
+}
+
+<script type="text/javascript">
+    function RedirectAction(Id, Page) {
+        window.location.href = "./RedirectPage?NoIssste=" + Id + "&Page=" + Page;
+    }
+</script>
+<div class="container" style="margin-top: -2px;">
+    <div class="row">
+
+        <div class="col-xs-12 col-sm-8" style="margin-top: -5px;">
+            <ol class="breadcrumb  col-md-8" id="nave">
+                <li><a href="http://www.gob.mx"><i class="icon icon-home"></i></a><i id="navinicio" class="active"><a href="http://www.gob.mx"></a></i></li>
+                <li id="navinicio"><a href="~/Entitle/index?noissste=@ViewBag.NoIssste#/Home">Inicio</a></li>
+            </ol>
+        </div>
+        <div class="col-xs-12 col-sm-4" style="margin-top: -12px;">
+            @Html.Partial("_InfoUsuario", new { UserName = ViewBag.Name })
+        </div>
+        <div class="hidden-xs col-xs-8 ">
+            <h2 class="vertical-buffer">@ViewBag.Title</h2>
+        </div>
+
+        <div class="row">
+            @Html.Partial("_EntitleMenu")
+        </div>
+
+        <div class="ng-view" autoscroll="true"></div>
+    </div>
+
+    <div ng-controller="dateController as vm" ng-init="vm.initCalendar()">
+
+        <link ng-href="~/Content/Entitle/calendario.css" rel="stylesheet">
+        <!-- Start Trámite -->
+
+        <div class="form-group">
+            <h2 class="">Agendar una cita</h2>
+            <hr class="red">
+            <div class="alert alert-info">
+                De acuerdo a la disponibilidad en la delegación que elegiste, selecciona la fecha y horario de tu cita.
+            </div>
+
+            <div class="alerts" style="padding-left: 0px;">
+            </div>
+        </div> <!-- col -->
+
+        <div class="form-group">
+
+            <div class="col-xs-12">
+                @*<div class="form-group col-if-6 col-sm-6 col-lg-6" style="padding-left: 0px;margin-left:-6px">
+                        <label class="control-label">Delegaciones:</label>
+                        <select class="form-control" ng-model="vm.DelegationSelect" style="width:48%">
+                            <option value=" ">Selecciona una delegación</option>
+                            <option ng-selected="vm.DelegationSelect == del.DelegationId" data-ng-repeat="del in vm.delegations" value="{{del.DelegationId}}">{{del.Name}}</option>
+                        </select>
+                    </div>*@
+                <div class="form-group col-if-6 col-sm-6 col-lg-6" style="padding-left: 0px;margin-left:-6px">
+                    <label class="">Delegación: </label>
+                    <br />
+                    <select class="form-control col-xs-3" data-ng-model="vm.DelegationSelect"
+                            data-ng-options="actualDelegation.DelegationId as actualDelegation.Name for actualDelegation in  vm.delegations"
+                            data-ng-change="vm.DelegationSelect == del.DelegationId" ng-change="vm.getCalendar()">
+                        <option value=''>Selecciona una delegación</option>
+                    </select>
+                </div>
+                <br />
+                <br />
+
+                <div class="col-xs-12" ng-hide="vm.delegation.Address==null || vm.delegation.Address==''">
+                    <h5>Dirección:</h5>
+                    <p class="abl-del-address">{{vm.delegation.Address}}</p>
+                </div>
+            </div>
+            <br />
+            <br />
+
+
+            <div class="col-xs-12">
+                <div class="col-xs-9" style="padding-left: 0px;">
+                    <div class="form-group col-if-4 col-sm-4 col-md-1=4 col-lg-4" style="padding-left: 0px;margin-left:-6px">
+                        <label class="control-label">Mes:</label>
+                        <select class="form-control " ng-model="vm.monthSelect" ng-options="mn.Value as mn.Key  for mn in vm.months" ng-change="vm.getCalendar()">
+                            <option value=''>Selecciona un mes</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-if-4 col-sm-4 col-md-4 col-lg-4 ns_" style="padding-right: 0; ">
+                        <label class="control-label">Año:</label>
+                        <select class="form-control marginbot-30" ng-model="vm.yearSelect" ng-options="yr.Value as  yr.Key  for yr in vm.years" ng-change="vm.getCalendar()">
+                            <option value=''>Selecciona un año</option>
+                        </select>
+                    </div>
+
+                </div>
+                <!-- MMMM-YYYY-->
+            </div>
+
+        </div>
+
+        <!--Div de calendario y seleccion de horario-->
+        <div class="row">
+            <div class="col-md-3 pull-left">
+                <table class="abl-thnobold" data-ng-hide="vm.calendar.Days == null">
+                    <thead>
+                        <tr>
+                            <th style="text-transform:lowercase;">domingo</th>
+                            <th style="text-transform:lowercase;">lunes</th>
+                            <th style="text-transform:lowercase;">martes</th>
+                            <th style="text-transform:lowercase;">miércoles</th>
+                            <th style="text-transform:lowercase;">jueves</th>
+                            <th style="text-transform:lowercase;">viernes</th>
+                            <th style="text-transform:lowercase;">sábado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-ng-repeat="rw in vm.calendar.Days">
+
+                            <td data-ng-repeat="col in rw" data-ng-disabled="col.Availability > 2" data-ng-model="vm.dayCalendar" data-ng-click="vm.getTimes(col)" data-ng-class="{
+                    'sindisponibilidad' : col.Availability == 4 || col.Availability == 3,
+                    'adisponible' : col.Availability == 1,
+                    'today' : col.Date == vm.FromDate,
+                    'seleccionado' : vm.selectDay === col.Day,
+                    }" id="fechaElegida">
+                                <div class="selectedDay">{{ col.Day }}</div>
+                                <div></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-3 pull-right" data-ng-hide="vm.calendar.Days == null">
+                <div class="panel panel-default margintop-100">
+                    <div class="panel-body">
+                        <h5>Horarios disponibles:</h5>
+                        <div class="alert alert-info">
+                            Seleccionaste la fecha siguiente para tu cita:<br />{{vm.dateDelegation.Date}}<br />
+
+                            Selecciona un horario para agendar cita.
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="radio">
+                                <label data-ng-repeat="tm in vm.times" class="col-md-12">
+
+                                    <input type="radio" data-ng-model="tm.timeselection" data-ng-click="vm.selectTime(tm)" name="tm.Time" value="tm" checked="checked">{{ tm.Time | limitTo : 5}}
+
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="leyenda" data-ng-hide="vm.calendar.Days == null">
+                        <span class="nodisponible-ley"></span><h6>Sin disponibilidad</h6>
+                        <span class="disponible-ley"></span><h6>Disponible</h6>
+                        <span class="diaactual-ley"></span><h6>Día actual</h6>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!--Div de calendario y seleccion de horario-->
+        <!-- Botones -->
+        <div style="padding-left: 0px;">
+            <div class="pull-right col-md-12 col-xs-12">
+                <!-- Botones -->
+                <div class="col-if-12 col-sm-12 col-md-12 pull-left text-muted">
+                </div>
+                <div class="col-if-12 col-sm-12 col-md-12">
+                    <div class="pull-right bottom-buffer" style="padding-top: 30px; margin-left:10px">
+                        <div data-ng-hide="vm.calendar.Days == null">
+                            <a href="@Url.Action("AgendarCita", "Entitle", new { NoIssste = @ViewBag.NoIssste, RequestId = @ViewBag.RequestId })" class="btn btn-default">Regresar</a>
+                            <a href="#clickin" onclick="uid_call('ISSSTE.Hipotecas.Agendar', 'clickin');" data-ng-click="vm.saveAppointment('@ViewBag.RequestId')" data-ng-class="{ 'disabled' : vm.dayCalendar == null || vm.timeselection ==  null }" class="btn btn-primary">
+                                <span class="glyphicon glyphicon-calendar"></span>&nbsp;&nbsp;Agendar cita
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Trámite -->
+
+
+    </div><!-- container -->
+
+</div>
+<script>
+    $gmx(document).ready(function () {
+        debugger;
+        //UI.initTabs();
+        UI.selectableTable("appointmentsTable");
+        UI.updateSelectIdTable("appointmentsTable", "appointmentSelected");
+
+    });
+
+</script>
+
+<script language="JavaScript">
+    function cambiar_color_over(celda) {
+        celda.style.backgroundColor = "#a94442"
+    }
+    function cambiar_color_out(celda) {
+        celda.style.backgroundColor = "#E59621"
+    }
+
+    function blurFunction() {
+        document.getElementById("fechaElegida").style.background = "D0021B";
+    }
+</script>
+@section Scripts{
+    @*@{
+            BundleTable.EnableOptimizations = true;
+        }*@
+
+    @Scripts.Render("~/bundles/entitle/javascript")
+    @Scripts.Render("~/bundles/entitle/app")
+}
+
+

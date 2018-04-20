@@ -1,0 +1,317 @@
+﻿<!--
+//####################################################################
+//      ## Fecha de creación: 18-03-2016
+//      ## Fecha de última modificación: 30-03-2016
+//      ## Responsable: Emanuel De la Isla Vértiz
+//      ## Módulos asociados: Información general, Deudos, Beneficiarios, Historial Laboral.
+//      ## Id Tickets asociados al cambio: R-013042
+//####################################################################
+-->
+<div ng-controller="requestController as vm" ng-init="vm.initFinalData()">
+
+    <style>
+        .debtor {
+            width: 151px !important;
+        }
+
+        .Nodebtor {
+            width: 451px !important;
+        }
+    </style>
+
+    <!-- Begin Digital Analytix Tag 1.1302.13 -->
+    <script type="text/javascript">
+	function udm_(e){var t="comScore=",n=document,r=n.cookie,i="",s="indexOf",o="substring",u="length",a=2048,f,l="&ns_",c="&",h,p,d,v,m=window,g=m.encodeURIComponent||escape;if(r[s](t)+1)for(d=0,p=r.split(";"),v=p[u];d<v;d++)h=p[d][s](t),h+1&&(i=c+unescape(p[d][o](h+t[u])));e+=l+"_t="+ +(new Date)+l+"c="+(n.characterSet||n.defaultCharset||"")+"&c8="+g(n.title)+i+"&c7="+g(n.URL)+"&c9="+g(n.referrer),e[u]>a&&e[s](c)>0&&(f=e[o](0,a-8).lastIndexOf(c),e=(e[o](0,f)+l+"cut="+g(e[o](f+1)))[o](0,a)),n.images?(h=new Image,m.ns_p||(ns_p=h),h.src=e):n.write("<","p","><",'img src="',e,'" height="1" width="1" alt="*"',"><","/p",">")};
+	function uid_call(a, b){
+		ui_c2 = 17183199; // your corporate c2 client value
+		ui_ns_site = 'gobmx'; // your sites identifier
+		window.b_ui_event = window.c_ui_event != null ? window.c_ui_event:"",window.c_ui_event = a;
+		var ui_pixel_url = 'https://sb.scorecardresearch.com/p?c1=2&c2='+ui_c2+'&ns_site='+ui_ns_site+'&name='+a+'&ns_type=hidden&type=hidden&ns_ui_type='+b;
+		var b="comScore=",c=document,d=c.cookie,e="",f="indexOf",g="substring",h="length",i=2048,j,k="&ns_",l="&",m,n,o,p,q=window,r=q.encodeURIComponent||escape;if(d[f](b)+1)for(o=0,n=d.split(";"),p=n[h];o<p;o++)m=n[o][f](b),m+1&&(e=l+unescape(n[o][g](m+b[h])));ui_pixel_url+=k+"_t="+ +(new Date)+k+"c="+(c.characterSet||c.defaultCharset||"")+"&c8="+r(c.title)+e+"&c7="+r(c.URL)+"&c9="+r(c.referrer)+"&b_ui_event="+b_ui_event+"&c_ui_event="+c_ui_event,ui_pixel_url[h]>i&&ui_pixel_url[f](l)>0&&(j=ui_pixel_url[g](0,i-8).lastIndexOf(l),ui_pixel_url=(ui_pixel_url[g](0,j)+k+"cut="+r(ui_pixel_url[g](j+1)))[g](0,i)),c.images?(m=new Image,q.ns_p||(ns_p=m),m.src=ui_pixel_url):c.write("<p><img src='",ui_pixel_url,"' height='1' width='1' alt='*'></p>");
+	}
+	udm_('https://sb.scorecardresearch.com/b?c1=2&c2=17183199&ns_site=gobmx&name=ISSSTE.Hipotecas.Inicio');
+    </script>
+    <noscript>&lt;p&gt;&lt;img src="https://sb.scorecardresearch.com/p?c1=2&amp;amp;c2=17183199&amp;amp;ns_site=gobmx&amp;amp;name=ISSSTE.Hipotecas.Inicio" height="1" width="1" alt="*"&gt;&lt;/p&gt;</noscript>
+    <!-- End Digital Analytix Tag 1.1302.13 -->
+    <script type="text/javascript" src="https://sb.scorecardresearch.com/c2/17183199/ct.js"></script>
+
+
+    <meta charset="utf-8">
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-if-12 col-md-12">
+            <div class="alert alert-success" data-ng-hide="vm.error">
+                ¡Felicidades, tu registro se ha procesado exitosamente!
+
+            </div>
+            <div class="alerts"></div>
+        </div>
+    </div>
+
+    <!-- Start Trámite -->
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-if-12 col-md-12">
+            <ul class="wizard-steps-extensive col-md-12">
+                <li class="completed"> <h5 data-ng-click="nc.navigateToRequestUrl()">1</h5> <span>Requisitos del trámite</span> </li>
+                <li class="completed"> <h5 data-ng-click="nc.navigateToRequestDataUrl()">2</h5> <span>Datos generales</span> </li>
+                <li class="completed"> <h5 data-ng-click="nc.navigateToLastRequestUrl(2)">3</h5> <span>Historia Laboral</span> </li>
+                <li class="completed"> <h5 data-ng-click="nc.navigateToLastRequestUrl(1)">4</h5> <span>Registro de solicitud</span> </li>
+                <li class="completed"> <h5>5</h5> <span>Informacion de los deudos</span> </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-if-12 col-md-12">
+            <h2>{{vm.ApplicationStatus}}</h2>
+            <hr class="red">
+            <div>
+                <div>
+                    <p>
+                        <strong>Folio del trámite:</strong> {{vm.requestInf.Folio}}
+                    </p>
+                    <div data-ng-hide="vm.error">
+                        <p>
+                            De acuerdo a tu edad y al posible total del tiempo acumulado mostrado en las etapas anteriores, (información revisada y validada con tu plena aceptación y conformidad, bajo protesta de decir verdad que los datos aquí reflejados son auténticos y congruentes), el beneficio pensionario que puedes obtener es:
+                        </p>
+                        
+                    </div>
+                    <p>
+                        <div data-ng-show="vm.error" class="alert alert-warning">
+                            Tu registro presenta inconsistencias, favor de acudir a la oficina de Afiliación y Vigencia de Derechos de la delegación más cercana para corregir y/o actualizar tu información.
+                            <br />
+                            <br />
+                            <div align="left">
+                                {{vm.requestInf.ApplicationMessages}}
+                            </div>
+                        </div>
+                        <div data-ng-init="vm.listaDocumentosSolicitud">
+                            <h5><strong>Tipo de Pensión:</strong> {{vm.listaDocumentosSolicitud[0].NamePensions}}</h5>
+                        </div>
+                        <div data-ng-show="vm.information.Debtors.length > 0">
+                           
+                        </div>
+                        <div>
+                            <h5>Una vez concluido tu registro en esta solicitud, el día de tu cita programada en la Delegación correspondiente, deberás presentar la siguiente documentación:</h5>
+                        </div>
+                        <div data-ng-repeat="list in vm.itemsKeyRelationship">
+                            <div data-ng-switch on="list">
+                                <div data-ng-switch-when="0">
+                                   
+                                    <div data-ng-repeat="listDocuments in vm.listaDocumentosSolicitud">
+                                        <div data-ng-if="list == listDocuments.RelationshipId ">
+                                            <ul>
+                                                <li>
+                                                    {{listDocuments.Description}}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-ng-switch-when="30">
+                                    <h5>Documentación que deberá ser presentada: </h5>
+                                    <div data-ng-repeat="listDocuments in vm.listaDocumentosSolicitud">
+                                        <div data-ng-if="list == listDocuments.RelationshipId ">
+                                            <ul>
+                                                <li>
+                                                    {{listDocuments.Description}}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-ng-switch-when="31">
+                                    <h5>Documentación que deberá ser presentada por la concubina:</h5>
+                                    <div data-ng-repeat="listDocuments in vm.listaDocumentosSolicitud">
+                                        <div data-ng-if="list == listDocuments.RelationshipId ">
+                                            <ul>
+                                                <li>
+                                                    {{listDocuments.Description}}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-ng-switch-when="32">
+                                    <h5>Parentesco: Mujer</h5>
+                                    <div data-ng-repeat="listDocuments in vm.listaDocumentosSolicitud">
+                                        <div data-ng-if="list == listDocuments.RelationshipId ">
+                                            <ul>
+                                                <li>
+                                                    {{listDocuments.Description}}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-ng-switch-when="40">
+                                    <h5>Documentación que deberá ser presentada por el esposo:</h5>
+                                    <div data-ng-repeat="listDocuments in vm.listaDocumentosSolicitud">
+                                        <div data-ng-if="list == listDocuments.RelationshipId ">
+                                            <ul>
+                                                <li>
+                                                    {{listDocuments.Description}}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-ng-switch-when="41">
+                                    <h5>Documentación que deberá ser presentada por el concubino:</h5>
+                                    <div data-ng-repeat="listDocuments in vm.listaDocumentosSolicitud">
+                                        <div data-ng-if="list == listDocuments.RelationshipId ">
+                                            <ul>
+                                                <li>
+                                                    {{listDocuments.Description}}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-ng-switch-when="50">
+                                    <h5>Documentación que deberá ser presentada por el padre:</h5>
+                                    <div data-ng-repeat="listDocuments in vm.listaDocumentosSolicitud">
+                                        <div data-ng-if="list == listDocuments.RelationshipId ">
+                                            <ul>
+                                                <li>
+                                                    {{listDocuments.Description}}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-ng-switch-when="51">
+                                    <h5>Documentación que deberá ser presentada por el abuelo:</h5>
+                                    <div data-ng-repeat="listDocuments in vm.listaDocumentosSolicitud">
+                                        <div data-ng-if="list == listDocuments.RelationshipId ">
+                                            <ul>
+                                                <li>
+                                                    {{listDocuments.Description}}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-ng-switch-when="60">
+                                    <h5>Documentación que deberá ser presentada por la madre:</h5>
+                                    <div data-ng-repeat="listDocuments in vm.listaDocumentosSolicitud">
+                                        <div data-ng-if="list == listDocuments.RelationshipId ">
+                                            <ul>
+                                                <li>
+                                                    {{listDocuments.Description}}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-ng-switch-when="61">
+                                    <h5>Documentación que deberá ser presentada por la abuela:</h5>
+                                    <div data-ng-repeat="listDocuments in vm.listaDocumentosSolicitud">
+                                        <div data-ng-if="list == listDocuments.RelationshipId ">
+                                            <ul>
+                                                <li>
+                                                    {{listDocuments.Description}}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-ng-switch-when="70">
+                                    <h5>Documentación que deberá ser presentada por el hijo:</h5>
+                                    <div data-ng-repeat="listDocuments in vm.listaDocumentosSolicitud">
+                                        <div data-ng-if="list == listDocuments.RelationshipId ">
+                                            <ul>
+                                                <li>
+                                                    {{listDocuments.Description}}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-ng-switch-when="71">
+                                    <h5>Documentación que deberá ser presentada por el hijo de cónyuge:</h5>
+                                    <div data-ng-repeat="listDocuments in vm.listaDocumentosSolicitud">
+                                        <div data-ng-if="list == listDocuments.RelationshipId ">
+                                            <ul>
+                                                <li>
+                                                    {{listDocuments.Description}}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-ng-switch-when="72">
+                                    <h5>Documentación que deberá ser presentada por el recien nacido:</h5>
+                                    <div data-ng-repeat="listDocuments in vm.listaDocumentosSolicitud">
+                                        <div data-ng-if="list == listDocuments.RelationshipId ">
+                                            <ul>
+                                                <li>
+                                                    {{listDocuments.Description}}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-ng-switch-when="80">
+                                    <h5>Documentación que deberá ser presentada por la hija:</h5>
+                                    <div data-ng-repeat="listDocuments in vm.listaDocumentosSolicitud">
+                                        <div data-ng-if="list == listDocuments.RelationshipId ">
+                                            <ul>
+                                                <li>
+                                                    {{listDocuments.Description}}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-ng-switch-when="81">
+                                    <h5>Documentación que deberá ser presentada por la hija de cónyuge:</h5>
+                                    <div data-ng-repeat="listDocuments in vm.listaDocumentosSolicitud">
+                                        <div data-ng-if="list == listDocuments.RelationshipId ">
+                                            <ul>
+                                                <li>
+                                                    {{listDocuments.Description}}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-ng-switch-when="82">
+                                    <h5>Documentación que deberá ser presentada por la recién nacida:</h5>
+                                    <div data-ng-repeat="listDocuments in vm.listaDocumentosSolicitud">
+                                        <div data-ng-if="list == listDocuments.RelationshipId ">
+                                            <ul>
+                                                <li>
+                                                    {{listDocuments.Description}}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </div> <!-- panel-body -->
+        <!-- Botones -->
+    </div> <!-- col -->
+    <div class="row bottom-buffer">
+        <div class="col-xs-12 col-sm-12 col-if-12 col-md-12">
+            <div class="pull-right" style="padding-bottom: 30px;">
+                <a onclick="uid_call('finally.home.information', 'clickin')" data-ng-click="nc.selectHome()" href="#{{nc.homeUrl}}" id="changeBtn" class="btn btn-default">
+                    <span class="glyphicon glyphicon-home"></span>
+                    &nbsp;&nbsp;Inicio
+                </a>
+                <a onclick="uid_call('finally.requests', 'clickin')" data-ng-click="nc.selectRequests()" href="#{{nc.requestsUrl}}" class="btn btn-default">
+                    <span class="glyphicon glyphicon-list-alt"></span>
+                    &nbsp;&nbsp;Mis solicitudes
+                </a>
+            </div>
+        </div>
+    </div>
+</div> <!-- row -->
+<!-- End Trámite -->
+<!-- End tramite Hipotecas -->
+</div><!-- container -->

@@ -1,0 +1,101 @@
+﻿@model IEnumerable<ISSSTE.Tramites2016.Escrituracion.Models.Model.Seguimiento>
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdministrator.cshtml";
+}
+
+<script type="text/javascript">
+    function RedirectAction(Id, Page, NoIssste, Observations) {
+        window.location.href = "./RedirectPage?NoIssste=" + NoIssste + "&Page=" + Page + "&Request=" + Id + "&Obeservations" + Observations;
+    }
+</script>
+
+<div class="row">
+
+    @Html.Partial("_AdministratorMenu")
+
+    <div class="container-fluid">
+        <div class="side-body" autoscroll="true">
+
+            <div class="row">
+
+
+                @Html.Partial("DetailEntitleNavTabs")
+
+
+                <div role="tabpanel" class="tab-pane active" id="docs">
+                    <div class="col-xs-12">
+                        <div class="col-xs-8">
+                            <h2>Seguimiento de solicitud</h2>
+                            <hr class="red">
+                        </div>
+
+                        <div class="col-xs-4 margintop-30">
+                            <div class="pull-right">
+                                <a href="@System.Configuration.ConfigurationManager.AppSettings["Sitio"]/Administrator/Index/#search" class="btn btn-default" type="button">
+                                    Volver a consulta de solicitudes
+                                </a>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 margintop-40">
+                                <div class="panel panel-default">
+                                    <div class="panel-body overflow-table">
+
+                                        <!--INICIO TABLA SEGUIMIENTO-->
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Folio</th>
+                                                    <th>Estatus</th>
+                                                    <th>Fecha</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model)
+                                                {
+                                                    <tr class="ng-scope">
+                                                        <td class="form-group col-xs-3">
+                                                            <label>@Html.DisplayFor(modelItem => item.Folio)</label>
+                                                        </td>
+                                                        <td class="form-group col-xs-2">
+                                                            <label>@Html.DisplayFor(modelItem => item.Name)</label>
+                                                        </td>
+                                                        <td class="form-group col-xs-2">
+                                                            <label>@Convert.ToString(string.Format("{0:dd/MM/yyyy}", item.Date))</label>
+                                                        </td>
+
+
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                        <!--FIN TABLA DE SEGUIMIENTO-->
+
+                                    </div>
+                                    <!-- /.panel-default -->
+                                </div>
+                                <!-- /.panel -->
+                                <div class="alert alert-info ng-hide" data-ng-show="vm.requests == 0">
+                                    No se encontraron solicitudes.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<script>
+    UI.initTabs();
+
+
+</script>
+
+<br />
+<br />
+<br />
+<br />

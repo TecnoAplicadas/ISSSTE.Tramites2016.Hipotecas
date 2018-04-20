@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3FC276AE-5F4C-4D47-9979-18EA111E8E9D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ISSSTE.Tramites2016.Common.Reports</RootNamespace>
+    <AssemblyName>ISSSTE.Tramites2016.Common.Reports</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.VSDesigner.resources, Version=13.0.2000.0, Culture=cs, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CrystalDecisions.VSDesigner.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah">
+      <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IActivitySportReportHelper.cs" />
+    <Compile Include="IEbdisReportHelper.cs" />
+    <Compile Include="IMortgageReportHelper.cs" />
+    <Compile Include="IMortuaryReportHelper.cs" />
+    <Compile Include="Implementation\ActivitySportReportHelper.cs" />
+    <Compile Include="Implementation\EbdisReportHelper.cs" />
+    <Compile Include="Implementation\MortgageReportHelper.cs" />
+    <Compile Include="Implementation\MortuaryReportHelper.cs" />
+    <Compile Include="Implementation\PitReportHelper.cs" />
+    <Compile Include="Implementation\TurisssteReportHelper.cs" />
+    <Compile Include="IPitReportHelper.cs" />
+    <Compile Include="ITurisssteReportHelper.cs" />
+    <Compile Include="Model\Dashboard\DashboardData.cs" />
+    <Compile Include="Model\Dashboard\FulfillmentCategory.cs" />
+    <Compile Include="Model\Dashboard\ProcedureRequest.cs" />
+    <Compile Include="Model\Dashboard\ProcedureRequestStatus.cs" />
+    <Compile Include="Model\Dashboard\ProcedureStatus.cs" />
+    <Compile Include="Model\Dashboard\Report\ProcedureRequestHelpertReport.cs" />
+    <Compile Include="Model\Dashboard\Report\ProcedureStatusHelperReport.cs" />
+    <Compile Include="Model\Deportivas\PartipantsActivityEvent.cs" />
+    <Compile Include="Model\Ebdis\CertificateRoom.cs" />
+    <Compile Include="Model\Ebdis\EbdisLetterInfo.cs" />
+    <Compile Include="Model\Ebdis\ServicesChildCareCenter.cs" />
+    <Compile Include="Model\Fosa\PropertyTitleInformation.cs" />
+    <Compile Include="Model\Hipoteca\MortgageCancel.cs" />
+    <Compile Include="Model\ReportFormat.cs" />
+    <Compile Include="Model\Turissste\BodyLodgment.cs" />
+    <Compile Include="Model\Turissste\BodyPackage.cs" />
+    <Compile Include="Model\Turissste\BodyTransportation.cs" />
+    <Compile Include="Model\Turissste\Entitle.cs" />
+    <Compile Include="Model\Turissste\Footer.cs" />
+    <Compile Include="Model\Turissste\Header.cs" />
+    <Compile Include="Model\Turissste\ItineraryEntry.cs" />
+    <Compile Include="Model\Turissste\Person.cs" />
+    <Compile Include="Model\Velacion\Entitle.cs" />
+    <Compile Include="Model\Velacion\Header.cs" />
+    <Compile Include="Model\Velacion\ItemsQuotation.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\ActivitySportCredential.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ActivitySportIndicators.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\EbdisAcceptance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\EbdisCertificateUseRoom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\EbdisCredential.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\EbdisDashboard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\EbdisIndicators.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\EbdisPostponed.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\EbdisReject.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\EbdisStatistic.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ListOfParticipantsAndTeams.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MortgageCancelReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MortuaryIndicators.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PensionReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PitIndicators.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PropertyTitleReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\QuotationReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\StaticDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TurIsssteFormatServiceLodgment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TurIsssteFormatServicePackage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TurIsssteFormatServiceTransportation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TurIsssteIndicators.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\ReportValues.Designer.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\MortgageCancelReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MortgageCancelReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ReportValues.resx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Reports\ActivitySportCredential.rpt" />
+    <None Include="Reports\ActivitySportIndicators.rpt" />
+    <None Include="Reports\EbdisAcceptance.rpt" />
+    <None Include="Reports\EbdisCertificateUseRoom.rpt" />
+    <None Include="Reports\EbdisCredential.rpt" />
+    <None Include="Reports\EbdisDashboard.rpt" />
+    <None Include="Reports\EbdisIndicators.rpt" />
+    <None Include="Reports\EbdisPostponed.rpt" />
+    <None Include="Reports\EbdisReject.rpt" />
+    <None Include="Reports\EbdisStatistic.rpt" />
+    <None Include="Reports\ListOfParticipantsAndTeams.rpt" />
+    <None Include="Reports\MortuaryIndicators.rpt" />
+    <None Include="Reports\PensionReport.rpt" />
+    <None Include="Reports\PitIndicators.rpt" />
+    <None Include="Reports\PropertyTitleReport.rpt" />
+    <None Include="Reports\QuotationReport.rpt" />
+    <None Include="Reports\StaticDetail.rpt" />
+    <None Include="Reports\TurIsssteFormatServiceLodgment.rpt" />
+    <None Include="Reports\TurIsssteFormatServicePackage.rpt" />
+    <None Include="Reports\TurIsssteFormatServiceTransportation.rpt" />
+    <None Include="Reports\TurIsssteIndicators.rpt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\issste-logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ISSSTE.Tramites2016.Common\ISSSTE.Tramites2016.Common.csproj">
+      <Project>{70274565-a1e2-4b83-99fb-6ec171f9ddd2}</Project>
+      <Name>ISSSTE.Tramites2016.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

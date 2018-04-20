@@ -1,0 +1,258 @@
+﻿
+@{ Layout = "~/Views/Shared/_LayoutAdministrator.cshtml"; }
+
+
+
+
+
+<div class="row" data-ng-controller="navigationController as nc">
+<!--/ START LEFT MENU -->
+<div id="side-menu" class="side-menu collapse">
+    <nav class="navbar navbar-default" role="navigation">
+        <!-- Main Menu -->
+        <div class="side-menu-container">
+            <ul class="nav navbar-nav">
+                <li >
+                    <a href="/Administrator/Index">Consulta de Solicitudes</a>
+                </li>
+                <li >
+                    <a href="/Administrator/AdministracionCitas">Administración de citas</a>
+                </li>
+                <li >
+                    <a href="/Administrator/ConsultaCitas">Consulta de Citas</a>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </nav>
+</div> <!-- /.side-menu -->
+
+
+<div class="container-fluid">
+<div class="side-body ng-view" autoscroll="true">
+
+<div id="page-content-wrapper" data-ng-controller="calendarController as vm" data-ng-init="vm.init()" class="ng-scope">
+<div class="col-xs-12">
+    <h2>Administración de Calendario</h2>
+</div>
+
+<div class="col-xs-12">
+    <div class="alerts"></div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <label>Delegación</label>
+    </div>
+
+    <div class="col-md-4">
+        <select class="form-control ng-pristine ng-untouched ng-valid" ng-model="vm.ChildCareCenterId" data-ng-options="center.ChildCareCenterId as center.Name for center in vm.Centers" ng-change="vm.centerChange()"><option value="" class="" selected="selected">Seleccione una Delegación</option><option value="number:2" label="EBDI No. 3">EBDI No. 3</option></select>
+    </div>
+    <div class="col-md-3">
+        <button class="btn btn-primary" type="button" ng-disabled="vm.ChildCareCenterId < 1" ng-click="vm.saveCalendar()" disabled="disabled">
+            Guardar
+        </button>
+    </div>
+</div>
+
+<div class="row">
+    <div>
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#schedules" aria-controls="schedules" role="tab" data-toggle="tab">Horarios</a>
+            </li>
+            <li role="presentation">
+                <a href="#nonLabourDays" aria-controls="nonLabourDays" role="tab" data-toggle="tab">Dias sin citas</a>
+            </li>
+            <li role="presentation">
+                <a href="#specialDays" aria-controls="specialDays" role="tab" data-toggle="tab">Dias especiales</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="schedules">
+            <ng-form name="formSchedules" role="form" novalidate="novalidate" class="ng-valid ng-valid-required ng-valid-pattern ng-dirty ng-valid-parse">
+                <div class="form-group col-xs-6">
+                    <h3>Horarios</h3>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-group col-lg-4 col-md-4">
+                        <label class="control-label">Día:</label>
+                        <select class="form-control ng-valid ng-valid-required" ng-model="vm.Schedule.WeekdayId" ng-required="">
+                            <option value="? number:2 ?"></option>
+                            <!-- ngRepeat: weekday in vm.weekDays -->
+                            <option ng-repeat="weekday in vm.weekDays" value="1" class="ng-binding ng-scope">Domingo</option><!-- end ngRepeat: weekday in vm.weekDays -->
+                            <option ng-repeat="weekday in vm.weekDays" value="2" class="ng-binding ng-scope">Lunes</option><!-- end ngRepeat: weekday in vm.weekDays -->
+                            <option ng-repeat="weekday in vm.weekDays" value="3" class="ng-binding ng-scope">Martes</option><!-- end ngRepeat: weekday in vm.weekDays -->
+                            <option ng-repeat="weekday in vm.weekDays" value="4" class="ng-binding ng-scope">Miercoles</option><!-- end ngRepeat: weekday in vm.weekDays -->
+                            <option ng-repeat="weekday in vm.weekDays" value="5" class="ng-binding ng-scope">Jueves</option><!-- end ngRepeat: weekday in vm.weekDays -->
+                            <option ng-repeat="weekday in vm.weekDays" value="6" class="ng-binding ng-scope">Viernes</option><!-- end ngRepeat: weekday in vm.weekDays -->
+                            <option ng-repeat="weekday in vm.weekDays" value="7" class="ng-binding ng-scope">Sábado</option><!-- end ngRepeat: weekday in vm.weekDays -->
+                        </select>
+                    </div>
+                    <div class="form-group col-lg-4 col-md-4 has-feedback">
+                        <label class="control-label">Hora:</label>
+                        <input class="form-control ng-isolate-scope ng-valid ng-dirty ng-valid-parse" type="text" ng-model="vm.Schedule.Time" datetimepicker="" placeholder="Selecciona una fecha" datetimepicker-options="{ format: 'LT' }">
+                    </div>
+                    <div class="form-group col-lg-4 col-md-4">
+                        <label class="control-label">Capacidad:</label>
+                        <input class="form-control ng-valid ng-valid-required ng-valid-pattern" type="text" data-ng-model="vm.Schedule.Capacity" pattern="^[0-9]{1,4}$" min="1" pattern-err-type="integerRequiredForPepole" required="">
+                    </div>
+                </div>
+
+                <div class="form-group col-md-12">
+                    <button class="btn btn-primary pull-right" type="button" ng-disabled="vm.ChildCareCenterId < 1" ng-click="vm.saveNewSchedule()" disabled="disabled">
+                        Agregar
+                    </button>
+                </div>
+
+                <div class="col-md-12 overflow-table">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Dia</th>
+                            <th>Horario</th>
+                            <th>Capacidad</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </ng-form>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="nonLabourDays">
+            <form name="formSpecialDay" novalidate="novalidate" class="ng-pristine ng-valid ng-valid-required">
+                <div class="form-group col-xs-6">
+                    <h3>Dias sin citas</h3>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-group col-lg-4 col-md-4">
+                        <label class="control-label">Fecha:</label>
+                        <input class="form-control ng-isolate-scope ng-valid ng-valid-required" type="text" ng-model="vm.SpecialDay.Date" datetimepicker="" placeholder="Selecciona una fecha" datetimepicker-options="{ format: 'DD/MM/YYYY', locale:'es'}" required="">
+                    </div>
+                </div>
+
+                <div class="form-group col-md-12">
+                    <button class="btn btn-primary pull-right" type="button" ng-disabled="vm.ChildCareCenterId < 1" ng-click="vm.saveNewSpecialDay()" disabled="disabled">
+                        Agregar
+                    </button>
+                </div>
+
+                <div class="col-md-12">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="specialDays">
+            <div class="row">
+                <div class="form-group col-xs-6">
+                    <h3>Dias especiales</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="panel-default col-md-6">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Fechas</h3>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="form-group col-md-6 date">
+                            <label class="control-label">Fecha:</label>
+                            <input class="form-control ng-isolate-scope ng-valid ng-valid-required" type="text" ng-model="vm.SpecialDaySchedule.Date" datetimepicker="" placeholder="Selecciona una fecha" datetimepicker-options="{ format: 'DD/MM/YYYY', locale:'es'}" required="">
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label class="control-label"></label>
+                            <button class="btn btn-primary pull-right" type="button" ng-disabled="vm.ChildCareCenterId < 1" ng-click="vm.saveNewSpecialSchedule()" disabled="disabled">
+                                Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-default col-md-6">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Horarios</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group col-md-4">
+                            <label class="control-label">Hora</label>
+                            <input class="form-control ng-isolate-scope ng-valid ng-valid-required ng-dirty ng-valid-parse" type="text" ng-model="vm.Quota.Time" datetimepicker="" placeholder="Selecciona una fecha" datetimepicker-options="{ format: 'LT' }" required="">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label">Capacidad</label>
+                            <input class="form-control ng-valid ng-valid-required ng-valid-pattern" type="text" data-ng-model="vm.Quota.Capacity" pattern="^[0-9]{1,4}$" min="1" pattern-err-type="integerRequiredForPepole" required="">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label class="control-label"></label>
+                            <button class="btn btn-primary pull-right" type="button" ng-disabled="vm.delegationId < 1" ng-click="vm.saveNewQuota()"> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 overflow-table">
+                    <table class="table table-striped" id="specialScheduleTable">
+                        <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <!-- ngRepeat: specialDay in vm.specialSchedues -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6 overflow-table">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Hora</th>
+                            <th>Cupo</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <!-- ngRepeat: quota in vm.specialDayScheduleEdit.Quota -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+@section Scripts{
+
+    @Scripts.Render("~/bundles/administrator/javascript")
+    @Scripts.Render("~/bundles/administrator/app")
+    @*@{ BundleTable.EnableOptimizations = false;}*@
+
+}
+<script>
+    UI.initTabs();
+</script>

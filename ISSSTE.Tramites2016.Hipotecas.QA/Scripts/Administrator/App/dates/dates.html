@@ -1,0 +1,144 @@
+﻿<div data-ng-controller="datesController as vm" data-ng-init="vm.initSearch()">
+    <!--/ START TITLE -->
+    <div class="col-xs-12">
+        <h2>Consulta de citas</h2>
+        <hr class="red">
+    </div>
+
+    <!--/ END TITLE -->
+    <!-- START CONTENT -->
+
+    <div class="col-xs-12">
+        <div class="alerts"></div>
+    </div>
+    <div class="col-lg-3">
+
+        <input type="text" class="form-control" placeholder="Buscar por folio o nombre" data-ng-model="vm.query"
+               data-ng-keyup="$event.keyCode == 13 && vm.searchRequests()" />
+
+
+    </div>
+    <div class="col-lg-3">
+
+        <input type="text" class="form-control" placeholder="Dia" data-ng-model="vm.date" datetimepicker
+               datetimepicker-options="{ format: 'DD/MM/YYYY', showClear : true    }" />
+
+    </div>
+    <div class="col-lg-3">
+
+        <input type="text" class="form-control" placeholder="Hora" data-ng-model="vm.time" datetimepicker
+               datetimepicker-options="{ format: 'hh:mm', showClear : true }" />
+
+    </div>
+    <div class="col-lg-3">
+
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-primary" data-ng-click="vm.searchRequests()">
+                Buscar
+            </button>
+        </div>
+
+        <!--<div class="btn-group" role="group">
+            <button type="button" class="btn btn-primary" data-ng-click="vm.clear()">
+                Limpiar
+            </button>
+        </div>-->
+
+    </div>
+    <!--<div class="col-sm-4">
+        <div class="dropdown pull-right" id="status-dropdow">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="true">
+                Mostrar por Todos los estatus
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li>
+                    <a data-ng-click="vm.selectStatus(null)">Todos los estatus</a>
+                </li>
+                <li data-ng-repeat="actualEstatus in vm.statusList">
+                    <a data-ng-click="vm.selectStatus(actualEstatus)">{{actualEstatus.Name}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>-->
+
+    <div class="col-xs-12 margintop-30">
+        <div class="panel panel-default" data-ng-show="vm.requests.length > 0">
+            <div class="panel-body">
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Folio</th>
+                            <th>Nombre</th>
+                            <th>Estatus</th>
+                            <th>Fecha de Cita</th>
+                            <th>Hora de Cita</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-ng-repeat="actualRequest in vm.requests">
+                            <td>{{actualRequest.Folio}}</td>
+                            <td>{{actualRequest.Name}}</td>
+                            <td>{{actualRequest.StatusDescription}}</td>
+                            <td>{{actualRequest.DateApp | date:'dd/MM/yyyy'}}</td>
+                            <td>{{actualRequest.TimeApp | date:'hh:mm'}}</td>
+                            <td>
+                                <div class="pull-right" data-ng-show="!actualRequest.IsinDay || actualRequest.StatusId == 202 || actualRequest.StatusId == 207 || actualRequest.StatusId == 304 || actualRequest.StatusId == 310 " data-ng-hide="actualRequest.StatusId == 311 || actualRequest.StatusId == 210 ">
+                                    <button type="button" class="btn btn-primary btn-sm" data-ng-click="vm.chanStatus(actualRequest.AppointmentId, true, actualRequest.RequestId)">
+                                        Atendida
+                                    </button>
+
+                                </div>
+                            </td>
+                            <td>
+                                <div class="pull-right" data-ng-show="actualRequest.StatusId == 202 || actualRequest.StatusId == 207 || actualRequest.StatusId == 304 || actualRequest.StatusId == 310 " data-ng-hide="actualRequest.StatusId == 311 || actualRequest.StatusId == 210  ">
+                                    <button type="button" class="btn btn-primary btn-sm" data-ng-click="vm.chanStatus(actualRequest.AppointmentId, false, actualRequest.RequestId)">
+                                        Cancelar Cita / No Atendida
+                                    </button>
+
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.panel-default -->
+        </div>
+        <!-- /.panel -->
+        <div class="alert alert-info" data-ng-show="vm.requests == 0">
+            No se encontraron solicitudes.
+        </div>
+
+        <div class="col-xs-2 pull-left paddingleft-0">
+            Mostrar:
+            <select class="form-control"
+                    data-ng-options="actualPageSize + ' resultados' for actualPageSize in vm.pageSizes"
+                    data-ng-model="vm.selectedPageSize" data-ng-change="vm.searchRequests()"></select>
+        </div>
+        <div class="col-xs-10 pull-right marginbot-20 paddingright-0" data-ng-show="vm.requests.length > 0">
+            <nav class="text-right">
+                <ul class="pagination">
+                    <li data-ng-class="{ disabled: vm.isFirstPage() }">
+                        <a data-ng-click="vm.changeToPreviousPage()">&laquo;</a>
+                    </li>
+                    <li data-ng-repeat="actualPage in vm.pages"
+                        data-ng-class="{ active: vm.isPageSelected(actualPage) }">
+                        <a data-ng-click="vm.changeSelectedPage(actualPage)">{{actualPage}}</a>
+                    </li>
+                    <li data-ng-class="{ disabled: vm.isLasPage() }">
+                        <a data-ng-disabled="vm.isLasPage()"
+                           data-ng-click="vm.changeToNextPage">&raquo;</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+    <!-- /.col -->
+    <!-- END CONTENT -->
+
+</div>

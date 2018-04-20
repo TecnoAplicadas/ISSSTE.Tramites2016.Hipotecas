@@ -1,0 +1,89 @@
+﻿@{
+    ViewBag.Title = "Trámite de solicitud de cancelación de hipotecas vía administrativa del ISSSTE";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+    <link rel="icon" href="@Url.Content("~/Images/Entitled/favicon.ico")" type="image/x-icon" />
+    <!--Se agrego las referencias a los archivos css. ISYLL-->
+    @Styles.Render("~/bundles/entitle/css")
+    <!-- CSS -->
+    <link href="https://framework-gb.cdn.gob.mx/qa/assets/styles/main.css" rel="stylesheet" style="position:fixed">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700&amp;subset=latin" media="all">
+    <link href="~/Content/Site.css" rel="stylesheet" />
+
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+    <link ng-href="~/Content/Entitle/calendario.css" rel="stylesheet">
+
+    @*<link href="~/Content/Entitle/calendario.css"/>*@
+
+    @Scripts.Render("~/bundles/jquery")
+    <script src="https://framework-gb.cdn.gob.mx/assets/scripts/jquery-ui-datepicker.js"></script>
+
+
+    <script src="~/Scripts/Entitle/App/validation/validator.js"></script>
+    <script src="~/Scripts/Entitle/App/validation/index.js"></script>
+    <script src="~/Scripts/Entitle/App/alerts.js"></script>
+
+
+    @Scripts.Render("~/bundles/ramda")
+    @*@Scripts.Render("~/bundles/modernizr")*@
+    @Scripts.Render("~/bundles/respond")
+    @Scripts.Render("~/bundles/utils")
+
+
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/angular-auto-validate")
+    @Scripts.Render("~/bundles/angular-upload")
+    @Scripts.Render("~/bundles/bootstrap-datetimepicker")
+    @RenderSection("scripts", false)
+
+
+
+
+
+</head>
+
+<body>
+    <input type="hidden" id="baseUrl" value="@String.Format("{0}://{1}{2}", Request.Url.Scheme, Request.Url.Authority, Url.Content("~"))" />
+    <main class="page" data-ng-app="ISSSTE.Tramites2016.Hipotecas.Entitle.App">
+        <!--Se agrego el div con el mansaje Trabajando en ello ...  ISYLL-->
+        <div data-ng-controller="workingonit as vm" data-ng-show="vm.isWorking" id="working" class="dialog-container dissolve-animation">
+            <div class="dialog-message">
+                <img src="data:image/gif;base64,R0lGODlhGAAYAJECAP///5mZmf///wAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFCgACACwAAAAAGAAYAAACQJQvAGgRDI1SyLnI5jr2YUQx10eW5hmeB6Wpkja5SZy6tYzn+g5uMhuzwW6lFtF05CkhxGQm+HKuoDPplOlDFAAAIfkEBQoAAgAsFAAGAAQABAAAAgVUYqeXUgAh+QQFCgACACwUAA4ABAAEAAACBVRip5dSACH5BAUKAAIALA4AFAAEAAQAAAIFVGKnl1IAIfkEBQoAAgAsBgAUAAQABAAAAgVUYqeXUgAh+QQFCgACACwAAA4ABAAEAAACBVRip5dSACH5BAUKAAIALAAABgAEAAQAAAIFVGKnl1IAIfkECQoAAgAsBgAAAAQABAAAAgVUYqeXUgAh+QQJCgACACwAAAAAGAAYAAACJZQvEWgADI1SyLnI5jr2YUQx10eW5omm6sq27gvH8kzX9o3ndAEAIfkECQoAAgAsAAAAABgAGAAAAkCULxFoAAyNUsi5yOY69mFEMddHluYZntyjqY3Vul2yucJo5/rOQ6lLiak0QtSEpvv1lh8l0lQsYqJHaO3gFBQAACH5BAkKAAIALAAAAAAYABgAAAJAlC8RaAAMjVLIucjmOvZhRDHXR5bmGZ7co6mN1bpdsrnCaOf6zkOpzJrYOjHV7Gf09JYlJA0lPBQ/0ym1JsUeCgAh+QQJCgACACwAAAAAGAAYAAACQJQvEWgADI1SyLnI5jr2YUQx10eW5hme3KOpjdW6XbK5wmjn+s5Dqcya2Dox1exn9PSWJeRNSSo+cR/pzOSkHgoAIfkECQoAAgAsAAAAABgAGAAAAkCULxFoAAyNUsi5yOY69mFEMddHluYZntyjqY3Vul2yucJo5/rOQ6nMmtg6MdXsZ/T0liXc6jRbOTHR15SqfEIKACH5BAkKAAIALAAAAAAYABgAAAJAlC8RaAAMjVLIucjmOvZhRDHXR5bmGZ7co6mN1bpdsrnCaOf6zkO4/JgBOz/TrHhC9pYRpNJnqURLwtdT5JFGCgAh+QQJCgACACwAAAAAGAAYAAACPpQvEWgADI1SyLnI5jr2YUQx10eW5jme3NOpTWe5Qpu6tYzn+l558tWywW4lmk/IS6KOr2UtSILOYiYiUVAAADs=">
+                <span class="ms-accentText dialog-accentText">
+                    &nbsp;Trabajando en ello...
+                </span>
+            </div>
+        </div>
+        @RenderBody()
+
+
+    </main>
+
+    <script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
+</body>
+</html>
+
+<script type="text/javascript">
+    //funcion que oculta la ventana Trabajando en ello ...  al terminar de cargar la página.ISYLL
+    function Oculta() {
+        document.getElementById("working").className = "ng-hide";
+    }
+
+    //funcion que muestra la ventana Trabajando en ello... que llamamos al dar click en los botones correspondientes
+    function Mostrar() {
+        document.getElementById("working").className = "dialog-container dissolve-animation";
+    }
+</script>
+
+

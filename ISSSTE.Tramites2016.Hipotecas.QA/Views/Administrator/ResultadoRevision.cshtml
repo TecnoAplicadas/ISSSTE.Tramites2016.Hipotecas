@@ -1,0 +1,128 @@
+﻿
+<script type="text/javascript">
+    function RedirectAction(Id, Page, NoIssste) {
+        window.location.href = "./RedirectPage?NoIssste=" + NoIssste + "&Page=" + Page + "&Request=" + Id;
+    }
+</script>
+
+@using System.Web.Http
+@using System.Web.Http.Controllers
+@using System.Web.Http.Description
+@using System.Collections.ObjectModel
+
+
+
+
+<div class="row" data-ng-controller="statusManagerController as vm" data-ng-init="vm.init()">
+    <div data-ng-controller="appointmentsController as ac" data-ng-init="ac.initAppoiments(vm.requestId)">
+
+        @*@Html.Partial("_AdministratorMenu")*@
+
+        <div class="container-fluid">
+
+
+            <div class="row">
+
+
+                @Html.Partial("DetailEntitleNavTabs")
+
+
+                <div role="tabpanel" class="tab-pane active" id="docs">
+                    <div class="col-xs-12">
+                        <div class="col-xs-8">
+                            <h2>Resultado de la revisión</h2>
+                            <hr class="red">
+                        </div>
+
+                        <div class="col-xs-4 margintop-30">
+                            <div class="pull-right">
+                                <a href="@System.Configuration.ConfigurationManager.AppSettings["Sitio"]/Administrator/Index/#search" class="btn btn-default" type="button">
+                                    Volver a consulta de solicitudes
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12">
+                        <div class="alerts col-md-12" style="margin-top:15px"></div>
+                    </div>
+                    <div class="form-group col-xs-12">
+
+                        <div data-ng-show="vm.availableNextStatus.length==0">
+                            <div class="alert alert-info">
+                                Esta solicitud no necesita de tu revisión en este punto del proceso.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Start Tab -->
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn btn-default" data-ng-class="{ 'btn-danger': actualStatus.IsCancel }"
+                                       data-ng-repeat="actualStatus in vm.availableNextStatus"
+                                       data-ng-click="vm.setSelectedNextStatus(actualStatus)">
+                                    <input type="radio" name="options" id="option1" autocomplete="off"> {{actualStatus.Name}}
+                                </label>
+                            </div>
+
+                            <div class="col-if-4 pull-right">
+                                <a class="btn btn-primary" type="button" data-ng-disabled="vm.error"
+                                   data-ng-click="vm.changeRequestStatus(nc.searchUrl)" data-ng-show="vm.availableNextStatus.length>0">
+                                    Guardar solicitud
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 margintop-30">
+                        <div class="panel panel-default" data-ng-show="ac.requests.length > 0">
+                            <div class="panel-body">
+
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Folio</th>
+                                            <th>Nombre Beneficiario</th>
+                                            <th>No. ISSSTE</th>
+                                            <th>Dirección</th>
+                                            <th>Estatus</th>
+                                            <th>Fecha de solicitud</th>
+                                            <!--<th>Usuario Asignado</th>
+                                            <th></th>-->
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr data-ng-repeat="actualRequest in ac.requests">
+                                            <td>{{actualRequest.Folio}}</td>
+                                            <td>{{actualRequest.Name}}</td>
+                                            <td>{{actualRequest.NoISSSTE}}</td>
+                                            <td>{{actualRequest.Direccion}}</td>
+                                            <td>{{actualRequest.StatusDescription}}</td>
+                                            <td>{{actualRequest.AppointmentDate | date:'dd/MM/yyyy'}}</td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.panel-default -->
+                        </div>
+                        <!-- /.panel -->
+                    </div>
+                  
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<br />
+<br />
+<br />
+<br />

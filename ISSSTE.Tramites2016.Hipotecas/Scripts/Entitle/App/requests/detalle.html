@@ -1,0 +1,400 @@
+﻿<!--
+//####################################################################
+//      ## Fecha de creación: 18-03-2016
+//      ## Fecha de última modificación: 30-03-2016
+//      ## Responsable: Emanuel De la Isla Vértiz
+//      ## Módulos asociados: Información general, Deudos, Beneficiarios, Historial Laboral.
+//      ## Id Tickets asociados al cambio: R-013042
+//####################################################################
+-->
+
+ <!-- Begin Digital Analytix Tag 1.1302.13 -->
+<script type="text/javascript">
+	function udm_(e){var t="comScore=",n=document,r=n.cookie,i="",s="indexOf",o="substring",u="length",a=2048,f,l="&ns_",c="&",h,p,d,v,m=window,g=m.encodeURIComponent||escape;if(r[s](t)+1)for(d=0,p=r.split(";"),v=p[u];d<v;d++)h=p[d][s](t),h+1&&(i=c+unescape(p[d][o](h+t[u])));e+=l+"_t="+ +(new Date)+l+"c="+(n.characterSet||n.defaultCharset||"")+"&c8="+g(n.title)+i+"&c7="+g(n.URL)+"&c9="+g(n.referrer),e[u]>a&&e[s](c)>0&&(f=e[o](0,a-8).lastIndexOf(c),e=(e[o](0,f)+l+"cut="+g(e[o](f+1)))[o](0,a)),n.images?(h=new Image,m.ns_p||(ns_p=h),h.src=e):n.write("<","p","><",'img src="',e,'" height="1" width="1" alt="*"',"><","/p",">")};
+	function uid_call(a, b){
+		ui_c2 = 17183199; // your corporate c2 client value
+		ui_ns_site = 'gobmx'; // your sites identifier
+		window.b_ui_event = window.c_ui_event != null ? window.c_ui_event:"",window.c_ui_event = a;
+		var ui_pixel_url = 'https://sb.scorecardresearch.com/p?c1=2&c2='+ui_c2+'&ns_site='+ui_ns_site+'&name='+a+'&ns_type=hidden&type=hidden&ns_ui_type='+b;
+		var b="comScore=",c=document,d=c.cookie,e="",f="indexOf",g="substring",h="length",i=2048,j,k="&ns_",l="&",m,n,o,p,q=window,r=q.encodeURIComponent||escape;if(d[f](b)+1)for(o=0,n=d.split(";"),p=n[h];o<p;o++)m=n[o][f](b),m+1&&(e=l+unescape(n[o][g](m+b[h])));ui_pixel_url+=k+"_t="+ +(new Date)+k+"c="+(c.characterSet||c.defaultCharset||"")+"&c8="+r(c.title)+e+"&c7="+r(c.URL)+"&c9="+r(c.referrer)+"&b_ui_event="+b_ui_event+"&c_ui_event="+c_ui_event,ui_pixel_url[h]>i&&ui_pixel_url[f](l)>0&&(j=ui_pixel_url[g](0,i-8).lastIndexOf(l),ui_pixel_url=(ui_pixel_url[g](0,j)+k+"cut="+r(ui_pixel_url[g](j+1)))[g](0,i)),c.images?(m=new Image,q.ns_p||(ns_p=m),m.src=ui_pixel_url):c.write("<p><img src='",ui_pixel_url,"' height='1' width='1' alt='*'></p>");
+	}
+	udm_('https://sb.scorecardresearch.com/b?c1=2&c2=17183199&ns_site=gobmx&name=ISSSTE.Hipotecas.Inicio');
+</script>
+<noscript>&lt;p&gt;&lt;img src="https://sb.scorecardresearch.com/p?c1=2&amp;amp;c2=17183199&amp;amp;ns_site=gobmx&amp;amp;name=ISSSTE.Hipotecas.Inicio" height="1" width="1" alt="*"&gt;&lt;/p&gt;</noscript>
+<!-- End Digital Analytix Tag 1.1302.13 -->
+<script type="text/javascript" src="https://sb.scorecardresearch.com/c2/17183199/ct.js"></script>
+
+<div ng-controller="requestController as vm" ng-init="vm.initDetail()">
+
+
+    <!-- Start Trámite -->
+    <!-- Start Encabezado -->
+    <div>
+        <h2>Detalle de mi solicitud</h2>
+        <hr class="red">
+        <!--<div class="alert alert-info">
+            <strong>¡Usted tiene una cita programada para el: 20/02/2015 a las 11:05 pm!</strong>
+        </div>-->
+
+
+        <div>
+            <div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Folio</th>
+                            <th>Fecha</th>
+                            <th>Estatus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{vm.requestAll.Folio}}</td>
+                            <td>{{vm.requestAll.Date}}</td>
+                            <td>{{vm.requestAll.StatusDescription}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- End Encabezado -->
+        <!-- Start Datos generales del derechohabiente -->
+
+        <div>
+            <h2>Datos generales del derechohabiente</h2>
+            
+        </div>
+    </div> <!-- col -->
+    <div class="row">
+        <form role="form">
+            <div class="form-group col-xs-12">
+                <h3>Datos personales</h3>
+                <hr class="red">
+            </div>
+            <div class="form-group col-md-4">
+                <label class="control-label" for="curp">Clave Única de Registro de Población (CURP):</label>
+                <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.CURP">
+            </div>
+            <div class="form-group col-md-4">
+                <label class="control-label" for="rfc">Registro Federal del Contribuyente <br/>(RFC):</label>
+                <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.RFC">
+            </div>
+            <div class="form-group col-xs-4">
+                <label class="control-label" for="email-01">Nombre(s):<br/><a style="color:white">.</a></label>
+                <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.Name">
+            </div>
+            <div class="form-group col-sm-4">
+                <label class="control-label" for="email-01">Primer apellido:</label>
+                <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.PaternalLastName">
+            </div>
+            <div class="form-group col-sm-4">
+                <label class="control-label" for="email-01">Segundo apellido:</label>
+                <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.MaternalLastName">
+            </div>
+            <div class="form-group col-sm-4">
+                <label class="control-label" for="email-01">Sexo:</label>
+                <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.Gender">
+            </div>
+            <div class="form-group col-sm-4">
+                <label class="control-label" for="email-01">Edad:</label>
+                <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.Age">
+            </div>
+            <div class="form-group col-sm-4">
+                <label class="control-label" for="regimen">Régimen de pensión:</label>
+                <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.RegimeType">
+            </div>
+            <!--Información de estatus del Derechohabiente-->
+            <div class="form-group col-sm-4">
+                <label class="control-label" for="email-01">Estatus:</label>
+                <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.StateDescription">
+            </div>
+            <div class="form-group col-xs-12">
+                <h3>Dirección</h3>
+                <hr class="red">
+            </div>
+            <div class="row">
+                <div class="ab-general-padding ">
+                    <div class="form-group col-sm-4 ">
+                        <label class="control-label" for="email-01">Código postal:</label>
+                        <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.ZipCode">
+                    </div>
+                    <div class="form-group col-sm-6 col-if-4 col-md-4">
+                        <label class="control-label" for="email-01">Municipio o delegación:</label>
+                        <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.City">
+                    </div>
+                    <div class="form-group col-sm-6 col-if-4 col-md-4">
+                        <label class="control-label" for="email-01">Colonia:</label>
+                        <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.Colony">
+                    </div>
+
+                    <div class="form-group col-sm-4 ">
+                        <label class="control-label" for="email-01">Calle:</label>
+                        <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.Street">
+                    </div>
+                    <div class="form-group col-sm-4 ">
+                        <label class="control-label" for="email-01">Número exterior:</label>
+                        <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.NumExt">
+                    </div>
+                    <div class="form-group col-sm-12 col-if-4 col-md-4">
+                        <label class="control-label" for="email-01">Número interior:</label>
+                        <input class="form-control" type="text" disabled data-ng-model="vm.information.Entitle.NumInt">
+                    </div>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+
+    <div>
+        <h3>Datos de contacto</h3>
+        <hr class="red">
+
+        <div class="row">
+            <form role="form">
+                <!--<div class="form-group col-xs-2">
+                    <label>Lada:</label>
+                    <input name="lada" class="form-control" placeholder="Lada" type="text"
+                           data-ng-model="vm.information.Entitle.Lada" required maxlength="3" ng-minlength="2">
+                </div>
+                <div class="form-group col-if-4 col-sm-4 col-md-4 col-lg-4">
+                    <label class="control-label" for="telefono">Teléfono (lada) y (número):</label>
+                    <input maxlength="10" class="form-control" name="telefono" type="text" data-ng-model="vm.information.Entitle.Telephone" ng-maxlength="10" ng-minlength="10" required disabled />
+                </div>
+                <div class="form-group col-if-4 col-sm-4 col-md-4 col-lg-4">
+                    <label class="control-label" for="correo">Correo electrónico:</label>
+                    <input class="form-control" name="correo" type="email" data-ng-model="vm.information.Entitle.Email" required disabled />
+                </div>-->
+
+                <div class="col-if-6 col-sm-12 col-md-2">
+                    <label class="control-label" for="lada" style="color:#545454 !important">Lada</label><label class="control-label"> <span id="spantel" class="form-text form-text-error" style="color:#545454"></span></label><label>:</label>
+                    <small> <input id="inpttel" data-placement="left" maxlength="2" class="form-control form-control-error" name="lada" data-ng-model="vm.lada" ng-maxlength="3" ng-minlength="2" disabled></small>
+                </div>
+                <div class="col-if-6 col-sm-12 col-md-2">
+                    <label class="control-label" for="telefono" style="color:#545454 !important">Teléfono</label><label class="control-label"> <span id="spantel" class="form-text form-text-error" style="color:#545454"></span></label><label>:</label>
+                    <small> <input id="inpttel" data-placement="left" maxlength="8" class="form-control form-control-error" name="telefono" data-ng-model="vm.telefono" ng-maxlength="8" ng-minlength="7" disabled></small>
+                </div>
+                <div class="col-if-6 col-sm-12 col-md-4 bottom-buffer">
+                    <label class="control-label" for="correo" style="color:#545454 !important">Correo electrónico</label><label class="control-label"> <span id="spanemail" class="form-text form-text-error" style="color:#545454"></span></label><label>:</label>
+                    <small>    <input id="inptemail" data-placement="left" class="form-control form-control-error" name="correo" type="email" data-ng-model="vm.information.Entitle.Email" disabled></small>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- End Datos generales del derechohabiente -->
+    <!-- Start Información de los beneficiarios -->
+    <!--<div class="ab-general-padding">
+        <h3>Información de los beneficiarios</h3>
+    </div>-->
+    <!--<div data-ng-repeat="bn in vm.information.Beneficiaries">
+        <div class="panel panel-default">
+            <div class="panel-body">
+
+                <form role="form">
+                    <div class="col-xs-12 marginbot-20">
+                        <h3>Beneficiaro {{ $index + 1}}</h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="ab-general-padding ">
+                            <div class="form-group col-xs-12 col-md-8">
+                                <label class="control-label" for="curp">Clave Única de Registro de Población (CURP):</label>
+                                <input class="form-control" type="text" disabled data-ng-model="bn.CURP">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12 col-if-4 col-md-4">
+                        <label class="control-label" for="email-01">Nombre(s):</label>
+                        <input class="form-control" type="text" disabled data-ng-model="bn.Name">
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6 col-if-4 col-md-4">
+                        <label class="control-label" for="email-01">Primer apellido:</label>
+                        <input class="form-control" type="text" disabled data-ng-model="bn.PaternalLastName">
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6 col-if-4 col-md-4">
+                        <label class="control-label" for="email-01">Segundo apellido:</label>
+                        <input class="form-control" type="text" disabled data-ng-model="bn.MaternalLastName">
+                    </div>
+                    <div class="form-group col-xs-6 col-sm-4">
+                        <label class="control-label" for="email-01">Edad:</label>
+                        <input class="form-control" type="text" disabled data-ng-model="bn.Age">
+                    </div>
+                    <div class="form-group col-xs-6 col-sm-4">
+                        <label class="control-label" for="email-01">Entidad de Nacimiento:</label>
+                        <input class="form-control" type="text" disabled data-ng-model="bn.Birthplace">
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-4">
+                        <label class="control-label" for="email-01">Parentesco:</label>
+                        <input class="form-control" type="text" disabled data-ng-model="bn.Relationship">
+                    </div>
+                </form>
+            </div>-->
+    <!--</div>--> <!-- panel-body -->
+    <!--</div>
+    <div class="panel panel-default" data-ng-show="vm.information.Beneficiaries.length == 0">
+        <div class="panel-body">
+            <div class="alert alert-warning">
+                No se encontraron resultados sobre los beneficiarios
+            </div>
+        </div>
+    </div>-->
+    <!-- End Información de los beneficiarios -->
+    <!-- Start Información de los deudos -->
+
+    <div class="vertical-buffer" data-ng-show="vm.information.Debtors.length > 0">
+        <div class="ab-general-padding">
+            <h2>Información de los deudos</h2>
+            
+        </div>
+
+        <div data-ng-repeat="deb in vm.information.Debtors">
+            <div>
+                <div>
+
+                    <form role="form">
+                        <div class="col-xs-12 marginbot-20">
+                            <h3>Deudo {{ $index + 1 }}</h3>
+                            <hr class="red">
+                        </div>
+
+                        <div class="row">
+                            <div class="ab-general-padding ">
+                                <div class="form-group col-xs-12 col-md-8">
+                                    <label class="control-label" for="curp">Clave Única de Registro de Población (CURP):</label>
+                                    <input class="form-control" type="text" disabled data-ng-model="deb.CURP">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-12 col-if-4 col-md-4">
+                            <label class="control-label" for="email-01">Nombre(s):</label>
+                            <input class="form-control" type="text" disabled data-ng-model="deb.Name">
+                        </div>
+                        <div class="form-group col-xs-12 col-sm-6 col-if-4 col-md-4">
+                            <label class="control-label" for="email-01">Primer apellido:</label>
+                            <input class="form-control" type="text" disabled data-ng-model="deb.PaternalLastName">
+                        </div>
+                        <div class="form-group col-xs-12 col-sm-6 col-if-4 col-md-4">
+                            <label class="control-label" for="email-01">Segundo apellido:</label>
+                            <input class="form-control" type="text" disabled data-ng-model="deb.MaternalLastName">
+                        </div>
+                        <div class="form-group col-xs-6 col-sm-4">
+                            <label class="control-label" for="email-01">Edad:</label>
+                            <input class="form-control" type="text" disabled data-ng-model="deb.Age">
+                        </div>
+                        <div class="form-group col-xs-6 col-sm-4">
+                            <label class="control-label" for="email-01">Entidad de Nacimiento:</label>
+                            <input class="form-control" type="text" disabled data-ng-model="deb.Birthplace">
+                        </div>
+                        <div class="form-group col-xs-12 col-sm-4">
+                            <label class="control-label" for="email-01">Parentesco:</label>
+                            <input class="form-control" type="text" disabled data-ng-model="deb.Relationship">
+                        </div>
+                    </form>
+
+                </div> <!-- panel-body -->
+            </div> <!-- panel panel-default -->
+
+        </div>
+    </div>
+    <!-- <div class="panel panel-default" data-ng-show="vm.information.Debtors.length == 0">
+         <div class="panel-body">
+             <div class="alert alert-warning">
+                 No se encontraron resultados sobre los deudos
+             </div>
+         </div>
+     </div>-->
+    <!-- End Información de los deudos -->
+    <!-- Start Historia Laboral del derechohabiente -->
+
+
+    <div data-ng-show="vm.information.WorkHistories.length > 0">
+        <div class="margintop-30">
+            <h3>Historia laboral del derechohabiente</h3>
+            <hr class="red">
+        </div>
+
+        <div class="form-group">
+            <div>
+                <div>
+
+
+                    <table class="table">
+
+                        <thead>
+                            <tr>
+                                <th>Dependencia</th>
+                                <th>Concepto inicial</th>
+                                <th>Concepto final</th>
+                                <th>Ramo</th>
+                                <th>Pagaduría</th>
+                                <th>Periodo</th>
+                                <th>
+                                    Años cotizados
+                                    <br />(AA.MM.DD)
+                                </th>
+                                <th>Sueldo básico</th>
+                                <!-- <th>Licencia liquidable</th>-->
+                            </tr>
+                        </thead>
+                        <tbody data-ng-repeat="wh in vm.information.WorkHistories">
+
+
+                            <tr>
+                                <td>{{wh.Dependency}}</td>
+                                <td>{{wh.StartReason}}</td>
+                                <td>{{wh.ClosingReason}}</td>
+                                <td>{{wh.Trade}}</td>
+                                <td>{{wh.PayMaster}}</td>
+                                <td>{{wh.StartDate}}<br>{{wh.EndDate}}</td>
+                                <td>{{wh.Years}}</td>
+                                <td>${{wh.SalaryISSSTE}}</td>
+                                <!-- <td>$ 0.00</td>-->
+                            </tr>
+
+                        </tbody>
+                        <tbody data-ng-show="vm.information.WorkHistories.length == 0">
+                            <tr>
+                                <td colspan="8">
+                                    <div class="alert alert-warning">
+                                        No se encontraron resultados para historia Laboral.
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div>
+                        <div>
+                            <label style="font-weight:100;" class="control-label" for="pTiempoCotizado">Posible tiempo cotizado:</label> {{vm.information.timeContributions.TimeContributions}}
+                        </div>
+                        <div>
+                            <label style="font-weight:100;" class="control-label" for="pTiempoLicenciasliquidar">Posible tiempo de licencias a liquidar:</label> {{vm.information.timeContributions.TimeLicenses}}
+                        </div>
+                        <div>
+                            <label style="font-weight:100;" class="control-label" for="pTotalTiempoAcumulado">Posible total tiempo acumulado:</label> {{vm.information.timeContributions.TotalTime}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Botones -->
+    <div class="pull-right bottom-buffer">
+        <a onclick="uid_call('detail.print.request', 'clickin')" href="javascript:window.print()" id="changeBtn" class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-print"></span>&nbsp;&nbsp;Imprimir
+        </a>
+        <a onclick="uid_call('validateHistory.return.request', 'clickin')" data-ng-click="nc.selectRequests()" href="#{{nc.requestsUrl}}" class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;Mis solicitudes
+        </a>
+    </div>
+
+</div> <!-- col -->
+<!-- End Historia Laboral del derechohabiente -->
+<!-- End Trámite -->
+<!-- End tramite Hipotecas -->
+<div class="bottom-buffer"></div>

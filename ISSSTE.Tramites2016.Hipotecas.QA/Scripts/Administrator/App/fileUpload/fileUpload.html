@@ -1,0 +1,32 @@
+﻿<div>
+    <div class="form-group">
+        <label class="control-label marg-T10px">{{vm.nfuName}}</label>
+
+        <div class="col-if-12 col-md-12 ">
+            <a id="preview-button" class="btn btn-primary btn-lg" data-ng-show="vm.nfuDocument.DownloadUrl" data-ng-click="vm.nfuDisplayImageInDialog()">
+                <span>Ver</span>
+            </a>
+            <a id="download-button" class="btn btn-primary btn-lg" data-ng-show="vm.nfuDocument.DownloadUrl"
+               href="{{vm.nfuDocument.DownloadUrl}}" target="_blank">
+                <span>DESCARGAR</span>
+            </a>
+
+            <div id class="file-input-wrapper btn btn-primary btn-lg" ngf-select="true" accept="{{vm.nfuAccepts}}"
+                 ng-model="vm.nfuDocument.File" ngf-multiple="false"
+                 data-ng-show="vm.nfuDocument.IsNew || vm.nfuDocument.IsValid != true">
+                <span data-ng-show="vm.nfuDocument.IsNew">EXAMINAR</span>
+                <span data-ng-show="!vm.nfuDocument.IsNew">REEMPLAZAR</span>
+            </div>
+
+            <span class="name">{{vm.nfuDocument.File.name}}</span>
+        </div>
+        <div class="col-xs-12 margintop-10">
+            <div class="form-group">
+                <label class="control-label">Observaciones:</label>
+                <textarea class="form-control" rows="3" data-ng-model="vm.nfuDocument.Observations"
+                          data-ng-show="vm.nfuDocument"
+                          data-ng-disabled="vm.nfuDocument.IsValid == true"></textarea>
+            </div>
+        </div>
+    </div>
+</div>

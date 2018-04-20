@@ -1,0 +1,181 @@
+﻿@model ISSSTE.Tramites2016.Hipotecas.Model.Model.Entitle
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdministrator.cshtml";
+}
+
+<script type="text/javascript">
+    function RedirectAction(Id, Page, NoIssste, Observations) {
+        window.location.href = "./RedirectPage?NoIssste=" + NoIssste + "&Page=" + Page + "&Request=" + Id + "&Obeservations" + Observations;
+    }
+</script>
+<div class="row">
+
+    @Html.Partial("_AdministratorMenu")
+
+    <div class="container-fluid">
+        <div class="side-body " autoscroll="true">
+
+            <div class="row">
+
+                @Html.Partial("DetailEntitleNavTabs")
+
+                <div role="tabpanel" class="tab-pane active" id="entitle">
+
+                    <div class="col-xs-12">
+                        <div class="form-group col-xs-8">
+                            <h2>Información general</h2>
+                            <hr class="red">
+                        </div>
+
+                        <div class="col-xs-4 margintop-30">
+                            <div class="pull-right">
+                                <a href="@System.Configuration.ConfigurationManager.AppSettings["Sitio"]/Administrator/Index/#search" class="btn btn-default" type="button">
+                                    Volver a consulta de solicitudes
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    @{
+                        <div class="col-xs-12">
+                            <div class="form-group col-md-4">
+                                <label class="control-label">Número de ISSSTE:</label>
+                            </div>
+
+
+                            <div class="form-group col-md-4">
+                                <label class="control-label">Clave Única de Registro de Población (CURP):</label>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label class="control-label">Registro Federal del Contribuyente (RFC):</label>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <input class="form-control" type="text" value="@Html.DisplayFor(modelItem => Model.NoISSSTE)" disabled="">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <input class="form-control" type="text" value="@Html.DisplayFor(modelItem => Model.CURP)" disabled="">
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <input class="form-control" type="text" value="@Html.DisplayFor(modelItem => Model.RFC)" disabled="">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label class="control-label">Nombre(s):</label>
+
+                                <input class="form-control" type="text" value="@Html.DisplayFor(modelItem => Model.Name)" style="text-transform:uppercase" disabled="">
+
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label class="control-label">Primer apellido:</label>
+                                <input class="form-control" type="text" value="@Html.DisplayFor(modelItem => Model.PaternalLastName)" style="text-transform:uppercase" disabled="">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label class="control-label">Segundo apellido:</label>
+                                <input class="form-control" type="text" value="@Html.DisplayFor(modelItem => Model.MaternalLastName)" style="text-transform:uppercase" disabled="">
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label class="control-label">Sexo:</label>
+                                <input class="form-control" type="text" value="@Html.DisplayFor(modelItem => Model.Gender)" disabled="">
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label class="control-label">Fecha de nacimiento:</label>
+                                <input class="form-control" type="text" value="@Convert.ToString(string.Format("{0:dd/MM/yyyy}", Model.Birthdate))" disabled="">
+
+
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label class="control-label">Lugar de nacimiento:</label>
+                                <input class="form-control" type="text" value="@Html.DisplayFor(modelItem => Model.Birthplace)" disabled="">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label class="control-label">Estado civil:</label>
+                                <input class="form-control" type="text" value="@Html.DisplayFor(modelItem => Model.MaritalStatus)" disabled="">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label class="control-label">Estatus Derechohabiente:</label>
+                                <input class="form-control" type="text" value="@Html.DisplayFor(modelItem => Model.State)" disabled="">
+                            </div>
+                            <div class="form-group col-xs-12">
+                                <h2>Dirección</h2>
+                                <hr class="red">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="control-label">Código postal:</label>
+                                <input class="form-control" type="text" value="@Html.DisplayFor(modelItem => Model.ZipCode)" disabled="">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="control-label">Nombre de vialidad:</label>
+                                <input class="form-control" type="text" value="@Html.DisplayFor(modelItem => Model.Street)" disabled="">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="control-label">Número exterior:</label>
+                                <input class="form-control" type="text" value="@Html.DisplayFor(modelItem => Model.NumExt)" disabled="">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="control-label">Número interior:</label>
+                                <input class="form-control" type="text" value="@Html.DisplayFor(modelItem => Model.NumInt)" disabled="">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="control-label">Nombre del asentamiento humano o colonia: </label>
+                                <input class="form-control" type="text" value="@Html.DisplayFor(modelItem => Model.Colony)" disabled="">
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label class="control-label">Nombre del Municipio o Delegación:</label>
+                                <input class="form-control" type="text" value="@Html.DisplayFor(modelItem => Model.City)" disabled="">
+                            </div>
+                            <div class="form-group col-xs-12">
+                                <h2>Datos de contacto</h2>
+                                <hr class="red">
+                            </div>
+
+                            <div class="form-group col-md-1">
+                                <label class="control-label">Lada:</label>
+                                <input class="form-control" type="text" value="@Html.DisplayFor(modelItem => Model.Lada)" disabled="">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label class="control-label">Teléfono:</label>
+                                <input class="form-control" type="text" value="@Html.DisplayFor(modelItem => Model.Telephone)" disabled="">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label class="control-label">Correo electrónico:</label>
+                                <input class="form-control" type="text" value="@Html.DisplayFor(modelItem => Model.Email)" disabled="">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label class="control-label">Teléfono móvil:</label>
+                                <input class="form-control" type="text" value="@Html.DisplayFor(modelItem => Model.MobilePhone)" disabled="">
+                            </div>
+                        </div>
+                    }
+
+
+                    <!-- End Tab -->
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 marginbot-50">
+                <div class="pull-right margintop-20 marginbot--10">
+                    <a class="btn btn-default" onclick="window.scrollTo(0,0)">
+                        <i class="fa fa-arrow-up"></i>Subir
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+<br />
+<br />
+<br />
+<br />

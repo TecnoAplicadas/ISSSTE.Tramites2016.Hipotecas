@@ -1,0 +1,25 @@
+﻿<div data-ng-controller="statusManagerController as vm" data-ng-init="vm.init()">
+    <div class="alerts"></div>
+    <div class="col-xs-12">
+        <div class="pull-right margintop-20 marginbot--10">
+            <a class="btn btn-primary" type="button" data-ng-disabled="vm.error"
+               data-ng-click="vm.changeRequestStatus(nc.searchUrl)" data-ng-show="vm.availableNextStatus.length>0">
+                Guardarasss solicitud
+            </a>
+        </div>
+    </div>
+    <div class="form-group col-xs-12">
+        <h3>Resultado de la revisión del trámite</h3>
+    </div>
+    <!-- Start Tab -->
+    <div class="form-group col-xs-12">
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-default" data-ng-class="{ 'btn-danger': actualStatus.IsCancel }"
+                   data-ng-repeat="actualStatus in vm.availableNextStatus"
+                   data-ng-click="vm.setSelectedNextStatus(actualStatus)">
+                <input type="radio" name="options" id="option1" autocomplete="off"> {{actualStatus.Name}}
+            </label>
+        </div>
+        <div data-ng-show="vm.availableNextStatus.length==0"><h4>Esta solicitud no necesita de tu revisión en este punto del proceso.</h4> </div>
+    </div>
+</div>

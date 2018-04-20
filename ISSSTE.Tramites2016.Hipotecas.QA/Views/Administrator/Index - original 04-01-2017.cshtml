@@ -1,0 +1,192 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutAdministrator.cshtml";
+}
+
+
+<div class="row">
+    <!--/ START LEFT MENU -->
+    <div id="side-menu" class="side-menu collapse">
+        <nav class="navbar navbar-default" role="navigation">
+            <!-- Main Menu -->
+            <div class="side-menu-container">
+                <ul class="nav navbar-nav">
+                    <li data-ng-show="nc.canUserAccessSearch()" data-ng-class="{ 'active': nc.isSearchSelected}">
+                        <a href="/Administrator/Index">Consulta de Solicitudes</a>
+                    </li>
+                    <li data-ng-show="nc.canUserAccessQuotasManager()" data-ng-class="{ 'active': nc.isQuotasManagerSelected}">
+                        <a href="/Administrator/AdministracionCitas">Administración de citas</a>
+                    </li>
+                    <li data-ng-show="nc.canUserAccessApprovalQuotasDelegation()" data-ng-class="{ 'active': nc.isApprovalQuotasDelegationSelected}">
+                        <a href="/Administrator/ConsultaCitas">Consulta de Citas</a>
+                    </li>
+
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </div> <!-- /.side-menu -->
+    <!--/ END LEFT MENU -->
+
+    <div class="container-fluid">
+        <div class="side-body ng-view" autoscroll="true">
+
+            <div class="row">
+                <div>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="/Administrator/Index" aria-controls="schedules" role="tab" data-toggle="tab">Derechohabiente</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="/Administrator/Documentos" aria-controls="nonLabourDays" role="tab" data-toggle="tab">Documentos</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="/Administrator/Seguimiento" aria-controls="specialDays" role="tab" data-toggle="tab">Seguimiento</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div role="tabpanel" class="tab-pane active" id="entitle">
+
+                    <div class="form-group col-xs-6">
+                        <h3>Información general</h3>
+                    </div>
+
+                    <div class="col-xs-3">
+                        <div class="pull-right margintop-20">
+                            <a href="#/search" class="btn btn-default" type="button">
+                                Volver a consulta de solicitudes
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12">
+                        <div class="form-group col-md-4" data-ng-show="vm.requestInfo.Entitle.NoISSSTE">
+                            <label class="control-label">Número de ISSSTE:</label>
+                            <input class="form-control ng-valid" type="text" data-ng-model="vm.requestInfo.Entitle.NoISSSTE" disabled="">
+                        </div>
+                        <div class="form-group col-md-4 ng-hide" data-ng-show="vm.requestInfo.Entitle.Delegation">
+                            <label class="control-label">Delegación asignada:</label>
+                            <input class="form-control ng-valid" type="text" data-ng-model="vm.requestInfo.Entitle.Delegation.Name" disabled="">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="control-label">Clave Única de Registro de Población (CURP):</label>
+                            <input class="form-control ng-valid" type="text" data-ng-model="vm.requestInfo.Entitle.CURP" disabled="">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="control-label">Registro Federal del Contribuyente (RFC):</label>
+                            <input class="form-control ng-valid" type="text" data-ng-model="vm.requestInfo.Entitle.RFC" disabled="">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label">Nombre(s):</label>
+
+                            <input class="form-control ng-valid" type="text" data-ng-model="vm.requestInfo.Entitle.Name" style="text-transform: uppercase" disabled="">
+
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label">Primer apellido:</label>
+                            <input class="form-control ng-valid" type="text" data-ng-model="vm.requestInfo.Entitle.PaternalLastName" style="text-transform: uppercase" disabled="">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label">Segundo apellido:</label>
+                            <input class="form-control ng-valid" type="text" data-ng-model="vm.requestInfo.Entitle.MaternalLastName" style="text-transform: uppercase" disabled="">
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <label class="control-label">Sexo:</label>
+                            <input class="form-control ng-valid" type="text" data-ng-model="vm.requestInfo.Entitle.Gender" disabled="">
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <label class="control-label">Fecha de nacimiento:</label>
+                            <input class="form-control" type="text" value="20/10/1958" disabled="">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label">Lugar de nacimiento:</label>
+                            <input class="form-control ng-valid" type="text" data-ng-model="vm.requestInfo.Entitle.Birthplace" disabled="">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label">Estado civil:</label>
+                            <input class="form-control ng-valid" type="text" data-ng-model="vm.requestInfo.Entitle.MaritalStatus" disabled="">
+                        </div>
+                        <div class="form-group col-xs-12">
+                            <h3>Dirección</h3>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label class="control-label">Código postal:</label>
+                            <input class="form-control ng-valid" type="text" data-ng-model="vm.requestInfo.Entitle.ZipCode" disabled="">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="control-label">Nombre de vialidad:</label>
+                            <input class="form-control ng-valid" type="text" data-ng-model="vm.requestInfo.Entitle.Street" disabled="">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label class="control-label">Número exterior:</label>
+                            <input class="form-control ng-valid" type="text" data-ng-model="vm.requestInfo.Entitle.NumExt" disabled="">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label class="control-label">Número interior:</label>
+                            <input class="form-control ng-valid" type="text" data-ng-model="vm.requestInfo.Entitle.NumInt" disabled="">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="control-label">Nombre del asentamiento humano o colonia: </label>
+                            <input class="form-control ng-valid" type="text" data-ng-model="vm.requestInfo.Entitle.Colony" disabled="">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label class="control-label">Nombre del Municipio o Delegación:</label>
+                            <input class="form-control ng-valid" type="text" data-ng-model="vm.requestInfo.Entitle.City" disabled="">
+                        </div>
+                        <h3 class="col-xs-12">Datos de contacto</h3>
+
+
+                        <div class="form-group col-md-6">
+                            <label class="control-label">Teléfono:</label>
+                            <input class="form-control ng-valid" type="text" data-ng-model="vm.requestInfo.Entitle.Telephone" disabled="">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="control-label">Correo electrónico:</label>
+                            <input class="form-control ng-valid" type="text" data-ng-model="vm.requestInfo.Entitle.Email" disabled="">
+                        </div>
+                    </div>
+
+
+                    <div class="col-xs-12 marginbot-50">
+                        <div class="pull-right margintop-20 marginbot--10">
+                            <a class="btn btn-default" onclick=" window.scrollTo(0, 0) ">
+                                <i class="fa fa-arrow-up"></i>Subir
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End Tab -->
+
+                </div>
+                <div role="tabpanel" class="tab-pane" id="docs">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>
+@section Scripts{
+    @*@{
+            BundleTable.EnableOptimizations = false;
+        }*@
+    @Scripts.Render("~/bundles/administrator/javascript")
+    @Scripts.Render("~/bundles/administrator/app")
+
+}
+
+
+<script>
+    
+
+    //UI.initTabs();
+
+
+</script>
+

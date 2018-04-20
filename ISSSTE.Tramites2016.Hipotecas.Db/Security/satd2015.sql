@@ -1,0 +1,2 @@
+﻿CREATE USER [satd2015] FOR LOGIN [satd2015];
+

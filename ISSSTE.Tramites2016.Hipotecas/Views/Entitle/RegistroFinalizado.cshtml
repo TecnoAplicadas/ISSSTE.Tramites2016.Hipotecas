@@ -1,0 +1,151 @@
+﻿ <!-- Begin Digital Analytix Tag 1.1302.13 -->
+<script type="text/javascript">
+    function udm_(e) { var t = "comScore=", n = document, r = n.cookie, i = "", s = "indexOf", o = "substring", u = "length", a = 2048, f, l = "&ns_", c = "&", h, p, d, v, m = window, g = m.encodeURIComponent || escape; if (r[s](t) + 1) for (d = 0, p = r.split(";"), v = p[u]; d < v; d++) h = p[d][s](t), h + 1 && (i = c + unescape(p[d][o](h + t[u]))); e += l + "_t=" + +(new Date) + l + "c=" + (n.characterSet || n.defaultCharset || "") + "&c8=" + g(n.title) + i + "&c7=" + g(n.URL) + "&c9=" + g(n.referrer), e[u] > a && e[s](c) > 0 && (f = e[o](0, a - 8).lastIndexOf(c), e = (e[o](0, f) + l + "cut=" + g(e[o](f + 1)))[o](0, a)), n.images ? (h = new Image, m.ns_p || (ns_p = h), h.src = e) : n.write("<", "p", "><", 'img src="', e, '" height="1" width="1" alt="*"', "><", "/p", ">") };
+    function uid_call(a, b) {
+        ui_c2 = 17183199; // your corporate c2 client value
+        ui_ns_site = 'ISSSTE.Hipotecas.RegistroFinalizado'; // your sites identifier
+        window.b_ui_event = window.c_ui_event != null ? window.c_ui_event : "", window.c_ui_event = a;
+        var ui_pixel_url = 'https://sb.scorecardresearch.com/p?c1=2&c2=' + ui_c2 + '&ns_site=' + ui_ns_site + '&name=' + a + '&ns_type=hidden&type=hidden&ns_ui_type=' + b;
+        var b = "comScore=", c = document, d = c.cookie, e = "", f = "indexOf", g = "substring", h = "length", i = 2048, j, k = "&ns_", l = "&", m, n, o, p, q = window, r = q.encodeURIComponent || escape; if (d[f](b) + 1) for (o = 0, n = d.split(";"), p = n[h]; o < p; o++) m = n[o][f](b), m + 1 && (e = l + unescape(n[o][g](m + b[h]))); ui_pixel_url += k + "_t=" + +(new Date) + k + "c=" + (c.characterSet || c.defaultCharset || "") + "&c8=" + r(c.title) + e + "&c7=" + r(c.URL) + "&c9=" + r(c.referrer) + "&b_ui_event=" + b_ui_event + "&c_ui_event=" + c_ui_event, ui_pixel_url[h] > i && ui_pixel_url[f](l) > 0 && (j = ui_pixel_url[g](0, i - 8).lastIndexOf(l), ui_pixel_url = (ui_pixel_url[g](0, j) + k + "cut=" + r(ui_pixel_url[g](j + 1)))[g](0, i)), c.images ? (m = new Image, q.ns_p || (ns_p = m), m.src = ui_pixel_url) : c.write("<p><img src='", ui_pixel_url, "' height='1' width='1' alt='*'></p>");
+    }
+    udm_('https://sb.scorecardresearch.com/b?c1=2&c2=17183199&ns_site=gobmx&name=ISSSTE.Hipotecas.RegistroFinalizado');
+</script>
+<!-- End Digital Analytix Tag 1.1302.13 -->
+
+@{
+    ViewBag.Title = "Trámite de solicitud de cancelación de hipotecas vía administrativa del ISSSTE";
+    Layout = "~/Views/Shared/_LayoutEntitle.cshtml";
+}
+<script>
+    function RedirectAction(Id, Page) {
+        window.location.href = "./RedirectPage?NoIssste=" + Id + "&Page=" + Page;
+    }
+</script>
+
+<div class="container" style="margin-top: -2px;">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <ol class="breadcrumb  col-md-8" id="nave">
+                <li><a href="http://www.gob.mx"><i class="icon icon-home"></i></a><i id="navinicio" class="active"><a href="http://www.gob.mx"></a></i></li>
+                <li id="navinicio"><a href="~/Entitle/index?noissste=@ViewBag.NoIssste#/Home">Inicio</a></li>
+                <li class="active">Registro finalizado</li>
+            </ol>
+        </div>
+        <div class="col-xs-12 col-sm-4" style="margin-top: -9px;">
+            @Html.Partial("_InfoUsuario", new { UserName = ViewBag.Name })
+        </div>
+
+        <div class="hidden-xs col-xs-8 ">
+            <h2 class="vertical-buffer">@ViewBag.Title</h2>
+
+        </div>
+        <div class="row" data-ng-hide="nc.isOverrided">
+            @Html.Partial("_EntitleMenu", new { page = "regitroSolicitud" })
+        </div>
+    </div>
+
+    <div>
+
+
+        <!--Start Wizard Steps-->
+
+
+
+        <ul class="wizard-steps">
+            <li class="completed" id="A" style="padding: 0 14px 0 50px;">
+                <h5>Paso 1</h5>
+                <span>Requisitos del trámite</span>
+            </li>
+            <li id="B" class="completed">
+                <h5>Paso 2</h5>
+                <span>Información del inmueble</span>
+            </li>
+            <li id="D" class="completed" style="width: 280px">
+                <h5>Paso 3</h5>
+                <span>Cargar documentación</span>
+            </li>
+            <li class="success">
+                <i class="glyphicon glyphicon-ok-circle"></i>
+            </li>
+        </ul>
+
+        <div class="row">
+            <div class="col-md-12">
+                <p>Estos son los pasos que tendrás que seguir para completar tu solicitud.</p>
+            </div>
+        </div>
+
+        <!--End Wizard Steps-->
+        <!-- Start Trámite -->
+
+
+
+
+        <div class="" data-ng-controller="requestController as vm" data-ng-init="vm.currentStep = @ViewBag.currentStep">
+
+            <div>
+
+                <h3>Solicitud en proceso</h3>
+                <hr class="red">
+                <div class="alert alert-success">
+                    <strong>¡Felicidades!</strong> Esta etapa de tu trámite ha finalizado satisfactoriamente.
+                </div>
+
+                <div class="alert alert-info">
+                    Te pedimos descargar el formato de carta dando clic en el botón "Imprimir carta". Será necesario presentarlo firmado el día de tu cita.
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+                        <p><strong>Te encuentras en esta etapa del trámite.</strong></p>
+                        <ol>
+                            <li data-ng-class="{'abl-grey': vm.currentStep  != 1 }" class="abl-grey">Carga de documentación.</li>
+                            <li data-ng-class="{'abl-grey': vm.currentStep  != 2 }">Espera de validación de documentación.</li>
+                            <li data-ng-class="{'abl-grey': vm.currentStep != 3 }">Agendar cita.</li>
+                            <li data-ng-class="{'abl-grey': vm.currentStep != 4 }" class="abl-grey">Asistir cita, cotejo de documentación.</li>
+                            <li data-ng-class="{'abl-grey': vm.currentStep != 5 }" class="abl-grey">En validación cancelación.</li>
+                            <li data-ng-class="{'abl-grey': vm.currentStep != 6 }" class="abl-grey">Cita para entrega de cancelación.</li>
+                        </ol>
+                    </div>
+
+                </div> <!-- panel-body -->
+                <!-- Botones -->
+                <div class="pull-right bottom-buffer">
+                    <!--Se agrego a los botones llamada a la funcion para mostrar la ventana Trabajando en ello... ISYLL-->
+                    <a onclick="RedirectAction(@ViewBag.NoIssste, 'Index'); uid_call('Hipotecas.RegistroFinalizado.Inicio','clickin'); Mostrar()" id="changeBtn" class="btn btn-default" type="button">
+                        Inicio
+                    </a>
+
+                    <a onclick="RedirectAction(@ViewBag.NoIssste, 'Historial');  uid_call('Hipotecas.Registro.VerSolicitudes','clickin');Mostrar()" id="changeBtn" class="btn btn-default" type="button">
+                        Ver Solicitudes
+                    </a>
+
+                    <a type="button" class="btn btn-primary pull-right" style="margin-left: 4px;margin-top: 1px;" target="_blank"
+                       href="@Url.Action("DownloadDocumentMortgageCancel", "Entitle", new { RequestId = @ViewBag.RequestId })">
+                        Imprimir carta
+                    </a>
+
+                </div>
+
+            </div> <!-- col -->
+
+        </div>
+
+        @section Scripts{
+
+            @Scripts.Render("~/bundles/entitle/app")
+        }
+        <!-- End Trámite -->
+        <!-- End tramite pensiones -->
+    </div><!-- container -->
+</div>
+
+<!--Producción-->
+@*<script src="https://framework-gb.cdn.gob.mx/data/encuesta_v1.0/encuestas.js"></script>*@
+<!--Pruebas-->
+<script src="https://framework-gb.cdn.gob.mx/data/encuesta_v1.0/qa/encuestas.js"></script>
+
+<script type="text/javascript">
+    $(window).load(function () { Oculta(); getEncuestaHC('ISSSTE-02-001'); });
+</script>

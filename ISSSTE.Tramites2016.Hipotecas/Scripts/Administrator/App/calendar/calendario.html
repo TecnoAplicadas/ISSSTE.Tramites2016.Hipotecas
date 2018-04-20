@@ -1,0 +1,289 @@
+﻿<div id="page-content-wrapper" data-ng-controller="calendarController as vm" data-ng-init="vm.init()">
+    <div class="col-xs-12">
+        <h2>Administración de Citas</h2>
+        <hr class="red">
+
+    </div>
+
+    <div class="col-xs-12">
+        <div class="alerts"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <label>Delegación:</label>
+        </div>
+        <div class="col-md-7">
+
+            <select class="form-control col-md-3" data-ng-model="vm.delegationId" data-ng-options="delegation.DelegationId as delegation.Name for delegation in  vm.delegations" data-ng-change="vm.delegationChange()">
+                <option value=''>Seleccione delegación</option>
+            </select>
+            <!--<select class="form-control" ng-model="vm.delegationId" ng-change="vm.delegationChange()" style="max-width: 600px;">
+                <option ng-repeat="delegation in vm.delegations" value="{{delegation.DelegationId}}">{{delegation.Name}}</option>
+            </select>-->
+        </div>
+        <div class="col-md-3 left">
+            <button class="btn btn-primary" type="button" ng-disabled="vm.delegationId < 1" ng-click="vm.saveCalendar()">
+                Guardar
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active">
+                    <a href="#schedules" aria-controls="schedules" role="tab" data-toggle="tab">Horarios</a>
+                </li>
+                <li role="presentation">
+                    <a href="#nonLabourDays" aria-controls="nonLabourDays" role="tab" data-toggle="tab">Días no laborables</a>
+                </li>
+                <li role="presentation">
+                    <a href="#day" aria-controls="day" role="tab" data-toggle="tab">Días especiales</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <!--Horarios-->
+        <div class="tab-content">
+
+            <div role="tabpanel" class="tab-pane active" id="schedules">
+                <ng-form name="formSchedules" role="form" novalidate="novalidate">
+                    <div class="form-group col-xs-6">
+                        <h3>Horarios</h3>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group col-lg-4 col-md-4">
+                            <label class="control-label">Día:</label>
+                            <!--<select class="form-control" ng-model="vm.Schedule.WeekdayId" ng-required="">
+                                <option ng-repeat="weekday in vm.weekDays" value="{{weekday.Ordinal}}">{{weekday.Name}}</option>
+                            </select>-->
+
+                            <select class="form-control col-md-3" data-ng-model="vm.Schedule.WeekdayId" data-ng-options="weekday.Ordinal as weekday.Name for weekday in vm.weekDays">
+                                <option value=''>Seleccione día</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-lg-4 col-md-4">
+                            <label class="control-label">Hora:</label>
+                            <input class="form-control" type="text" ng-model="vm.Schedule.Time" datetimepicker
+                                   placeholder="Selecciona una hora" datetimepicker-options="{ format: 'LT' }" required />
+                        </div>
+                        <div class="form-group col-lg-4 col-md-4">
+                            <label class="control-label">Capacidad:</label>
+                            <input class="form-control" type="number" data-ng-model="vm.Schedule.Capacity" min="1" max="99"  required>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <button class="btn btn-primary pull-right" type="button" ng-disabled="vm.delegationId < 1 && !vm.formValid(formSchedules)" ng-click="vm.saveNewSchedule()">
+                            Agregar
+                        </button>
+                    </div>
+
+                    <div class="col-md-12">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Dia</th>
+                                    <th>Horario</th>
+                                    <th>Capacidad</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-ng-repeat="schedule in vm.schedules">
+                                    <td>{{schedule.Weekday}}</td>
+                                    <td>{{schedule.Time | date: "HH:mm:ss"}}</td>
+                                    <td>{{schedule.Capacity}}</td>
+                                    <td>
+                                        <div class="pull-right">
+                                            <button type="button" class="btn btn-danger btn-sm" data-ng-click="vm.deleteSchedule(schedule)">
+                                                Quitar
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </ng-form>
+            </div>
+
+
+
+            <!--Dias no laborales-->
+            <div role="tabpanel" class="tab-pane" id="nonLabourDays">
+                <form name="formSpecialDay" novalidate="novalidate">
+                    <div class="form-group col-xs-6">
+                        <h3>Días no laborables</h3>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group col-lg-4 col-md-4">
+                            <label class="control-label">Fecha:</label>
+                            <input class="form-control" type="text" ng-model="vm.SpecialDay.Date" id="calendar" datetimepicker-options="{ format: 'DD/MM/YYYY', locale: 'es' }" datetimepicker ng-keyup="vm.validateSpecialDay()" />
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <button class="btn btn-primary pull-right" type="button" ng-disabled="vm.delegationId < 1" ng-click="vm.saveNewSpecialDay()">
+                            Agregar
+                        </button>
+                    </div>
+
+                    <div class="col-md-12">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-ng-repeat="specialDay in vm.specialDays">
+                                    <td>{{specialDay.Date | date: "yyyy-MM-dd" }}</td>
+                                    <td>
+                                        <div class="pull-right">
+                                            <button type="button" class="btn btn-danger btn-sm"
+                                                    data-ng-click="vm.deleteSpecialDay(specialDay)">
+                                                Quitar
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+
+            <!--Dias especiales-->
+
+            <div  role="tabpanel" class="tab-pane" id="day">
+                <div class="row">
+                    <div class="form-group col-xs-6">
+                        <h3>Días especiales</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <form name="specialDays" novalidate>
+                        <div class="panel-default col-md-6">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Fechas</h3>
+                            </div>
+                            <div class="panel-body" style="padding-right:0%;">
+
+                                <div class="col-md-12">
+                                    <label class="control-label">Fecha:</label>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <input class="form-control" type="text" ng-model="vm.SpecialDaySchedule.Date" datetimepicker  min="minDate"
+                                           placeholder="Selecciona una fecha" datetimepicker-options="{ format: 'DD/MM/YYYY', locale: 'es' }"  required />
+                                </div>
+
+                                <div class="form-group col-md-6" style="padding-right:0%;">
+                                    <label class="control-label"></label>
+                                    <button class="btn btn-primary pull-right" type="button" ng-disabled="vm.delegationId < 1" ng-click="vm.saveNewSpecialSchedule()">
+                                        Agregar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel-default col-md-6">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Horarios</h3>
+                            </div>
+
+                            <div class="panel-body" style="padding-right:0%;">
+
+                                <div class="col-md-12">
+                                    <div class="col-md-4"><label class="control-label">Hora:</label></div>
+                                    <div class="col-md-4"><label class="control-label">Capacidad:</label></div>
+                                </div>
+
+                                <div class="form-group col-md-4">
+
+                                    <input class="form-control" type="text" ng-model="vm.Quota.Time" datetimepicker
+                                           placeholder="Selecciona una hora" datetimepicker-options="{ format: 'LT' }" required />
+                                </div>
+                                <div class="form-group col-md-4">
+
+                                    <input class="form-control" type="number" ng-model="vm.Quota.Capacity" min="1" max="99"  required />
+                                </div>
+                                <div class="form-group col-md-4" style="padding-right:0%;">
+                                    <label class="control-label"></label>
+                                    <button class="btn btn-primary pull-right" type="button" ng-disabled="vm.delegationId < 1  || !specialDays.$valid " ng-click="vm.saveNewQuota()">
+                                        Agregar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <table class="table table-striped" id="specialScheduleTable">
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-ng-repeat="specialDay in vm.specialSchedues" data-ng-click="vm.selectSpecialScheduleDetail(specialDay)">
+                                    <td>{{specialDay.Date | date: "yyyy-MM-dd" }}</td>
+                                    <td>
+                                        <div class="pull-right">
+                                            <button type="button" class="btn btn-danger btn-sm"
+                                                    data-ng-click="vm.deleteSpecialSchedule(specialDay)">
+                                                Quitar
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Hora</th>
+                                    <th>Cupo</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-ng-repeat="quota in vm.specialDayScheduleEdit.Quota">
+                                    <td>{{quota.Time | date: "HH:mm" }}</td>
+                                    <td>{{quota.Capacity}}</td>
+                                    <td>
+                                        <div class="pull-right">
+                                            <button type="button" class="btn btn-danger btn-sm"
+                                                    data-ng-click="vm.deleteQuota(quota)">
+                                                Quitar
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    UI.initTabs();
+    UI.selectableTable("specialScheduleTable");
+
+
+</script>

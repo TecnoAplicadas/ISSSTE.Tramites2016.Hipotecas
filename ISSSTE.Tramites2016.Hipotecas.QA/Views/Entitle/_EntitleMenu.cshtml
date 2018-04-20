@@ -1,0 +1,32 @@
+﻿<div>
+    <div class="hidden-xs hidden-if hidden-sm col-md-12 col-lg-12">
+        <div class="col-md-9">
+            <div class="btn-group text-center bottom-buffer" role="group" aria-label="...">
+                <!--se agrego llamada a la función que muestra la ventana Trabajando en ello ...-->
+                <a role="button" onclick="Mostrar()" class="btn btn-default @(ViewData.Eval("page")=="home"?"disabled":"")"
+                   href="@Url.Action("Index", "Entitle", new { NoIssste = @ViewBag.NoIssste })" data-toggle="tooltip"
+                   data-placement="bottom" style="padding: 10px 20px;">
+                    <span class="icon-home " aria-hidden="true"></span>&nbsp;Inicio
+                </a>
+                <!--se agrego llamada a la función que muestra la ventana Trabajando en ello ...-->
+                <a role="button" onclick="Mostrar()" class="btn btn-default @(ViewData.Eval("page")=="about"?"disabled":"")"
+                   href="@Url.Action("About", "Entitle", new { NoIssste = @ViewBag.NoIssste })" data-toggle="tooltip"
+                   data-placement="bottom" style="padding: 10px 20px;">
+                    <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>&nbsp;Acerca del trámite
+                </a>
+                <!--se agrego llamada a la función que muestra la ventana Trabajando en ello ...-->
+                <a role="button" onclick="Mostrar()" class="btn btn-default @(ViewData.Eval("page")=="regitroSolicitud"?"disabled":"")"
+                   href="@Url.Action("Solicitud", "Entitle", new { NoIssste = @ViewBag.NoIssste })" data-toggle="tooltip"
+                   data-placement="bottom" style="padding: 10px 20px;">
+                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;Registrar solicitud
+                </a>
+                <!--se agrego llamada a la función que muestra la ventana Trabajando en ello ...-->
+                <a role="button" onclick="Mostrar()" class="btn btn-default @(ViewData.Eval("page")=="verSolicitudes"?"disabled":"")"
+                   href="@Url.Action("Historial", "Entitle", new { NoIssste = @ViewBag.NoIssste })" data-toggle="tooltip"
+                   data-placement="bottom" style="padding: 10px 20px;">
+                    <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>&nbsp;Mis solicitudes
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,205 @@
+﻿ <!-- Begin Digital Analytix Tag 1.1302.13 -->
+<script type="text/javascript">
+    function udm_(e) { var t = "comScore=", n = document, r = n.cookie, i = "", s = "indexOf", o = "substring", u = "length", a = 2048, f, l = "&ns_", c = "&", h, p, d, v, m = window, g = m.encodeURIComponent || escape; if (r[s](t) + 1) for (d = 0, p = r.split(";"), v = p[u]; d < v; d++) h = p[d][s](t), h + 1 && (i = c + unescape(p[d][o](h + t[u]))); e += l + "_t=" + +(new Date) + l + "c=" + (n.characterSet || n.defaultCharset || "") + "&c8=" + g(n.title) + i + "&c7=" + g(n.URL) + "&c9=" + g(n.referrer), e[u] > a && e[s](c) > 0 && (f = e[o](0, a - 8).lastIndexOf(c), e = (e[o](0, f) + l + "cut=" + g(e[o](f + 1)))[o](0, a)), n.images ? (h = new Image, m.ns_p || (ns_p = h), h.src = e) : n.write("<", "p", "><", 'img src="', e, '" height="1" width="1" alt="*"', "><", "/p", ">") };
+    function uid_call(a, b) {
+        ui_c2 = 17183199; // your corporate c2 client value
+        ui_ns_site = 'ISSSTE.Hipotecas.Registro'; // your sites identifier
+        window.b_ui_event = window.c_ui_event != null ? window.c_ui_event : "", window.c_ui_event = a;
+        var ui_pixel_url = 'https://sb.scorecardresearch.com/p?c1=2&c2=' + ui_c2 + '&ns_site=' + ui_ns_site + '&name=' + a + '&ns_type=hidden&type=hidden&ns_ui_type=' + b;
+        var b = "comScore=", c = document, d = c.cookie, e = "", f = "indexOf", g = "substring", h = "length", i = 2048, j, k = "&ns_", l = "&", m, n, o, p, q = window, r = q.encodeURIComponent || escape; if (d[f](b) + 1) for (o = 0, n = d.split(";"), p = n[h]; o < p; o++) m = n[o][f](b), m + 1 && (e = l + unescape(n[o][g](m + b[h]))); ui_pixel_url += k + "_t=" + +(new Date) + k + "c=" + (c.characterSet || c.defaultCharset || "") + "&c8=" + r(c.title) + e + "&c7=" + r(c.URL) + "&c9=" + r(c.referrer) + "&b_ui_event=" + b_ui_event + "&c_ui_event=" + c_ui_event, ui_pixel_url[h] > i && ui_pixel_url[f](l) > 0 && (j = ui_pixel_url[g](0, i - 8).lastIndexOf(l), ui_pixel_url = (ui_pixel_url[g](0, j) + k + "cut=" + r(ui_pixel_url[g](j + 1)))[g](0, i)), c.images ? (m = new Image, q.ns_p || (ns_p = m), m.src = ui_pixel_url) : c.write("<p><img src='", ui_pixel_url, "' height='1' width='1' alt='*'></p>");
+    }
+    udm_('https://sb.scorecardresearch.com/b?c1=2&c2=17183199&ns_site=gobmx&name=ISSSTE.Hipotecas.Registro');
+</script>
+<!-- End Digital Analytix Tag 1.1302.13 -->
+
+@using System.Web.Mvc.Html
+@model Tuple<ISSSTE.Tramites2016.Hipotecas.Model.Model.Entitle, ISSSTE.Tramites2016.Hipotecas.Model.Model.Request>
+
+@{
+    ViewBag.Title = "Trámite de solicitud de cancelación de hipotecas vía administrativa del ISSSTE";
+    Layout = "~/Views/Shared/_LayoutEntitle.cshtml";
+}
+
+<script>
+    $('input[type="checkbox"]').on('change', function () {
+        $('input[name="creditType"]').not(this).prop('checked', false);
+    });
+    $gmx(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+<script type="text/javascript">
+    function RedirectAction(Id, Page) {
+        window.location.href = "./RedirectPage?NoIssste=" + Id + "&Page=" + Page;
+    }
+    function validateRadioButtons() {
+        if (!document.getElementById('conyugal').checked || !document.getElementById('individual').checked) {
+            $("#errorRadioButtons").show();
+            $(".asterisk").addClass("error");
+        } else {
+            $(".asterisk").css("color", "");
+        }
+    }
+</script>
+
+<div class="container" data-ng-controller="requestController as vm" ng-init="vm.description  = '@ViewBag.Writing.ToString()'">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <ol class="breadcrumb  col-md-8" id="nave">
+                <li><a href="http://www.gob.mx"><i class="icon icon-home"></i></a><i id="navinicio" class="active"><a href="http://www.gob.mx"></a></i></li>
+                <li id="navinicio"><a href="~/Entitle/index?noissste=@ViewBag.NoIssste#/Home">Inicio</a></li>
+                <li class="active">Información del inmueble</li>
+            </ol>
+        </div>
+
+        <div class="col-xs-12 col-sm-4">
+            @Html.Partial("_InfoUsuario", new { UserName = ViewBag.Name })
+        </div>
+
+        <div class="hidden-xs col-xs-8 ">
+            <h2 class="vertical-buffer">@ViewBag.Title</h2>
+
+        </div>
+        <div class="row">
+            <!--oculta el menu -->
+            <div class="clearfix">
+
+            </div>
+            @Html.Partial("_EntitleMenu", new { page = "regitroSolicitud" })
+
+        </div>
+    </div>
+
+    <div>
+
+
+        <!--Start Wizard Steps-->
+
+
+
+        <ul class="wizard-steps">
+            <li class="completed" id="A" style="padding: 0 14px 0 50px;">
+                <h5>Paso 1</h5>
+                <span>Requisitos del trámite</span>
+            </li>
+            <li id="B" class="completed">
+                <h5>Paso 2</h5>
+                <span>Información del inmueble</span>
+            </li>
+            <li id="D" style="width: 280px">
+                <h5>Paso 3</h5>
+                <span>Cargar documentación</span>
+            </li>
+            <li>
+                <i class="glyphicon glyphicon-ok-circle"></i>
+            </li>
+        </ul>
+
+        <div class="row">
+            <div class="col-md-12">
+                <p>Estos son los pasos que tendrás que seguir para completar tu solicitud.</p>
+            </div>
+        </div>
+
+        <!--End Wizard Steps-->
+        <!-- Start Trámite -->
+
+
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>Registra datos de tu escritura</h3>
+                <hr class="red" />
+            </div> <!-- col -->
+        </div> <!-- row -->
+        <div class="alert alert-info">
+            <strong>¡Sugerencia!</strong> Los datos que deberá de ingresar son los que están asentados en la escritura, en la cláusula de otorgamiento del crédito o en los antecedentes de la escritura.
+        </div>
+        <div class="row">
+            <div class="col-if-12 col-sm-12 col-md-12 col-lg-12 row">
+                @using (Html.BeginForm("SaveRequest", "Entitle", FormMethod.Post, new { @id = "formRegister", @class = "cmxform", @name = "formData", @novalidate = "novalidate" }))
+            {
+                    <input type="hidden" id="hidden" name="hidden" value="@(ViewBag.NoIssste ?? String.Empty)" />
+                    <input type="hidden" id="RequestId" name="RequestId" value="@(ViewBag.RequestId ?? String.Empty)" />
+                    <div class="form-group col-if-12 col-sm-12 col-md-12 col-lg-12">
+                        <label class="control-label">Selecciona tipo de crédito<span class="asterisk">*</span>:</label>
+                    </div>
+
+                    <div class="form-group col-if-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="row">
+                            <div class="col-md-12">
+                                @{
+
+
+                                    <p> @Html.RadioButtonFor(requestData => requestData.Item2.IsConjugalCredit, true, new { @name = "creditType", @id = "conyugal" })  Conyugal</p>
+
+                                    <p>  @Html.RadioButtonFor(requestData => requestData.Item2.IsConjugalCredit, false, new { @name = "creditType", @id = "individual", @checked = "checked" })   Individual </p>
+
+                                }
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <small for="Item2.IsConjugalCredit-error" class="error" id="errorRadioButtons" style="display:none;">Selecciona una opción.</small>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-xs-12 bottom-buffer">
+                        <label class="control-label" data-toggle="tooltip" data-placement="bottom" title="Transcribir la dirección del inmueble hipotecado a favor del ISSSTE, tal como aparece en la escritura de mutuo interés y garantía hipotecaria.">Ingresa datos de ubicación como aparece en tu escritura<span ng-show="vm.description != undefined">*</span><span ng-show="vm.description == undefined" style="color:red;">*</span></label>
+                        @Html.TextArea("WritingProperty", "", new { @class = "form-control", @style = "width:120", @maxlength = "800", @data_ng_model = "vm.description", @required = "required" })
+
+                        @*@Html.TextAreaFor(requestData => requestData.Item2.WritingProperty, new { @name = "Item2_WritingProperty", @class = "form-control" })*@
+                        @Html.Hidden("ValorWritingProperty")
+                    </div>
+
+
+                    <div class="container bottom-buffer ">
+
+                        <div class="clearfix">
+                            <div class="pull-left text-muted text-vertical-align-button">
+                                <span>* Campos obligatorios</span>
+                            </div>
+                            <div class="pull-right">
+                                <a onclick="RedirectAction(@ViewBag.NoIssste, 'Solicitud'); uid_call('Hipotecas.Registro.Anterior', 'clickin'); Mostrar()"
+                                   id="changeBtn" class="btn btn-default" type="button">
+                                    Regresar
+                                </a>
+                                <button ng-disabled="vm.description.length <=  0 || vm.description == undefined " onclick="uid_call('Hipotecas.Registro.Siguiente','clickin'); valida()" class="btn btn-primary" type="submit">
+                                    Siguiente paso
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                                    }
+                <!-- End Trámite -->
+                <!-- End tramite pensiones -->
+            </div><!-- container -->
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+
+    @Scripts.Render("~/bundles/entitle/app")
+}
+
+<script type="text/javascript">
+    $(window).load(function () { Oculta(); });
+
+    function valida() {
+        var valueToValidate = $("#WritingProperty").val();
+
+        if (valueToValidate === null || valueToValidate === "") {
+            $("#ValorWritingProperty").val("es vacio");
+        } else {
+            $("#ValorWritingProperty").val(valueToValidate);
+            document.getElementById("working").className = "dialog-container dissolve-animation";
+        }
+    }
+</script>
