@@ -1,0 +1,8 @@
+C:\Users\Upgenia\Documents\TD-Hipotecas\TD_Hipoteca\Hipoteca\ISSSTE.Tramites2016.Hipotecas.Model\obj\Release\ISSSTE.Tramites2016.Hipotecas.Model.csprojResolveAssemblyReference.cache
+C:\Users\Upgenia\Documents\TD-Hipotecas\TD_Hipoteca\Hipoteca\ISSSTE.Tramites2016.Hipotecas.Model\obj\Release\ISSSTE.Tramites2016.Hipotecas.Model.Properties.Resources.resources
+C:\Users\Upgenia\Documents\TD-Hipotecas\TD_Hipoteca\Hipoteca\ISSSTE.Tramites2016.Hipotecas.Model\obj\Release\ISSSTE.Tramites2016.Hipotecas.Model.Resources.DisplayNames.resources
+C:\Users\Upgenia\Documents\TD-Hipotecas\TD_Hipoteca\Hipoteca\ISSSTE.Tramites2016.Hipotecas.Model\obj\Release\ISSSTE.Tramites2016.Hipotecas.Model.csproj.GenerateResource.Cache
+D:\Projects\ISSSTE.Tramites2016.Hipotecas\ISSSTE.Tramites2016.Hipotecas.Model\obj\Release\ISSSTE.Tramites2016.Hipotecas.Model.csprojResolveAssemblyReference.cache
+D:\Projects\ISSSTE.Tramites2016.Hipotecas\ISSSTE.Tramites2016.Hipotecas.Model\obj\Release\ISSSTE.Tramites2016.Hipotecas.Model.Properties.Resources.resources
+D:\Projects\ISSSTE.Tramites2016.Hipotecas\ISSSTE.Tramites2016.Hipotecas.Model\obj\Release\ISSSTE.Tramites2016.Hipotecas.Model.Resources.DisplayNames.resources
+D:\Projects\ISSSTE.Tramites2016.Hipotecas\ISSSTE.Tramites2016.Hipotecas.Model\obj\Release\ISSSTE.Tramites2016.Hipotecas.Model.csproj.GenerateResource.Cache

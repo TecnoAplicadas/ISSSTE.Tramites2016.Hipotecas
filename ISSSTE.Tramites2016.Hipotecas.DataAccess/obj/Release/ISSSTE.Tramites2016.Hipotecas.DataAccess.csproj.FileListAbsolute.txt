@@ -1,0 +1,3 @@
+D:\Projects\ISSSTE.Tramites2016.Hipotecas\ISSSTE.Tramites2016.Hipotecas.DataAccess\obj\Release\ISSSTE.Tramites2016.Hipotecas.DataAccess.csprojResolveAssemblyReference.cache
+D:\Projects\ISSSTE.Tramites2016.Hipotecas\ISSSTE.Tramites2016.Hipotecas.DataAccess\obj\Release\ISSSTE.Tramites2016.Hipotecas.DataAccess.Properties.Resources.resources
+D:\Projects\ISSSTE.Tramites2016.Hipotecas\ISSSTE.Tramites2016.Hipotecas.DataAccess\obj\Release\ISSSTE.Tramites2016.Hipotecas.DataAccess.csproj.GenerateResource.Cache

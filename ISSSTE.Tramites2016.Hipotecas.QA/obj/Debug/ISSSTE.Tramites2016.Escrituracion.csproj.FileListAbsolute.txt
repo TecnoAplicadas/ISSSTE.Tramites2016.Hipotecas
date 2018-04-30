@@ -1,0 +1,257 @@
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ApplicationInsights.config
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\roslyn\csc.exe
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\roslyn\vbc.exe
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\roslyn\VBCSCompiler.exe
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Escrituracion.dll.config
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Escrituracion.XML
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Escrituracion.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Escrituracion.pdb
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Antlr3.Runtime.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Elmah.Contrib.Mvc.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Elmah.Contrib.WebApi.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Elmah.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\EntityFramework.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\EntityFramework.SqlServer.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Common.exe
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Common.Reports.exe
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Common.Security.exe
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Escrituracion.Bussiness.exe
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Escrituracion.DataAccess.exe
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Escrituracion.Domian.exe
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Escrituracion.Model.exe
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Practices.Unity.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Practices.Unity.Mvc.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Newtonsoft.Json.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Owin.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Net.Http.Formatting.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Helpers.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Http.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Http.Owin.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Http.WebHost.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Mvc.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Optimization.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Razor.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.WebPages.Deployment.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.WebPages.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.WebPages.Razor.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Unity.WebApi.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\WebActivatorEx.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\WebGrease.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\CrystalDecisions.Shared.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\CrystalDecisions.ReportSource.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Common.Reports.pdb
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Common.Security.pdb
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Common.pdb
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Escrituracion.Bussiness.pdb
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Escrituracion.DataAccess.pdb
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Escrituracion.Domian.pdb
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Escrituracion.Model.pdb
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Antlr3.Runtime.pdb
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Elmah.Contrib.WebApi.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Practices.ServiceLocation.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Practices.Unity.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Practices.Unity.Mvc.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Newtonsoft.Json.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Net.Http.Formatting.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Http.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Http.Owin.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Http.WebHost.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Mvc.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Helpers.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Optimization.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Razor.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.WebPages.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.WebPages.Deployment.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.WebPages.Razor.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\EntityFramework.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\EntityFramework.SqlServer.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\System.Web.Mvc.resources.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\System.Web.Helpers.resources.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\System.Web.Optimization.resources.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\System.Web.Razor.resources.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\System.Web.WebPages.resources.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\EntityFramework.resources.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\EntityFramework.SqlServer.resources.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\Microsoft.Owin.resources.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\Microsoft.Owin.Security.resources.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\obj\Debug\ISSSTE.Tramites2016.Escrituracion.csprojResolveAssemblyReference.cache
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\obj\Debug\ISSSTE.Tramites2016.Escrituracion.dll
+C:\Users\kriosoft\Desktop\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\obj\Debug\ISSSTE.Tramites2016.Escrituracion.pdb
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ApplicationInsights.config
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\roslyn\csc.exe
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\roslyn\vbc.exe
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\roslyn\VBCSCompiler.exe
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Escrituracion.dll.config
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Escrituracion.XML
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Escrituracion.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Escrituracion.pdb
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Antlr3.Runtime.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Elmah.Contrib.Mvc.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Elmah.Contrib.WebApi.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Elmah.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\EntityFramework.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\EntityFramework.SqlServer.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Common.exe
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Common.Reports.exe
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Common.Security.exe
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Escrituracion.Bussiness.exe
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Escrituracion.DataAccess.exe
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Escrituracion.Domian.exe
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Escrituracion.Model.exe
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Practices.Unity.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Practices.Unity.Mvc.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Newtonsoft.Json.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Owin.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Net.Http.Formatting.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Helpers.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Http.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Http.Owin.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Http.WebHost.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Mvc.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Optimization.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Razor.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.WebPages.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.WebPages.Razor.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Unity.WebApi.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\WebActivatorEx.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\WebGrease.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\CrystalDecisions.Shared.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\CrystalDecisions.ReportSource.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\stdole.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Common.Reports.pdb
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Common.Security.pdb
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Common.pdb
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Escrituracion.Bussiness.pdb
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Escrituracion.DataAccess.pdb
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Escrituracion.Domian.pdb
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\ISSSTE.Tramites2016.Escrituracion.Model.pdb
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Antlr3.Runtime.pdb
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Elmah.Contrib.WebApi.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Practices.Unity.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Practices.Unity.Mvc.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Newtonsoft.Json.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Net.Http.Formatting.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Http.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Http.Owin.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Http.WebHost.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Mvc.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Helpers.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Optimization.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.Razor.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.WebPages.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\System.Web.WebPages.Razor.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\EntityFramework.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\EntityFramework.SqlServer.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\System.Web.Razor.resources.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\EntityFramework.resources.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\EntityFramework.SqlServer.resources.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\Microsoft.Owin.resources.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\Microsoft.Owin.Security.resources.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\obj\Debug\ISSSTE.Tramites2016.Escrituracion.csprojResolveAssemblyReference.cache
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\obj\Debug\ISSSTE.Tramites2016.Escrituracion.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion\obj\Debug\ISSSTE.Tramites2016.Escrituracion.pdb

@@ -1,0 +1,9 @@
+C:\Users\Upgenia\Documents\TD-Hipotecas\TD_Hipoteca\Hipoteca\ISSSTE.Tramites2016.Hipotecas.Db\bin\Release\ISSSTE.Tramites2016.Hipotecas.Db.dacpac
+C:\Users\Upgenia\Documents\TD-Hipotecas\TD_Hipoteca\Hipoteca\ISSSTE.Tramites2016.Hipotecas.Db\bin\Release\ISSSTE.Tramites2016.Hipotecas.Db.dll
+C:\Users\Upgenia\Documents\TD-Hipotecas\TD_Hipoteca\Hipoteca\ISSSTE.Tramites2016.Hipotecas.Db\bin\Release\ISSSTE.Tramites2016.Hipotecas.Db.pdb
+C:\Users\Upgenia\Documents\TD-Hipotecas\TD_Hipoteca\Hipoteca\ISSSTE.Tramites2016.Hipotecas.Db\obj\Release\Model.xml
+C:\Users\Upgenia\Documents\TD-Hipotecas\TD_Hipoteca\Hipoteca\ISSSTE.Tramites2016.Hipotecas.Db\obj\Release\refactor.xml
+C:\Users\Upgenia\Documents\TD-Hipotecas\TD_Hipoteca\Hipoteca\ISSSTE.Tramites2016.Hipotecas.Db\obj\Release\postdeploy.sql
+C:\Users\Upgenia\Documents\TD-Hipotecas\TD_Hipoteca\Hipoteca\ISSSTE.Tramites2016.Hipotecas.Db\obj\Release\predeploy.sql
+C:\Users\Upgenia\Documents\TD-Hipotecas\TD_Hipoteca\Hipoteca\ISSSTE.Tramites2016.Hipotecas.Db\obj\Release\ISSSTE.Tramites2016.Hipotecas.Db.dll
+C:\Users\Upgenia\Documents\TD-Hipotecas\TD_Hipoteca\Hipoteca\ISSSTE.Tramites2016.Hipotecas.Db\obj\Release\ISSSTE.Tramites2016.Hipotecas.Db.pdb

@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5AAFAC41-F5E9-40E6-B480-A3A1F0BCE7A2}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ISSSTE.Tramites2016.Common.Security</RootNamespace>
     <AssemblyName>ISSSTE.Tramites2016.Common.Security</AssemblyName>
@@ -32,6 +32,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Elmah">
@@ -153,7 +156,6 @@
     <Compile Include="Owin\IsssteTramitesAuthenticationOptions.cs" />
     <Compile Include="Owin\IsssteTramitesConstants.cs" />
     <Compile Include="Owin\IsssteTramitesContext.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\ErrorMessages.Designer.cs" />
     <Compile Include="ServiceAgents\Implementation\BaseSecurityServiceAgent.cs" />

@@ -366,8 +366,6 @@
     <Content Include="Scripts\Administrator\App\support\support.html" />
     <Content Include="Scripts\Administrator\App\support\supportController.js" />
     <Content Include="Scripts\Administrator\App\support\supportDataServices.js" />
-    <Content Include="Scripts\Administrator\catalogs\catalogsController.js" />
-    <Content Include="Scripts\Administrator\catalogs\catalogsDataService.js" />
     <Content Include="Scripts\Administrator\UI\agregar-tabla.js" />
     <Content Include="Scripts\Administrator\UI\bootstrap.js" />
     <Content Include="Scripts\Administrator\UI\bootstrap.min.js" />
@@ -442,6 +440,7 @@
     <Content Include="Content\Administrator\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\Administrator\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\Administrator\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Properties\PublishProfiles\QA.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Entitle\App\app.js" />
     <Content Include="Scripts\Entitle\App\common\common.js" />
@@ -1274,7 +1273,6 @@
     <Content Include="Scripts\Libraries\Angular\i18n\angular-locale_zu-za.js" />
     <Content Include="Scripts\Libraries\Angular\i18n\angular-locale_zu.js" />
     <Content Include="Scripts\Libraries\BootstrapDatetimePicker\angular-bootstrap-datetimepicker-directive.js" />
-    <Content Include="Scripts\Libraries\BootstrapDatetimePicker\angular-bootstrap-datetimepicker-directive.min.js" />
     <Content Include="Scripts\Libraries\BootstrapDatetimePicker\bootstrap-datetimepicker.js" />
     <Content Include="Scripts\Libraries\BootstrapDatetimePicker\moment-with-locales.js" />
     <Content Include="Scripts\Libraries\BootstrapDatetimePicker\moment.js" />
@@ -1379,10 +1377,12 @@
     <Content Include="Views\Administrator\CatalogElements.cshtml" />
     <Content Include="Views\Administrator\CatalogItemDetail.cshtml" />
     <Content Include="Views\Entitle\Documentacion.cshtml" />
+    <Content Include="Views\Entitle\PrivacidadIntegral.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="App_GlobalResources\" />
+    <Folder Include="Scripts\Administrator\catalogs\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

@@ -1,0 +1,65 @@
+C:\Users\dmanzanob\Documents\Talia\DIG TRAMI F2\Codigo\Dev\Tramites 2015\ISSSTE.Tramites2015.Common.Reports\bin\Release\ISSSTE.Tramites2015.Common.Reports.dll.config
+C:\Users\dmanzanob\Documents\Talia\DIG TRAMI F2\Codigo\Dev\Tramites 2015\ISSSTE.Tramites2015.Common.Reports\bin\Release\ISSSTE.Tramites2015.Common.Reports.XML
+C:\Users\dmanzanob\Documents\Talia\DIG TRAMI F2\Codigo\Dev\Tramites 2015\ISSSTE.Tramites2015.Common.Reports\bin\Release\ISSSTE.Tramites2015.Common.Reports.dll
+C:\Users\dmanzanob\Documents\Talia\DIG TRAMI F2\Codigo\Dev\Tramites 2015\ISSSTE.Tramites2015.Common.Reports\bin\Release\ISSSTE.Tramites2015.Common.Reports.pdb
+C:\Users\dmanzanob\Documents\Talia\DIG TRAMI F2\Codigo\Dev\Tramites 2015\ISSSTE.Tramites2015.Common.Reports\bin\Release\EntityFramework.dll
+C:\Users\dmanzanob\Documents\Talia\DIG TRAMI F2\Codigo\Dev\Tramites 2015\ISSSTE.Tramites2015.Common.Reports\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\dmanzanob\Documents\Talia\DIG TRAMI F2\Codigo\Dev\Tramites 2015\ISSSTE.Tramites2015.Common.Reports\bin\Release\stdole.dll
+C:\Users\dmanzanob\Documents\Talia\DIG TRAMI F2\Codigo\Dev\Tramites 2015\ISSSTE.Tramites2015.Common.Reports\bin\Release\EntityFramework.xml
+C:\Users\dmanzanob\Documents\Talia\DIG TRAMI F2\Codigo\Dev\Tramites 2015\ISSSTE.Tramites2015.Common.Reports\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\dmanzanob\Documents\Talia\DIG TRAMI F2\Codigo\Dev\Tramites 2015\ISSSTE.Tramites2015.Common.Reports\obj\Release\ISSSTE.Tramites2015.Common.Reports.Properties.Resources.resources
+C:\Users\dmanzanob\Documents\Talia\DIG TRAMI F2\Codigo\Dev\Tramites 2015\ISSSTE.Tramites2015.Common.Reports\obj\Release\ISSSTE.Tramites2015.Common.Reports.Resources.ReportValues.resources
+C:\Users\dmanzanob\Documents\Talia\DIG TRAMI F2\Codigo\Dev\Tramites 2015\ISSSTE.Tramites2015.Common.Reports\obj\Release\ISSSTE.Tramites2015.Common.Reports.csproj.GenerateResource.Cache
+C:\Users\dmanzanob\Documents\Talia\DIG TRAMI F2\Codigo\Dev\Tramites 2015\ISSSTE.Tramites2015.Common.Reports\obj\Release\ISSSTE.Tramites2015.Common.Reports.dll
+C:\Users\dmanzanob\Documents\Talia\DIG TRAMI F2\Codigo\Dev\Tramites 2015\ISSSTE.Tramites2015.Common.Reports\obj\Release\ISSSTE.Tramites2015.Common.Reports.pdb
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\ISSSTE.Tramites2015.Common.Reports.dll.config
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\ISSSTE.Tramites2015.Common.Reports.XML
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\ISSSTE.Tramites2015.Common.Reports.dll
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\ISSSTE.Tramites2015.Common.Reports.pdb
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\CrystalDecisions.ReportSource.dll
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\CrystalDecisions.Shared.dll
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\CrystalDecisions.Windows.Forms.dll
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\EntityFramework.dll
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\FlashControlV71.dll
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\ShockwaveFlashObjects.dll
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\stdole.dll
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\EntityFramework.xml
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\obj\Release\ISSSTE.Tramites2015.Common.Reports.Properties.Resources.resources
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\obj\Release\ISSSTE.Tramites2015.Common.Reports.Resources.ReportValues.resources
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\obj\Release\ISSSTE.Tramites2015.Common.Reports.csproj.GenerateResource.Cache
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\obj\Release\ISSSTE.Tramites2015.Common.Reports.dll
+C:\Users\ricardo ramirez\Documents\Leonardo\Documentacion\2016\03 Marzo\Grafica base\Código\ISSSTE.Tramites2015.Common.Reports\obj\Release\ISSSTE.Tramites2015.Common.Reports.pdb
+C:\Users\dmanzanob\Documents\Talia\Leo\Entrega ISSSTE\Gráfica base\Code\Gráfica base - Pensiones\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\ISSSTE.Tramites2015.Common.Reports.dll.config
+C:\Users\dmanzanob\Documents\Talia\Leo\Entrega ISSSTE\Gráfica base\Code\Gráfica base - Pensiones\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\ISSSTE.Tramites2015.Common.Reports.XML
+C:\Users\dmanzanob\Documents\Talia\Leo\Entrega ISSSTE\Gráfica base\Code\Gráfica base - Pensiones\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\ISSSTE.Tramites2015.Common.Reports.dll
+C:\Users\dmanzanob\Documents\Talia\Leo\Entrega ISSSTE\Gráfica base\Code\Gráfica base - Pensiones\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\ISSSTE.Tramites2015.Common.Reports.pdb
+C:\Users\dmanzanob\Documents\Talia\Leo\Entrega ISSSTE\Gráfica base\Code\Gráfica base - Pensiones\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\EntityFramework.dll
+C:\Users\dmanzanob\Documents\Talia\Leo\Entrega ISSSTE\Gráfica base\Code\Gráfica base - Pensiones\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\dmanzanob\Documents\Talia\Leo\Entrega ISSSTE\Gráfica base\Code\Gráfica base - Pensiones\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\stdole.dll
+C:\Users\dmanzanob\Documents\Talia\Leo\Entrega ISSSTE\Gráfica base\Code\Gráfica base - Pensiones\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\EntityFramework.xml
+C:\Users\dmanzanob\Documents\Talia\Leo\Entrega ISSSTE\Gráfica base\Code\Gráfica base - Pensiones\Código\ISSSTE.Tramites2015.Common.Reports\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\dmanzanob\Documents\Talia\Leo\Entrega ISSSTE\Gráfica base\Code\Gráfica base - Pensiones\Código\ISSSTE.Tramites2015.Common.Reports\obj\Release\ISSSTE.Tramites2015.Common.Reports.csprojResolveAssemblyReference.cache
+C:\Users\dmanzanob\Documents\Talia\Leo\Entrega ISSSTE\Gráfica base\Code\Gráfica base - Pensiones\Código\ISSSTE.Tramites2015.Common.Reports\obj\Release\ISSSTE.Tramites2015.Common.Reports.Properties.Resources.resources
+C:\Users\dmanzanob\Documents\Talia\Leo\Entrega ISSSTE\Gráfica base\Code\Gráfica base - Pensiones\Código\ISSSTE.Tramites2015.Common.Reports\obj\Release\ISSSTE.Tramites2015.Common.Reports.Resources.ReportValues.resources
+C:\Users\dmanzanob\Documents\Talia\Leo\Entrega ISSSTE\Gráfica base\Code\Gráfica base - Pensiones\Código\ISSSTE.Tramites2015.Common.Reports\obj\Release\ISSSTE.Tramites2015.Common.Reports.csproj.GenerateResource.Cache
+C:\Users\dmanzanob\Documents\Talia\Leo\Entrega ISSSTE\Gráfica base\Code\Gráfica base - Pensiones\Código\ISSSTE.Tramites2015.Common.Reports\obj\Release\ISSSTE.Tramites2015.Common.Reports.dll
+C:\Users\dmanzanob\Documents\Talia\Leo\Entrega ISSSTE\Gráfica base\Code\Gráfica base - Pensiones\Código\ISSSTE.Tramites2015.Common.Reports\obj\Release\ISSSTE.Tramites2015.Common.Reports.pdb
+C:\Users\raulv\Desktop\Tramites 2015\Pensiones Grafica\ISSSTE.Tramites2015.Common.Reports\obj\Release\ISSSTE.Tramites2015.Common.Reports.csprojResolveAssemblyReference.cache
+C:\Users\raulv\Desktop\Tramites 2015\Pensiones Grafica\ISSSTE.Tramites2015.Common.Reports\obj\Release\ISSSTE.Tramites2015.Common.Reports.dll
+C:\Users\raulv\Desktop\Tramites 2015\Pensiones Grafica\ISSSTE.Tramites2015.Common.Reports\obj\Release\ISSSTE.Tramites2015.Common.Reports.pdb
+C:\Users\raulv\Desktop\Tramites 2015\Ultimas versiones Tramites 2015\Pensiones\Pensiones Grafica\ISSSTE.Tramites2015.Common.Reports\obj\Release\ISSSTE.Tramites2015.Common.Reports.csprojResolveAssemblyReference.cache

@@ -1,0 +1,3 @@
+C:\Users\Upgenia\Documents\TD-Hipotecas\TD_Hipoteca\Hipoteca\ISSSTE.Tramites2016.Hipotecas\obj\Release\ISSSTE.Tramites2016.Hipotecas.csprojResolveAssemblyReference.cache
+C:\Users\Upgenia\Documents\TD-Hipotecas\TD_Hipoteca\Hipoteca\ISSSTE.Tramites2016.Hipotecas\obj\Release\ISSSTE.Tramites2016.Hipotecas.Resources.ResponseMessages.resources
+C:\Users\Upgenia\Documents\TD-Hipotecas\TD_Hipoteca\Hipoteca\ISSSTE.Tramites2016.Hipotecas\obj\Release\ISSSTE.Tramites2016.Hipotecas.csproj.GenerateResource.Cache

@@ -1,0 +1,12 @@
+C:\Users\Upgenia\Documents\TD-Hipotecas\TD_Hipoteca\Hipoteca\ISSSTE.Tramites2016.Common.Security\obj\Release\ISSSTE.Tramites2016.Common.Security.csprojResolveAssemblyReference.cache
+C:\Users\Upgenia\Documents\TD-Hipotecas\TD_Hipoteca\Hipoteca\ISSSTE.Tramites2016.Common.Security\obj\Release\ISSSTE.Tramites2016.Common.Security.Migrations.InitialSetup.resources
+C:\Users\Upgenia\Documents\TD-Hipotecas\TD_Hipoteca\Hipoteca\ISSSTE.Tramites2016.Common.Security\obj\Release\ISSSTE.Tramites2016.Common.Security.Migrations.DelegationsCatalog.resources
+C:\Users\Upgenia\Documents\TD-Hipotecas\TD_Hipoteca\Hipoteca\ISSSTE.Tramites2016.Common.Security\obj\Release\ISSSTE.Tramites2016.Common.Security.Properties.Resources.resources
+C:\Users\Upgenia\Documents\TD-Hipotecas\TD_Hipoteca\Hipoteca\ISSSTE.Tramites2016.Common.Security\obj\Release\ISSSTE.Tramites2016.Common.Security.Resources.ErrorMessages.resources
+C:\Users\Upgenia\Documents\TD-Hipotecas\TD_Hipoteca\Hipoteca\ISSSTE.Tramites2016.Common.Security\obj\Release\ISSSTE.Tramites2016.Common.Security.csproj.GenerateResource.Cache
+D:\Projects\ISSSTE.Tramites2016.Hipotecas\ISSSTE.Tramites2016.Common.Security\obj\Release\ISSSTE.Tramites2016.Common.Security.csprojResolveAssemblyReference.cache
+D:\Projects\ISSSTE.Tramites2016.Hipotecas\ISSSTE.Tramites2016.Common.Security\obj\Release\ISSSTE.Tramites2016.Common.Security.Migrations.InitialSetup.resources
+D:\Projects\ISSSTE.Tramites2016.Hipotecas\ISSSTE.Tramites2016.Common.Security\obj\Release\ISSSTE.Tramites2016.Common.Security.Migrations.DelegationsCatalog.resources
+D:\Projects\ISSSTE.Tramites2016.Hipotecas\ISSSTE.Tramites2016.Common.Security\obj\Release\ISSSTE.Tramites2016.Common.Security.Properties.Resources.resources
+D:\Projects\ISSSTE.Tramites2016.Hipotecas\ISSSTE.Tramites2016.Common.Security\obj\Release\ISSSTE.Tramites2016.Common.Security.Resources.ErrorMessages.resources
+D:\Projects\ISSSTE.Tramites2016.Hipotecas\ISSSTE.Tramites2016.Common.Security\obj\Release\ISSSTE.Tramites2016.Common.Security.csproj.GenerateResource.Cache

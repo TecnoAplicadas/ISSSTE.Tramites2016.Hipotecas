@@ -1,0 +1,9 @@
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion.Db\bin\Debug\ISSSTE.Tramites2016.Escrituracion.dacpac
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion.Db\bin\Debug\ISSSTE.Tramites2016.Escrituracion.Db.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion.Db\bin\Debug\ISSSTE.Tramites2016.Escrituracion.Db.pdb
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion.Db\obj\Debug\Model.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion.Db\obj\Debug\refactor.xml
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion.Db\obj\Debug\postdeploy.sql
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion.Db\obj\Debug\predeploy.sql
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion.Db\obj\Debug\ISSSTE.Tramites2016.Escrituracion.Db.dll
+C:\Users\Antonio Martinez\Documents\Hipotecas Angular Merge Version\07112016\Escrituracion\ISSSTE.Tramites2016.Escrituracion\ISSSTE.Tramites2016.Escrituracion.Db\obj\Debug\ISSSTE.Tramites2016.Escrituracion.Db.pdb

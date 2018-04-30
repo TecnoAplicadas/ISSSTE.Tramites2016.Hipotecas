@@ -1,0 +1,1658 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ISSSTE.Tramites2016.Hipotecas</name>
+    </assembly>
+    <members>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.UnityApiConfig.MailMasterPagePath">
+            <summary>
+            Obtiene la ruta relativa donde se encuentra el html a utilizar como plantilla de los correos
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.UnityApiConfig.MailMasterPageLogoPath">
+            <summary>
+            Obtiene la ruta relativa donde se encuentra la a utilizar como logo para los correos
+            </summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.UnityApiConfig.RegisterComponents">
+            <summary>
+            Registra los tipos necesarios para los controladores Web API
+            </summary>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.UnityConfig">
+            <summary>
+                Specifies the Unity configuration for the main container.
+            </summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.UnityConfig.RegisterTypes(Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>Registers the type mappings with the Unity container.</summary>
+            <param name="container">The unity container to configure.</param>
+            <remarks>
+                There is no need to register concrete types such as controllers or API controllers (unless you want to
+                change the defaults), as Unity allows resolving a concrete type even if it was not previously registered.
+            </remarks>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.UnityConfig.GetConfiguredContainer">
+            <summary>
+                Gets the configured Unity container.
+            </summary>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.UnityWebActivator">
+            <summary>Provides the bootstrapping for integrating Unity with ASP.NET MVC.</summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.UnityWebActivator.Start">
+            <summary>Integrates Unity when the application starts.</summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.UnityWebActivator.Shutdown">
+            <summary>Disposes the Unity container when the application is shut down.</summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
+            <summary>
+                Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription" />. E.g. "Get-Values-id_name" instead of
+                "GetValues/{id}?name={name}"
+            </summary>
+            <param name="description">The <see cref="T:System.Web.Http.Description.ApiDescription" />.</param>
+            <returns>The ID as a string.</returns>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.App_Start.HelpPageConfig">
+            <summary>
+                Use this class to customize the Help Page.
+                For example you can set a custom <see cref="T:System.Web.Http.Description.IDocumentationProvider" /> to supply the
+                documentation
+                or you can provide the samples for the requests/responses.
+            </summary>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.Controllers.HelpController">
+            <summary>
+                The controller that will handle requests for the help page.
+            </summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.HelpPageConfigurationExtensions.SetDocumentationProvider(System.Web.Http.HttpConfiguration,System.Web.Http.Description.IDocumentationProvider)">
+            <summary>
+                Sets the documentation provider for help page.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="documentationProvider">The documentation provider.</param>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleObjects(System.Web.Http.HttpConfiguration,System.Collections.Generic.IDictionary{System.Type,System.Object})">
+            <summary>
+                Sets the objects that will be used by the formatters to produce sample requests/responses.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="sampleObjects">The sample objects.</param>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+                Sets the sample request directly for the specified media type and action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+                Sets the sample request directly for the specified media type and action with parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+                Sets the sample request directly for the specified media type of the action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+                Sets the sample response directly for the specified media type of the action with specific parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForMediaType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+                Sets the sample directly for all actions with the specified media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+                Sets the sample directly for all actions with the specified type and media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The parameter type or return type of an action.</param>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+                Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1" /> passed to the
+                <see cref="T:System.Net.Http.HttpRequestMessage" /> in an action.
+                The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+                Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1" /> passed to the
+                <see cref="T:System.Net.Http.HttpRequestMessage" /> in an action.
+                The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+                Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1" /> returned as part of the
+                <see cref="T:System.Net.Http.HttpRequestMessage" /> in an action.
+                The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+                Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1" /> returned as part of the
+                <see cref="T:System.Net.Http.HttpRequestMessage" /> in an action.
+                The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+                Gets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <returns>The help page sample generator.</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.HelpPageConfigurationExtensions.SetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration,ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator)">
+            <summary>
+                Sets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="sampleGenerator">The help page sample generator.</param>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.HelpPageConfigurationExtensions.GetModelDescriptionGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+                Gets the model description generator.
+            </summary>
+            <param name="config">The configuration.</param>
+            <returns>The <see cref="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator" /></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageApiModel(System.Web.Http.HttpConfiguration,System.String)">
+            <summary>
+                Gets the model that represents an API displayed on the help page. The model is initialized on the first call and
+                cached for subsequent calls.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="apiDescriptionId">The <see cref="T:System.Web.Http.Description.ApiDescription" /> ID.</param>
+            <returns>
+                An <see cref="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.Models.HelpPageApiModel" />
+            </returns>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.ModelDescriptions.ModelDescription">
+            <summary>
+                Describes a type model.
+            </summary>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator">
+            <summary>
+                Generates model descriptions for given types.
+            </summary>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.ModelDescriptions.ModelNameAttribute">
+            <summary>
+                Use this attribute to change the name of the <see cref="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.ModelDescriptions.ModelDescription" /> generated for a type.
+            </summary>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.Models.HelpPageApiModel">
+            <summary>
+                The model that represents an API displayed on the help page.
+            </summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.Models.HelpPageApiModel.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.Models.HelpPageApiModel" /> class.
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription">
+            <summary>
+                Gets or sets the <see cref="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription" /> that describes the API.
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.Models.HelpPageApiModel.UriParameters">
+            <summary>
+                Gets or sets the <see cref="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.ModelDescriptions.ParameterDescription" /> collection that describes the URI parameters for the API.
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.Models.HelpPageApiModel.RequestDocumentation">
+            <summary>
+                Gets or sets the documentation for the request.
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.Models.HelpPageApiModel.RequestModelDescription">
+            <summary>
+                Gets or sets the <see cref="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.ModelDescriptions.ModelDescription" /> that describes the request body.
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.Models.HelpPageApiModel.RequestBodyParameters">
+            <summary>
+                Gets the request body parameter descriptions.
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.Models.HelpPageApiModel.ResourceDescription">
+            <summary>
+                Gets or sets the <see cref="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.ModelDescriptions.ModelDescription" /> that describes the resource.
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.Models.HelpPageApiModel.ResourceProperties">
+            <summary>
+                Gets the resource property descriptions.
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.Models.HelpPageApiModel.SampleRequests">
+            <summary>
+                Gets the sample requests associated with the API.
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.Models.HelpPageApiModel.SampleResponses">
+            <summary>
+                Gets the sample responses associated with the API.
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.Models.HelpPageApiModel.ErrorMessages">
+            <summary>
+                Gets the error messages associated with this model.
+            </summary>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator">
+            <summary>
+                This class will generate the samples for the help page.
+            </summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator" /> class.
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.ActualHttpMessageTypes">
+            <summary>
+                Gets CLR types that are used as the content of <see cref="T:System.Net.Http.HttpRequestMessage" /> or
+                <see cref="T:System.Net.Http.HttpResponseMessage" />.
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.ActionSamples">
+            <summary>
+                Gets the objects that are used directly as samples for certain actions.
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.SampleObjects">
+            <summary>
+                Gets the objects that are serialized as samples by the supported formatters.
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.SampleObjectFactories">
+            <summary>
+                Gets factories for the objects that the supported formatters will serialize as samples. Processed in order,
+                stopping when the factory successfully returns a non-<see langref="null" /> object.
+            </summary>
+            <remarks>
+                Collection includes just <see cref="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.ObjectGenerator.GenerateObject(System.Type)" /> initially. Use
+                <code>SampleObjectFactories.Insert(0, func)</code> to provide an override and
+                <code>SampleObjectFactories.Add(func)</code> to provide a fallback.
+            </remarks>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.GetSampleRequests(System.Web.Http.Description.ApiDescription)">
+            <summary>
+                Gets the request body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription" />.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription" />.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.GetSampleResponses(System.Web.Http.Description.ApiDescription)">
+            <summary>
+                Gets the response body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription" />.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription" />.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.GetSample(System.Web.Http.Description.ApiDescription,ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.SampleDirection)">
+            <summary>
+                Gets the request or response body samples.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription" />.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.GetActionSample(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Type,System.Net.Http.Formatting.MediaTypeFormatter,System.Net.Http.Headers.MediaTypeHeaderValue,ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.SampleDirection)">
+            <summary>
+                Search for samples that are provided directly through <see cref="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.ActionSamples" />.
+            </summary>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="type">The CLR type.</param>
+            <param name="formatter">The formatter.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The sample that matches the parameters.</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.GetSampleObject(System.Type)">
+            <summary>
+                Gets the sample object that will be serialized by the formatters.
+                First, it will look at the <see cref="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.SampleObjects" />. If no sample object is found, it will try to create
+                one using <see cref="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.DefaultSampleObjectFactory(ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator,System.Type)" /> (which wraps an <see cref="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.ObjectGenerator" />) and other
+                factories in <see cref="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.SampleObjectFactories" />.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The sample object.</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.ResolveHttpRequestMessageType(System.Web.Http.Description.ApiDescription)">
+            <summary>
+                Resolves the actual type of <see cref="T:System.Net.Http.ObjectContent`1" /> passed to the
+                <see cref="T:System.Net.Http.HttpRequestMessage" /> in an action.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription" />.</param>
+            <returns>The type.</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.ResolveType(System.Web.Http.Description.ApiDescription,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.SampleDirection,System.Collections.ObjectModel.Collection{System.Net.Http.Formatting.MediaTypeFormatter}@)">
+            <summary>
+                Resolves the type of the action parameter or return value when <see cref="T:System.Net.Http.HttpRequestMessage" /> or
+                <see cref="T:System.Net.Http.HttpResponseMessage" /> is used.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription" />.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or a response.</param>
+            <param name="formatters">The formatters.</param>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.WriteSampleObjectUsingFormatter(System.Net.Http.Formatting.MediaTypeFormatter,System.Object,System.Type,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+                Writes the sample object using formatter.
+            </summary>
+            <param name="formatter">The formatter.</param>
+            <param name="value">The value.</param>
+            <param name="type">The type.</param>
+            <param name="mediaType">Type of the media.</param>
+            <returns></returns>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleKey">
+            <summary>
+                This is used to identify the place where the sample should be applied.
+            </summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+                Creates a new <see cref="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleKey" /> based on media type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+                Creates a new <see cref="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleKey" /> based on media type and CLR type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The CLR type.</param>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.#ctor(ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+                Creates a new <see cref="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleKey" /> based on <see cref="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.SampleDirection" />, controller name, action
+                name and parameter names.
+            </summary>
+            <param name="sampleDirection">The <see cref="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.SampleDirection" />.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+                Creates a new <see cref="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleKey" /> based on media type, <see cref="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.SampleDirection" />, controller
+                name, action name and parameter names.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The <see cref="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.SampleDirection" />.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.ControllerName">
+            <summary>
+                Gets the name of the controller.
+            </summary>
+            <value>
+                The name of the controller.
+            </value>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.ActionName">
+            <summary>
+                Gets the name of the action.
+            </summary>
+            <value>
+                The name of the action.
+            </value>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.MediaType">
+            <summary>
+                Gets the media type.
+            </summary>
+            <value>
+                The media type.
+            </value>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.ParameterNames">
+            <summary>
+                Gets the parameter names.
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.SampleDirection">
+            <summary>
+                Gets the <see cref="P:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.SampleDirection" />.
+            </summary>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.ImageSample">
+            <summary>
+                This represents an image sample on the help page. There's a display template named ImageSample associated with this
+                class.
+            </summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.ImageSample.#ctor(System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.ImageSample" /> class.
+            </summary>
+            <param name="src">The URL of an image.</param>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.InvalidSample">
+            <summary>
+                This represents an invalid sample on the help page. There's a display template named InvalidSample associated with
+                this class.
+            </summary>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.ObjectGenerator">
+            <summary>
+                This class will create an object of a given type and populate it with sample data.
+            </summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.ObjectGenerator.GenerateObject(System.Type)">
+            <summary>
+                Generates an object for a given type. The type needs to be public, have a public default constructor and settable
+                public properties/fields. Currently it supports the following types:
+                Simple types: <see cref="T:System.Int32" />, <see cref="T:System.String" />, <see cref="T:System.Enum" />, <see cref="T:System.DateTime" />,
+                <see cref="T:System.Uri" />, etc.
+                Complex types: POCO types.
+                Nullables: <see cref="T:System.Nullable`1" />.
+                Arrays: arrays of simple types or complex types.
+                Key value pairs: <see cref="T:System.Collections.Generic.KeyValuePair`2" />
+                Tuples: <see cref="T:System.Tuple`1" />, <see cref="T:System.Tuple`2" />, etc
+                Dictionaries: <see cref="T:System.Collections.Generic.IDictionary`2" /> or anything deriving from
+                <see cref="T:System.Collections.Generic.IDictionary`2" />.
+                Collections: <see cref="T:System.Collections.Generic.IList`1" />, <see cref="T:System.Collections.Generic.IEnumerable`1" />, <see cref="T:System.Collections.Generic.ICollection`1" />,
+                <see cref="T:System.Collections.IList" />, <see cref="T:System.Collections.IEnumerable" />, <see cref="T:System.Collections.ICollection" /> or anything deriving from
+                <see cref="T:System.Collections.Generic.ICollection`1" /> or <see cref="T:System.Collections.IList" />.
+                Queryables: <see cref="T:System.Linq.IQueryable" />, <see cref="T:System.Linq.IQueryable`1" />.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>An object of the given type.</returns>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.SampleDirection">
+            <summary>
+                Indicates whether the sample is used for request or response
+            </summary>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.SampleGeneration.TextSample">
+            <summary>
+                This represents a preformatted text sample on the help page. There's a display template named TextSample associated
+                with this class.
+            </summary>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.XmlDocumentationProvider">
+            <summary>
+                A custom <see cref="T:System.Web.Http.Description.IDocumentationProvider" /> that reads the API documentation from an XML documentation file.
+            </summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.XmlDocumentationProvider.#ctor(System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:ISSSTE.Tramites2016.Hipotecas.Areas.HelpPage.XmlDocumentationProvider" /> class.
+            </summary>
+            <param name="documentPath">The physical path to XML document.</param>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.Controllers.AccountController">
+            <summary>
+                Controlador que maneja operaciones relacionadas a la sesión
+            </summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AccountController.Login(System.String)">
+            <summary>
+                Despliega la página de login
+            </summary>
+            <param name="returnUrl">Url a la que redirigir una vez que se complete el logueo</param>
+            <returns>Vista</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AccountController.ExternalLogin(System.String,System.String)">
+            <summary>
+                Procesa la respuesta del proveedor de identidad externo almacenando la información del usuario. En caso de se
+                llamado por el sitio propio, inicia el proceso de logueo con el proveedor de identidad externo
+            </summary>
+            <param name="returnUrl">Url a la que redirigir una vez que se complete el logueo</param>
+            <param name="error">Error generado en el proceso de logueo</param>
+            <returns>Redirección</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AccountController.LoginComplete(System.String)">
+            <summary>
+                Despliega la´página que completa el logueo del lado del cliente
+            </summary>
+            <param name="returnUrl">Url a la que redirigir una vez que se complete el logueo</param>
+            <returns>Vista</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AccountController.LoginError">
+            <summary>
+                Despliega la pagina de error en el logueo
+            </summary>
+            <returns>Vista</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AccountController.Logout(System.String,System.Boolean)">
+            <summary>
+                Cierra sesión tanto en la cookie como en OAuth 2.0 y despliega la página de cierre de sesión
+            </summary>
+            <param name="returnUrl">Página a la que redirigir una vez cumplido el cierre de sesión</param>
+            <param name="soft">Indica si tambien se debe de cerrar la sesión del proveedor de indetidad o no</param>
+            <returns>Vista</returns>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController">
+            <summary>
+                Controllador del Api para el Administrador
+            </summary>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.UserIdentityHeader">
+            <summary>
+                Nombre del encabezado utilizado para enviar la identidad del usuario
+            </summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.#ctor(ISSSTE.Tramites2016.Common.Util.ILogger,ISSSTE.Tramites2016.Hipotecas.Domians.IEntitleDomainService,ISSSTE.Tramites2016.Hipotecas.Domian.IRequestDomainService,ISSSTE.Tramites2016.Hipotecas.Domian.ICalendarDomainService,ISSSTE.Tramites2016.Hipotecas.Domian.ICommonDomainService,ISSSTE.Tramites2016.Common.ServiceAgents.ISipeAvDataServiceAgent,ISSSTE.Tramites2016.Common.Catalogs.ICatalogReflexionHelper,ISSSTE.Tramites2016.Common.Catalogs.ICatalogRepository)">
+            <summary>
+                Constructor del Controllador
+            </summary>
+            <param name="logger"></param>
+            <param name="entitleDomainService"></param>
+            <param name="requestDomainService"></param>
+            <param name="calendarDomainService"></param>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController._requestDomainService">
+            <summary>
+                Dominio de solicitudes
+            </summary>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController._entitleDomainService">
+            <summary>
+                Dominiio de derechohabiente
+            </summary>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController._calendarDomainService">
+            <summary>
+                Dominio del calendario
+            </summary>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController._catalogReflexionHelper">
+            <summary>
+            Contiene las rutinas para utilizar reflexion sobre los catalogos
+            </summary>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController._catalogRepository">
+            <summary>
+            Contiene las rutinas para el manejo generico de catálogos
+            </summary>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController._userIdentity">
+            <summary>
+                Identidad del usuario enviado en la petición
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.HasUserIdentityInRequest">
+            <summary>
+                Valida si en la petición se envío la identidad del usuario
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.UserIdentity">
+            <summary>
+                Se obtiene la identidad del usuario que realizo la petición
+            </summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.ValidateLogin">
+            <summary>
+                Se utiliza para validar que el token de autenticación sigue siendo válido
+            </summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.GetUserRoles">
+            <summary>
+                Obtiene los reles a los que pertenece el usuario
+            </summary>
+            <returns>Roles</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.GetAvailableNextStatus(ISSSTE.Tramites2016.Hipotecas.Models.CheckNextStatus)">
+            <summary>
+            Obtiene la lista de estados a los cuales se puede mover la solicitud, para el rol que tenga el usuario
+            </summary>
+            <returns>lista de estados a los cuales se puede mover la solicitud, para el rol que tenga el usuario</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.AsingRequest(ISSSTE.Tramites2016.Hipotecas.Model.Pocos.UserRequestApi)">
+            <summary>
+                Asigna la solicitud a un usuario
+            </summary>
+            <param name="userrequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.UpdateDocuments(ISSSTE.Tramites2016.Hipotecas.Model.Pocos.DocumentData)">
+            <summary>
+            
+            </summary>
+            <param name="RequestId"></param>
+            <param name="Observations"></param>
+            <param name="IsValid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.GetRequests(System.Int32,System.Int32,System.Boolean,System.String,System.Nullable{System.Int32})">
+            <summary>
+                Obtiene la lista de solicitudes paginando y filtrando por un texto y un estatus
+            </summary>
+            <param name="pageSize">Cantidad de registros por página</param>
+            <param name="page">Página solicitada</param>
+            <param name="query">Texto de busqueda</param>
+            <param name="statusId">Ide del estatus por el cual filtrar</param>
+            <param name="orden"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.GetAppointments(System.Int32,System.Int32,System.String,System.Nullable{System.DateTime},System.Nullable{System.TimeSpan},System.Nullable{System.Int32})">
+            <summary>
+            Obtiene la lista de citas, utilizando paginacion y filtro de busqueda.
+            </summary>
+            <param name="pageSize"></param>
+            <param name="page"></param>
+            <param name="query"></param>
+            <param name="date"></param>
+            <param name="time"></param>
+            <param name="statusId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.GetAllDataFromEntitleNewRequest(System.Guid)">
+            <summary>
+                Obtiene toda la informacion de la solicitud y derechohabiente
+            </summary>
+            <param name="requestId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.GetRequest(System.Guid)">
+            <summary>
+                Obtiene la solicitud por id
+            </summary>
+            <param name="requestId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.GetOpinionMessages(System.Guid)">
+            <summary>
+                Obtiene la lista de Diagnositocs por id
+            </summary>
+            <param name="requestId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.GetOpinionAndRequest(System.Guid)">
+            <summary>
+                Obitnene el diagnostico y la informaciond ela solicitud
+            </summary>
+            <param name="requestId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.SaveStatusRequest(ISSSTE.Tramites2016.Hipotecas.Model.Pocos.StatusOpinionApi)">
+            <summary>
+                Guarda el Estatus de la solicitud
+            </summary>
+            <param name="staOpinion"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.GetDates(System.Int32,System.Int32,System.String,System.Nullable{System.DateTime},System.Nullable{System.TimeSpan})">
+            <summary>
+                Obtiene la lista de citas para la delegacion
+            </summary>
+            <param name="parameter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.ChangueStatusAppointment(System.Guid,System.Boolean,System.Guid)">
+            <summary>
+                Cambia el estatus de la cita
+            </summary>
+            <param name="appointmentId"></param>
+            <param name="isAttended"></param>
+            <param name="requestId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.GetStatusByRole">
+            <summary>
+                Obtiene la lista de estatus
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.GetDateStatusByRole">
+            <summary>
+                Obtiene la lista de estatus
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.GetAllDelegation">
+            <summary>
+                Obtiene la lista de dlegaciones
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.GetUserOperator">
+            <summary>
+                Obtiene a los usuarios operador
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.GetSheduleList(System.Int32)">
+            <summary>
+                Regresa las listas de configuracion para el calendario
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.DeleteSchedule(System.Guid)">
+            <summary>
+                Borra la configuracion por id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.DeleteSpecialScheduleDays(System.Guid)">
+            <summary>
+            Borra los horarios asignados al día especial
+            </summary>
+            <param name="specialScheduleDays"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.DeleteSpecialDaysSchedules(System.Guid)">
+            <summary>
+            Elimina el horario por medio del Id de la lista de días especiales.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.successfulRequest(System.Guid)">
+             <summary>
+            Obtiene el total de solicitudes Exitosas
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.DeleteNonLaboraleDays(ISSSTE.Tramites2016.Hipotecas.Model.Pocos.IntDateApi)">
+            <summary>
+                Borra el dia no laborable
+            </summary>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.SaveSchedules(System.Collections.Generic.List{ISSSTE.Tramites2016.Hipotecas.Model.Model.Schedule})">
+            <summary>
+                Guarda la lista de configuraciones de citas
+            </summary>
+            <param name="saves"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.SaveNonLaborableDays(System.Collections.Generic.List{ISSSTE.Tramites2016.Hipotecas.Model.Model.SpecialDay})">
+            <summary>
+                Guarda la lista de dias no laborales
+            </summary>
+            <param name="specialDays"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.SaveSpecialDayAndSchedule(System.Collections.Generic.List{ISSSTE.Tramites2016.Hipotecas.Model.Pocos.SpecialDayScheduleApi})">
+            <summary>
+                Guarda la lista de dias especiales y su configuracion
+            </summary>
+            <param name="specialDaysapi"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.ValidateIsssteNumber(System.String)">
+            <summary>
+            Valida si el Número ISSSTE es válido
+            </summary>
+            <returns>Número ISSSTE del derechohabiente si es válido, si no nulo</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.GetEntitleIsssteNumber(System.String,System.String)">
+            <summary>
+            Obtiene el Número ISSSTE del derechochabiente buscandolo por CURP o popr RFC
+            </summary>
+            <returns>Número ISSSTE del derechohabiente</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.GetAllCatalogs(System.String)">
+            <summary>
+            Obtiene una la lista de elementos del catalogo especificado
+            </summary>
+            <param name="catalogName">Nombre del catálogo</param>
+            <returns>Lista de elementos del catálogo</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.GetCatalog(System.String,System.String)">
+            <summary>
+            Obtiene un elemento específico de un catálogo
+            </summary>
+            <param name="catalogName">Nombre del catálogo</param>
+            <param name="key">Llave del elemento</param>
+            <returns>Detalle del elemento especificado</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.SaveOrUpdateCatalogEntity(System.String,System.String)">
+            <summary>
+            Crea o actualiza un elemento de un catálogo
+            </summary>
+            <param name="catalogName">Nombre del catálogo</param>
+            <param name="objectToSave">Información del elemento</param>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.DeleteCatalogEntity(System.String,System.String)">
+            <summary>
+            Elimina un elemento de un catálogo
+            </summary>
+            <param name="catalogName">Nombre del catálogo</param>
+            <param name="objectToSave"></param>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorApiController.GetCatalogEntityDependentCatalogs(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Obtiene la lista de elementos de los catalogos dependientes enviados
+            </summary>
+            <param name="catalogName">Nombre del catálogo</param>
+            <param name="dependentPropertyNames">Propiedades dependientes</param>
+            <returns>Elementos de cada propiedad dependiente enviada</returns>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorController">
+            <summary>
+                Controllador para la pagina de administrador
+            </summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorController.CatalogElements(System.String)">
+            <summary>
+            Returns the list view of a catalog
+            </summary>
+            <param name="catalogName">Name of the catalog to display</param>
+            <returns><see cref="T:System.Web.Mvc.ViewResult"/></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.AdministratorController.CatalogItemDetail(System.String)">
+            <summary>
+            Returns the detail view of a catalog
+            </summary>
+            <param name="catalogName">Name of the catalog to display</param>
+            <returns><see cref="T:System.Web.Mvc.ViewResult"/></returns>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController">
+            <summary>
+                Controllador del api para el calendario
+            </summary>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.UserIdentityHeader">
+            <summary>
+                Nombre del encabezado utilizado para enviar la identidad del usuario
+            </summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.#ctor(ISSSTE.Tramites2016.Common.Util.ILogger,ISSSTE.Tramites2016.Hipotecas.Domian.IRequestDomainService,ISSSTE.Tramites2016.Hipotecas.Domians.IEntitleDomainService,ISSSTE.Tramites2016.Hipotecas.Domian.ICalendarDomainService,ISSSTE.Tramites2016.Hipotecas.Domian.ICommonDomainService)">
+            <summary>
+                Constructor del Calendario
+            </summary>
+            <param name="logger"></param>
+            <param name="requestDomainService"></param>
+            <param name="entitleDomainService"></param>
+            <param name="calendarDomainService"></param>
+            <param name="commonDomainService"></param>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController._requestDomainService">
+            <summary>
+                Dominio de la solicitud
+            </summary>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController._entitleDomainService">
+            <summary>
+                Dominio del derechohabiente
+            </summary>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController._calendarDomainService">
+            <summary>
+                Dominio del calendario
+            </summary>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController._commonDomainService">
+            <summary>
+                Dominio comun
+            </summary>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController._userIdentity">
+            <summary>
+                Identidad del usuario enviado en la petición
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.HasUserIdentityInRequest">
+            <summary>
+                Valida si en la petición se envío la identidad del usuario
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.UserIdentity">
+            <summary>
+                Se obtiene la identidad del usuario que realizo la petición
+            </summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.GetCurrentAppointmentsByRequestId(System.Guid)">
+            <summary>
+                Obtiene las citas por id Derechohabiente
+            </summary>
+            <param name="RequestId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.GetCancelAndNotAttendedAppointmentsByEntitleId(System.Guid)">
+            <summary>
+                Obtiene las citas canceladas/No atendidas por id Derechohabiente
+            </summary>
+            <param name="RequestId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.GetAppointments(System.DateTime,System.Int32)">
+            <summary>
+                Obtiene la lista de Citas por fecha y delegacion
+            </summary>
+            <param name="date"></param>
+            <param name="delegationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.GetAppointmentsByRequestId(System.Guid)">
+            <summary>
+                Obtiene las citas por solicitud
+            </summary>
+            <param name="requestId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.GetHolydays">
+            <summary>
+                Obtiene los dias feriados
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.GetScheduleByDelegationId(System.Int32)">
+            <summary>
+                Obtiene la configuracion de dias por delegación
+            </summary>
+            <param name="delegationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.GetSpecialDayByDelegationId(System.Int32)">
+            <summary>
+                Obtiene los dias especiales por delegacion
+            </summary>
+            <param name="delegationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.GetSpecialDayScheduleByDelegationId(System.Int32)">
+            <summary>
+                Obtiene los horarios por dia especial por delegacion
+            </summary>
+            <param name="delegationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.GetWeekDays">
+            <summary>
+                Obtiene los dias de la semanada
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.SaveSchedule(System.Collections.Generic.List{ISSSTE.Tramites2016.Hipotecas.Model.Model.Schedule})">
+            <summary>
+                Guarda la configuracion de citas
+            </summary>
+            <param name="schedules"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.DeleteSchedulesByDelegation(System.Int32)">
+            <summary>
+                Borra las configuraciones por id de delegacion
+            </summary>
+            <param name="delegationId"></param>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.SaveAppointment(ISSSTE.Tramites2016.Hipotecas.Model.Model.Appoinment)">
+            <summary>
+                Guarda la cita para la solicitud
+            </summary>
+            <param name="appoinment"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.NotAttendedAppointment(System.Guid)">
+            <summary>
+                Regresa las citas no atendidas por id
+            </summary>
+            <param name="appointmenId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.GetDatesRequest(System.Guid)">
+            <summary>
+                Obtiene la informacion de las citas por solicitud
+            </summary>
+            <param name="requestId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.CancelAppointment(System.Guid)">
+            <summary>
+                Obtiene las citas canceladas
+            </summary>
+            <param name="appointmentId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.GetCalendarByMonthAndDelegation(ISSSTE.Tramites2016.Hipotecas.Model.Pocos.DateDelegationApi)">
+            <summary>
+                Obtiene el calendario por delegacion y mes
+            </summary>
+            <param name="dateDelegation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.GetFreeSpace(ISSSTE.Tramites2016.Hipotecas.Model.Pocos.DateDelegationApi)">
+            <summary>
+                Obtiene el espacio libre por configuracion
+            </summary>
+            <param name="dateDelegation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.GetOccupiedSpace(ISSSTE.Tramites2016.Hipotecas.Model.Pocos.DateDelegationApi)">
+            <summary>
+                Obtiene la configuracion de espacios ocupados por id
+            </summary>
+            <param name="dateDelegation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.GetTimeCalendar(ISSSTE.Tramites2016.Hipotecas.Model.Pocos.DateDelegationApi)">
+            <summary>
+                Obtiene los tiempos  por dia
+            </summary>
+            <param name="dateDelegation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.GetMonths">
+            <summary>
+                OBtiene los meses del año
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.GetYears">
+            <summary>
+                Obtiene una lista de años
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.ValidateAndHandleOperationExecutionAsync(System.Func{System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage}})">
+            <summary>
+                Valida que la petición contenga la identidad del usuario, a la vez que ejecuta cóigo asíncrono para manejar
+                excepciones no controladas
+            </summary>
+            <param name="operationBody">Cuerpo a ejecutar si se valido la petición</param>
+            <returns>Resultado del cuerpo a ejecutar</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.ValidateAndHandleOperationExecution(System.Func{System.Net.Http.HttpResponseMessage})">
+            <summary>
+                Valida que la petición contenga la identidad del usuario, a la vez que ejecuta cóigo para manejar excepciones no
+                controladas
+            </summary>
+            <param name="operationBody">Cuerpo a ejecutar si se valido la petición</param>
+            <returns>Resultado del cuerpo a ejecutar</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CalendarApiController.ValidateAndHandleMultipartOperationExecutionAsync(System.Func{ISSSTE.Tramites2016.Common.Web.HttpPostedData,System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage}})">
+            <summary>
+                Valida que la petición contenga la identidad del usuario, a la vez que ejecuta cóigo asíncrono para manejar
+                excepciones no controladas y envía al código a ejecutar los valores obtenidos del multipart
+            </summary>
+            <param name="operationBody">Cuerpo a ejecutar si se valido la petición</param>
+            <returns>Resultado del cuerpo a ejecutar</returns>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.Controllers.CommonApiController">
+            <summary>
+                Controllador para el api de operaciones comunes
+            </summary>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.CommonApiController.UserIdentityHeader">
+            <summary>
+                Nombre del encabezado utilizado para enviar la identidad del usuario
+            </summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CommonApiController.#ctor(ISSSTE.Tramites2016.Common.Util.ILogger,ISSSTE.Tramites2016.Hipotecas.Domian.IRequestDomainService,ISSSTE.Tramites2016.Hipotecas.Domians.IEntitleDomainService,ISSSTE.Tramites2016.Hipotecas.Domian.ICalendarDomainService,ISSSTE.Tramites2016.Hipotecas.Domian.ICommonDomainService)">
+            <summary>
+                Constructor del controlador
+            </summary>
+            <param name="logger"></param>
+            <param name="requestDomainService"></param>
+            <param name="entitleDomainService"></param>
+            <param name="calendarDomainService"></param>
+            <param name="commonDomainService"></param>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.CommonApiController._requestDomainService">
+            <summary>
+                *Dominio de la solicitud
+            </summary>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.CommonApiController._entitleDomainService">
+            <summary>
+                Dominio del derechohabiente
+            </summary>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.CommonApiController._calendarDomainService">
+            <summary>
+                Dominio del calendario
+            </summary>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.CommonApiController._commonDomainService">
+            <summary>
+                Dominio comun
+            </summary>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.CommonApiController._userIdentity">
+            <summary>
+                Identidad del usuario enviado en la petición
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Controllers.CommonApiController.HasUserIdentityInRequest">
+            <summary>
+                Valida si en la petición se envío la identidad del usuario
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Controllers.CommonApiController.UserIdentity">
+            <summary>
+                Se obtiene la identidad del usuario que realizo la petición
+            </summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CommonApiController.GetDelegations">
+            <summary>
+                Obtiene las delegaciones
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CommonApiController.GetDelegationById(System.Int32)">
+            <summary>
+                Regresa la delegacion por su id
+            </summary>
+            <param name="idDelegation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CommonApiController.GetConfigurationByName(System.String)">
+            <summary>
+                Obtiene la configuracion por su llave
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CommonApiController.GetMessage(System.String)">
+            <summary>
+                Obtiene el mensaje por su llave
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CommonApiController.GetMessages">
+            <summary>
+                Obtiene los la lista de mensajes
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CommonApiController.GetRequirements(System.Int32)">
+            <summary>
+                Obtiene los requerimientos de pension
+            </summary>
+            <param name="pensionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CommonApiController.GetRole(System.Int32)">
+            <summary>
+                Obtiene el role por id
+            </summary>
+            <param name="roleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CommonApiController.GetRoles">
+            <summary>
+                obtiene los roles
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CommonApiController.ValidateAndHandleOperationExecutionAsync(System.Func{System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage}})">
+            <summary>
+                Valida que la petición contenga la identidad del usuario, a la vez que ejecuta cóigo asíncrono para manejar
+                excepciones no controladas
+            </summary>
+            <param name="operationBody">Cuerpo a ejecutar si se valido la petición</param>
+            <returns>Resultado del cuerpo a ejecutar</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CommonApiController.ValidateAndHandleOperationExecution(System.Func{System.Net.Http.HttpResponseMessage})">
+            <summary>
+                Valida que la petición contenga la identidad del usuario, a la vez que ejecuta cóigo para manejar excepciones no
+                controladas
+            </summary>
+            <param name="operationBody">Cuerpo a ejecutar si se valido la petición</param>
+            <returns>Resultado del cuerpo a ejecutar</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.CommonApiController.ValidateAndHandleMultipartOperationExecutionAsync(System.Func{ISSSTE.Tramites2016.Common.Web.HttpPostedData,System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage}})">
+            <summary>
+                Valida que la petición contenga la identidad del usuario, a la vez que ejecuta cóigo asíncrono para manejar
+                excepciones no controladas y envía al código a ejecutar los valores obtenidos del multipart
+            </summary>
+            <param name="operationBody">Cuerpo a ejecutar si se valido la petición</param>
+            <returns>Resultado del cuerpo a ejecutar</returns>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.Controllers.EntitleApiController">
+            <summary>
+                Controllador para el api del derechohabiente
+            </summary>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.EntitleApiController.UserIdentityHeader">
+            <summary>
+                Nombre del encabezado utilizado para enviar la identidad del usuario
+            </summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.EntitleApiController.#ctor(ISSSTE.Tramites2016.Common.Util.ILogger,ISSSTE.Tramites2016.Hipotecas.Domian.IRequestDomainService,ISSSTE.Tramites2016.Hipotecas.Domians.IEntitleDomainService)">
+            <summary>
+                Constructor del api
+            </summary>
+            <param name="logger"></param>
+            <param name="requestDomainService"></param>
+            <param name="entitleDomainService"></param>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.EntitleApiController._requestDomainService">
+            <summary>
+                dominio de la solicitud
+            </summary>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.EntitleApiController._entitleDomainService">
+            <summary>
+                dominio del derechohabiente
+            </summary>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.EntitleApiController._userIdentity">
+            <summary>
+                Identidad del usuario enviado en la petición
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Controllers.EntitleApiController.HasUserIdentityInRequest">
+            <summary>
+                Valida si en la petición se envío la identidad del usuario
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Controllers.EntitleApiController.UserIdentity">
+            <summary>
+                Se obtiene la identidad del usuario que realizo la petición
+            </summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.EntitleApiController.GetEntitledInformation">
+            <summary>
+                Obtiene la informacion del derechohabiente
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.EntitleApiController.GetDebtors">
+            <summary>
+                Obtiene la lista de deudos del derechohabiente
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.EntitleApiController.ValidateCurpRenapo(System.String)">
+            <summary>
+                Valida el curp
+            </summary>
+            <param name="curp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.EntitleApiController.GetEntitledAlerts(System.String)">
+            <summary>
+            Obtiene las alertas de las solicitudes del derechohabiente
+            </summary>
+            <param name="isssteNumber">Número Issste del derechohabiente</param>
+            <returns>Lista de alertas del sistema</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.EntitleApiController.GetDocumentsForInfo">
+            <summary>
+            Obtiene una lista que contiene las listas de docuemntos para mostrarlos en la sección correspondiente
+            </summary>
+            <returns>Lista de listas de documentos</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.EntitleApiController.GetAllDataFromEntitleNewRequest">
+            <summary>
+                Obtiene toda la informacion del derechohabiente par ala solicitud
+            </summary>
+            <param name="idPension"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.EntitleApiController.GetAllDataFromEntitleNewRequest(System.Guid)">
+            <summary>
+                Obtiene toda la informacion de una solicitud y el derechohabiente
+            </summary>
+            <param name="requestId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.EntitleApiController.SaveEntitle(ISSSTE.Tramites2016.Hipotecas.Model.Model.Entitle)">
+            <summary>
+                Guarda el Derechohabiente
+            </summary>
+            <param name="entitle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.EntitleApiController.SaveEntitleAll(ISSSTE.Tramites2016.Hipotecas.Model.Pocos.EntitledData)">
+            <summary>
+                Guarda toda la informacion de un derechohabiente apartir de una solicitud
+            </summary>
+            <param name="entitledData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.EntitleApiController.GetOpinionByRequest(System.Guid)">
+            <summary>
+                Guardar el diagnostico de la solicitud
+            </summary>
+            <param name="requestId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.EntitleApiController.ValidateAndHandleOperationExecutionAsync(System.Func{System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage}})">
+            <summary>
+                Valida que la petición contenga la identidad del usuario, a la vez que ejecuta cóigo asíncrono para manejar
+                excepciones no controladas
+            </summary>
+            <param name="operationBody">Cuerpo a ejecutar si se valido la petición</param>
+            <returns>Resultado del cuerpo a ejecutar</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.EntitleApiController.ValidateAndHandleOperationExecution(System.Func{System.Net.Http.HttpResponseMessage})">
+            <summary>
+                Valida que la petición contenga la identidad del usuario, a la vez que ejecuta cóigo para manejar excepciones no
+                controladas
+            </summary>
+            <param name="operationBody">Cuerpo a ejecutar si se valido la petición</param>
+            <returns>Resultado del cuerpo a ejecutar</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.EntitleApiController.ValidateAndHandleMultipartOperationExecutionAsync(System.Func{ISSSTE.Tramites2016.Common.Web.HttpPostedData,System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage}})">
+            <summary>
+                Valida que la petición contenga la identidad del usuario, a la vez que ejecuta cóigo asíncrono para manejar
+                excepciones no controladas y envía al código a ejecutar los valores obtenidos del multipart
+            </summary>
+            <param name="operationBody">Cuerpo a ejecutar si se valido la petición</param>
+            <returns>Resultado del cuerpo a ejecutar</returns>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.Controllers.EntitleController">
+            <summary>
+                Controllador para el derechohabiente
+            </summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.EntitleController.#ctor(ISSSTE.Tramites2016.Common.Util.ILogger,ISSSTE.Tramites2016.Hipotecas.Domians.IEntitleDomainService)">
+            <summary>
+                Constructor del Controller
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController">
+            <summary>
+                Controllador para las peticiones de solicitud
+            </summary>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController.UserIdentityHeader">
+            <summary>
+                Nombre del encabezado utilizado para enviar la identidad del usuario
+            </summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController.#ctor(ISSSTE.Tramites2016.Common.Util.ILogger,ISSSTE.Tramites2016.Hipotecas.Domian.IRequestDomainService,ISSSTE.Tramites2016.Hipotecas.Domians.IEntitleDomainService,ISSSTE.Tramites2016.Hipotecas.Domian.ICalendarDomainService,ISSSTE.Tramites2016.Hipotecas.Domian.ICommonDomainService)">
+            <summary>
+                Constructor del controllador
+            </summary>
+            <param name="logger"></param>
+            <param name="requestDomainService"></param>
+            <param name="entitleDomainService"></param>
+            <param name="calendarDomainService"></param>
+            <param name="commonDomainService"></param>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController._requestDomainService">
+            <summary>
+                Dominio de solicitudes
+            </summary>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController._entitleDomainService">
+            <summary>
+                Dominio de Derechohabiente
+            </summary>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController._calendarDomainService">
+            <summary>
+                Dominio de Calendario
+            </summary>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController._commonDomainService">
+            <summary>
+                Dominio Comun
+            </summary>
+        </member>
+        <member name="F:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController._userIdentity">
+            <summary>
+                Identidad del usuario enviado en la petición
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController.HasUserIdentityInRequest">
+            <summary>
+                Valida si en la petición se envío la identidad del usuario
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController.UserIdentity">
+            <summary>
+                Se obtiene la identidad del usuario que realizo la petición
+            </summary>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController.GetRequestById(System.Guid)">
+            <summary>
+                Obtiene las solicitudes por su id
+            </summary>
+            <param name="requestId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController.GetRequestAllEntitleById(System.Guid,System.String)">
+            <summary>
+                Obtiene la solicitud por Id con informacion del derechohabiente
+            </summary>
+            <param name="requestId"></param>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController.SaveRequest(ISSSTE.Tramites2016.Hipotecas.Model.Model.Request)">
+            <summary>
+                Guarda una nueva solicitud
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController.GetRequestByEntitledId">
+            <summary>
+                Obtiene las solicitudes por el id del derechohabiente
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController.GetLastNotification">
+            <summary>
+                Obtienen las notificaciones para el derechohabiente
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController.GetCurrentRequestByEntitledId">
+            <summary>
+                Obtiene las Solicitudes Actuales
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController.GetPastRequestByEntitledId">
+            <summary>
+                Obtiene las solicitudes pasadas
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController.GetAppointmentsByRequestIdNotAttended(System.Guid)">
+            <summary>
+                Obtiene las Citas no atendidas
+            </summary>
+            <param name="requestid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController.GetAppointmentsByRequestId(System.Guid)">
+            <summary>
+                Obtiene las citas actuales
+            </summary>
+            <param name="requestid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController.GetOpinionAndRequest(System.Guid,System.String)">
+            <summary>
+                Obtiene el diagnostico y la solicitud
+            </summary>
+            <param name="requestId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController.SaveStatusRequest(System.Guid,System.Nullable{System.Int32},System.Boolean)">
+            <summary>
+                Guarda el status de la solicitud
+            </summary>
+            <param name="requestId"></param>
+            <param name="idStatus"></param>
+            <param name="happy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController.GetCurpRequest">
+            <summary>
+                Obtiene las Solicitudes Actuales
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController.GetDocumentsByRelationship(System.Int32,System.String)">
+            <summary>
+            Obtiene la lista de documentos para el solicitante
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController.GetModalidadPension(System.String)">
+            <summary>
+            Obtiene la modalidad de la pensión
+            </summary>
+            <param name="KeyRelationships"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController.GetRequestDebtors">
+            <summary>
+            Obtiene todas la solicitudes creadas por el Deudo 1.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController.GetRequestDebtorsRequestId(System.Guid)">
+            <summary>
+            Obtiene todas la solicitudes creadas por el Deudo.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController.ValidateAndHandleOperationExecutionAsync(System.Func{System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage}})">
+            <summary>
+                Valida que la petición contenga la identidad del usuario, a la vez que ejecuta cóigo asíncrono para manejar
+                excepciones no controladas
+            </summary>
+            <param name="operationBody">Cuerpo a ejecutar si se valido la petición</param>
+            <returns>Resultado del cuerpo a ejecutar</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController.ValidateAndHandleOperationExecution(System.Func{System.Net.Http.HttpResponseMessage})">
+            <summary>
+                Valida que la petición contenga la identidad del usuario, a la vez que ejecuta cóigo para manejar excepciones no
+                controladas
+            </summary>
+            <param name="operationBody">Cuerpo a ejecutar si se valido la petición</param>
+            <returns>Resultado del cuerpo a ejecutar</returns>
+        </member>
+        <member name="M:ISSSTE.Tramites2016.Hipotecas.Controllers.RequestApiController.ValidateAndHandleMultipartOperationExecutionAsync(System.Func{ISSSTE.Tramites2016.Common.Web.HttpPostedData,System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage}})">
+            <summary>
+                Valida que la petición contenga la identidad del usuario, a la vez que ejecuta cóigo asíncrono para manejar
+                excepciones no controladas y envía al código a ejecutar los valores obtenidos del multipart
+            </summary>
+            <param name="operationBody">Cuerpo a ejecutar si se valido la petición</param>
+            <returns>Resultado del cuerpo a ejecutar</returns>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.Models.CatalogViewModel">
+            <summary>
+            Represents the information used to create a catalog view
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Models.CatalogViewModel.CatalogName">
+            <summary>
+            Gets or sets the catalog system name
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Models.CatalogViewModel.CatalogDisplayName">
+            <summary>
+            Gets or sets the catalog display name
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Models.CatalogViewModel.KeyProperty">
+            <summary>
+            Gets or sets the catalog key property
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Models.CatalogViewModel.Properties">
+            <summary>
+            Gets or sets the properties of the catalog
+            </summary>
+        </member>
+        <member name="T:ISSSTE.Tramites2016.Hipotecas.Resources.ResponseMessages">
+            <summary>
+              Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Resources.ResponseMessages.ResourceManager">
+            <summary>
+              Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Resources.ResponseMessages.Culture">
+            <summary>
+              Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+              búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Resources.ResponseMessages.EntityDependedUponDeleteError">
+            <summary>
+              Busca una cadena traducida similar a Hay registros de otros catálogos que dependenen de este registro, por lo que necesitas eliminarlos antes para poder continuar..
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Resources.ResponseMessages.FileNotFound">
+            <summary>
+              Busca una cadena traducida similar a No se econtró el archivo.
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Resources.ResponseMessages.InvalidInput">
+            <summary>
+              Busca una cadena traducida similar a Verifique los datos.
+            </summary>
+        </member>
+        <member name="P:ISSSTE.Tramites2016.Hipotecas.Resources.ResponseMessages.InvalidUser">
+            <summary>
+              Busca una cadena traducida similar a Usuario no válido.
+            </summary>
+        </member>
+    </members>
+</doc>

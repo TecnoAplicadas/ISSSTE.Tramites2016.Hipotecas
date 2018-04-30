@@ -1,0 +1,4 @@
+C:\Users\Upgenia\Documents\TD-Hipotecas\TD_Hipoteca\Hipoteca\ISSSTE.Tramites2016.Hipotecas.Bussiness\obj\Release\ISSSTE.Tramites2016.Hipotecas.Bussiness.Properties.Resources.resources
+C:\Users\Upgenia\Documents\TD-Hipotecas\TD_Hipoteca\Hipoteca\ISSSTE.Tramites2016.Hipotecas.Bussiness\obj\Release\ISSSTE.Tramites2016.Hipotecas.Bussiness.csproj.GenerateResource.Cache
+D:\Projects\ISSSTE.Tramites2016.Hipotecas\ISSSTE.Tramites2016.Hipotecas.Bussiness\obj\Release\ISSSTE.Tramites2016.Hipotecas.Bussiness.Properties.Resources.resources
+D:\Projects\ISSSTE.Tramites2016.Hipotecas\ISSSTE.Tramites2016.Hipotecas.Bussiness\obj\Release\ISSSTE.Tramites2016.Hipotecas.Bussiness.csproj.GenerateResource.Cache
